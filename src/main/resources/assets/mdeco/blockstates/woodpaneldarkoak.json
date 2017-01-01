@@ -1,0 +1,16 @@
+{
+"variants":{
+"connected=0,facing=north":{"model":"mdeco:woodPanelDarkOak0"},
+"connected=0,facing=south":{"model":"mdeco:woodPanelDarkOak0","y":180},
+"connected=0,facing=west":{"model":"mdeco:woodPanelDarkOak0","y":270},
+"connected=0,facing=east":{"model":"mdeco:woodPanelDarkOak0","y":90},
+"connected=1,facing=north":{"model":"mdeco:woodPanelDarkOak1"},
+"connected=1,facing=south":{"model":"mdeco:woodPanelDarkOak1","y":180},
+"connected=1,facing=west":{"model":"mdeco:woodPanelDarkOak1","y":270},
+"connected=1,facing=east":{"model":"mdeco:woodPanelDarkOak1","y":90},
+"connected=2,facing=north":{"model":"mdeco:woodPanelDarkOak1","y":90},
+"connected=2,facing=south":{"model":"mdeco:woodPanelDarkOak1","y":270},
+"connected=2,facing=west":{"model":"mdeco:woodPanelDarkOak1"},
+"connected=2,facing=east":{"model":"mdeco:woodPanelDarkOak1","y":180}
+}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:supportPoleIron"},
+"facing=south":{"model":"mdeco:supportPoleIron","y":180},
+"facing=west":{"model":"mdeco:supportPoleIron","y":270},
+"facing=east":{"model":"mdeco:supportPoleIron","y":90}
+}
+}

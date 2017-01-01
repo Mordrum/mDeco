@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:deskWoodBasicBirch"},
+"facing=south":{"model":"mdeco:deskWoodBasicBirch","y":180},
+"facing=west":{"model":"mdeco:deskWoodBasicBirch","y":270},
+"facing=east":{"model":"mdeco:deskWoodBasicBirch","y":90}
+}
+}

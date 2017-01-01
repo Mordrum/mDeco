@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStoneDiorite"},
+"facing=south":{"model":"mdeco:standLargeStoneDiorite","y":180},
+"facing=west":{"model":"mdeco:standLargeStoneDiorite","y":270},
+"facing=east":{"model":"mdeco:standLargeStoneDiorite","y":90}
+}
+}

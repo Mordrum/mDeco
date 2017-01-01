@@ -1,0 +1,7 @@
+{
+"parent":"block/half_slab",
+"textures":{
+"bottom":"mdeco:blocks/ancientBrickGray_normal",
+"top":"mdeco:blocks/ancientBrickGray_normal",
+"side":"mdeco:blocks/ancientBrickGray_normal"}
+}

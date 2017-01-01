@@ -1,0 +1,8 @@
+{
+"variants":{
+"axis=x":{"model":"mdeco:pillarLargePrismarine_side","y":90},
+"axis=y":{"model":"mdeco:pillarLargePrismarine"},
+"axis=z":{"model":"mdeco:pillarLargePrismarine_side"},
+"axis=none":{"model":"mdeco:pillarLargePrismarine"}
+}
+}

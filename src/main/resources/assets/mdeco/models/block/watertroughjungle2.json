@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_waterTrough2",
+"textures":{
+"primary":"minecraft:blocks/planks_jungle",
+"trim":"minecraft:blocks/log_jungle",
+"hardware":"minecraft:blocks/water_still"}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:cabinetWallJungle"},
+"facing=south":{"model":"mdeco:cabinetWallJungle","y":180},
+"facing=west":{"model":"mdeco:cabinetWallJungle","y":270},
+"facing=east":{"model":"mdeco:cabinetWallJungle","y":90}
+}
+}

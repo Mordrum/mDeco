@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:chairBasicDarkOak"},
+"facing=south":{"model":"mdeco:chairBasicDarkOak","y":180},
+"facing=west":{"model":"mdeco:chairBasicDarkOak","y":270},
+"facing=east":{"model":"mdeco:chairBasicDarkOak","y":90}
+}
+}

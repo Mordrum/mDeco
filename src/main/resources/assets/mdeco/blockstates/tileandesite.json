@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:tileAndesite"},
+"facing=south":{"model":"mdeco:tileAndesite","y":180},
+"facing=west":{"model":"mdeco:tileAndesite","y":270},
+"facing=east":{"model":"mdeco:tileAndesite","y":90}
+}
+}

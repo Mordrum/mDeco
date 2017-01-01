@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_tile",
+"textures":{
+"primary":"minecraft:blocks/prismarine_rough",
+"trim":"minecraft:blocks/prismarine_bricks"}
+}

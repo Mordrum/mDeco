@@ -1,0 +1,16 @@
+{
+"variants":{
+"facing=north,variant=large_pot":{"model":"mdeco:kitchenPot0"},
+"facing=east,variant=large_pot":{"model":"mdeco:kitchenPot0","y":90},
+"facing=south,variant=large_pot":{"model":"mdeco:kitchenPot0","y":180},
+"facing=west,variant=large_pot":{"model":"mdeco:kitchenPot0","y":270},
+"facing=north,variant=medium_pot":{"model":"mdeco:kitchenPot1"},
+"facing=east,variant=medium_pot":{"model":"mdeco:kitchenPot1","y":90},
+"facing=south,variant=medium_pot":{"model":"mdeco:kitchenPot1","y":180},
+"facing=west,variant=medium_pot":{"model":"mdeco:kitchenPot1","y":270},
+"facing=north,variant=frying_pan":{"model":"mdeco:kitchenPot2"},
+"facing=east,variant=frying_pan":{"model":"mdeco:kitchenPot2","y":90},
+"facing=south,variant=frying_pan":{"model":"mdeco:kitchenPot2","y":180},
+"facing=west,variant=frying_pan":{"model":"mdeco:kitchenPot2","y":270}
+}
+}

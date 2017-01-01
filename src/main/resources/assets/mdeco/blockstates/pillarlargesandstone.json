@@ -1,0 +1,8 @@
+{
+"variants":{
+"axis=x":{"model":"mdeco:pillarLargeSandstone_side","y":90},
+"axis=y":{"model":"mdeco:pillarLargeSandstone"},
+"axis=z":{"model":"mdeco:pillarLargeSandstone_side"},
+"axis=none":{"model":"mdeco:pillarLargeSandstone"}
+}
+}

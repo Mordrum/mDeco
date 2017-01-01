@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:curioBaseGold"},
+"facing=south":{"model":"mdeco:curioBaseGold","y":180},
+"facing=west":{"model":"mdeco:curioBaseGold","y":270},
+"facing=east":{"model":"mdeco:curioBaseGold","y":90}
+}
+}

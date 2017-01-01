@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_standLargeStone",
+"textures":{
+"primary":"minecraft:blocks/end_stone",
+"trim":"mdeco:blocks/end_stone_bordered"}
+}

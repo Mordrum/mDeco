@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_kitchenTableSetting",
+"textures":{
+"primary":"mdeco:blocks/blockBlackIron",
+"trim":"",
+"hardware":""}
+}

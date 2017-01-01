@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_shopSignHexagon",
+"textures":{
+"primary":"minecraft:blocks/planks_birch",
+"trim":"minecraft:blocks/log_birch",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

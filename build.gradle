@@ -1,0 +1,45 @@
+group 'com.mordrum'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.0.5-3'
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = 'sponge'
+            url = 'http://repo.spongepowered.org/maven'
+        }
+        maven {
+            name = 'sonatype-nexus'
+            url = 'https://oss.sonatype.org/content/repositories/public/'
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+sourceCompatibility = 1.8
+
+minecraft {
+    version = "1.11-13.19.1.2194"
+    runDir = "run"
+    mappings = "snapshot_20161209"
+    makeObfSourceJar = false
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

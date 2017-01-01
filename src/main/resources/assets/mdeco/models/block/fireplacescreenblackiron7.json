@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_fireplaceScreen7",
+"textures":{
+"primary":"mdeco:blocks/blockBlackIron",
+"trim":"minecraft:blocks/glass"}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:fountainLavaDiorite"},
+"facing=south":{"model":"mdeco:fountainLavaDiorite","y":180},
+"facing=west":{"model":"mdeco:fountainLavaDiorite","y":270},
+"facing=east":{"model":"mdeco:fountainLavaDiorite","y":90}
+}
+}

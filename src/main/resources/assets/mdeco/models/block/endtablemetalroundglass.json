@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_endTableMetalRound",
+"textures":{
+"primary":"minecraft:blocks/glass",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

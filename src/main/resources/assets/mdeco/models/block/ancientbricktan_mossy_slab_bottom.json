@@ -1,0 +1,7 @@
+{
+"parent":"block/half_slab",
+"textures":{
+"bottom":"mdeco:blocks/ancientBrickTan_mossy",
+"top":"mdeco:blocks/ancientBrickTan_mossy",
+"side":"mdeco:blocks/ancientBrickTan_mossy"}
+}

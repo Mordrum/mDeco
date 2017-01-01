@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_cabinetWall",
+"textures":{
+"primary":"minecraft:blocks/planks_spruce",
+"trim":"minecraft:blocks/log_spruce_top",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

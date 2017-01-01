@@ -1,0 +1,8 @@
+{
+"parent":"mdeco:block/_cabinetWallGlass",
+"textures":{
+"primary":"minecraft:blocks/planks_birch",
+"trim":"minecraft:blocks/log_birch_top",
+"hardware":"mdeco:blocks/blockBlackIron",
+"extra":"minecraft:blocks/glass"}
+}

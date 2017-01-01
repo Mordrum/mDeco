@@ -1,0 +1,161 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "#primary"
+    },
+"display":{
+"gui":{
+"rotation":[30,45,0],
+"translation":[0,0,0],
+"scale":[0.625,0.625,0.625]
+},
+"ground":{
+"rotation":[0,0,0],
+"translation":[0,3,0],
+"scale":[0.25,0.25,0.25]
+},
+"fixed":{
+"rotation":[0,0,0],
+"translation":[0,0,0],
+"scale":[0.5,0.5,0.5]
+},
+"thirdperson_righthand":{
+"rotation": [75,45,0],
+"translation":[0,2.5,0],
+"scale":[0.375,0.375,0.375]
+},
+"firstperson_righthand":{
+"rotation":[0,45,0],
+"translation":[0,0,0],
+"scale":[0.40,0.40,0.40]
+},
+"firstperson_lefthand":{
+"rotation":[0,225,0],
+"translation":[0,0,0],
+"scale":[0.40,0.40,0.40]
+}
+},
+    "elements": [
+        {
+            "from": [4,15,4],
+            "to": [12,16,12],
+            "faces": {
+                "up": {
+                    "texture": "#primary"
+                },
+                "down": {
+                    "texture": "#primary"
+                },
+                "west": {
+                    "uv": [4,15,12,16],
+                    "texture": "#trim"
+                },
+                "east": {
+                    "uv": [4,15,12,16],
+                    "texture": "#trim"
+                },
+                "north": {
+                    "uv": [4,15,12,16],
+                    "texture": "#trim"
+                },
+                "south": {
+                    "uv": [4,15,12,16],
+                    "texture": "#trim"
+                }
+            }
+        },
+        {
+            "from": [4,0,4],
+            "to": [12,1,12],
+            "faces": {
+                "up": {
+                    "texture": "#primary"
+                },
+                "down": {
+                    "texture": "#primary"
+                },
+                "west": {
+                    "texture": "#trim"
+                },
+                "east": {
+                    "texture": "#trim"
+                },
+                "north": {
+                    "texture": "#trim"
+                },
+                "south": {
+                    "texture": "#trim"
+                }
+            }
+        },
+        {
+            "from": [5,14.5,5],
+            "to": [11,15,11],
+            "faces": {
+                "down": {
+                    "texture": "#primary"
+                },
+                "west": {
+                    "uv": [5,15.5,11,16],
+                    "texture": "#trim"
+                },
+                "east": {
+                    "uv": [5,15.5,11,16],
+                    "texture": "#trim"
+                },
+                "north": {
+                    "uv": [5,15.5,11,16],
+                    "texture": "#trim"
+                },
+                "south": {
+                    "uv": [5,15.5,11,16],
+                    "texture": "#trim"
+                }
+            }
+        },
+        {
+            "from": [5,1,5],
+            "to": [11,1.5,11],
+            "faces": {
+                "up": {
+                    "texture": "#primary"
+                },
+                "west": {
+                    "uv": [5,15.5,11,16],
+                    "texture": "#trim"
+                },
+                "east": {
+                    "uv": [5,15.5,11,16],
+                    "texture": "#trim"
+                },
+                "north": {
+                    "uv": [5,15.5,11,16],
+                    "texture": "#trim"
+                },
+                "south": {
+                    "uv": [5,15.5,11,16],
+                    "texture": "#trim"
+                }
+            }
+        },
+        {
+            "from": [6,1.5,6],
+            "to": [10,14.5,10],
+            "faces": {
+                "west": {
+                    "texture": "#primary"
+                },
+                "east": {
+                    "texture": "#primary"
+                },
+                "north": {
+                    "uv": [6,1.5,10,14.5],
+                    "texture": "#primary"
+                },
+                "south": {
+                    "texture": "#primary"
+                }
+            }
+        }
+    ]
+}

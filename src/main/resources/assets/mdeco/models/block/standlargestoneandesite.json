@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_standLargeStone",
+"textures":{
+"primary":"minecraft:blocks/stone_andesite",
+"trim":"minecraft:blocks/stone_andesite_smooth"}
+}

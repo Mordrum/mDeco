@@ -1,0 +1,9 @@
+{
+"parent":"mdeco:block/_workbenchFoundry",
+"textures":{
+"top":"mdeco:blocks/workbenchFoundry0",
+"side":"mdeco:blocks/workbenchFoundry1",
+"back":"mdeco:blocks/workbenchFoundry2",
+"front":"mdeco:blocks/workbenchFoundry3",
+"bottom":"mdeco:blocks/workbenchFoundry4"}
+}

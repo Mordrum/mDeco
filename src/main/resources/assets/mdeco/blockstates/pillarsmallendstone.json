@@ -1,0 +1,8 @@
+{
+"variants":{
+"axis=x":{"model":"mdeco:pillarSmallEndStone_side","y":90},
+"axis=y":{"model":"mdeco:pillarSmallEndStone"},
+"axis=z":{"model":"mdeco:pillarSmallEndStone_side"},
+"axis=none":{"model":"mdeco:pillarSmallEndStone"}
+}
+}

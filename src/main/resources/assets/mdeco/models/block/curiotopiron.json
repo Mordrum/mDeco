@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_curioTop",
+"textures":{
+"primary":"minecraft:blocks/iron_block",
+"trim":"minecraft:blocks/glass"}
+}

@@ -1,0 +1,10 @@
+{
+"variants":{
+"stacks=0":{"model":"mdeco:ingotStackGold0"},
+"stacks=1":{"model":"mdeco:ingotStackGold1"},
+"stacks=2":{"model":"mdeco:ingotStackGold2"},
+"stacks=3":{"model":"mdeco:ingotStackGold3"},
+"stacks=4":{"model":"mdeco:ingotStackGold4"},
+"stacks=5":{"model":"mdeco:ingotStackGold5"}
+}
+}

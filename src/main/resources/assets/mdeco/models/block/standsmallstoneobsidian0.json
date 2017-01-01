@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_standSmallStone0",
+"textures":{
+"primary":"minecraft:blocks/obsidian",
+"trim":"minecraft:blocks/obsidian"}
+}

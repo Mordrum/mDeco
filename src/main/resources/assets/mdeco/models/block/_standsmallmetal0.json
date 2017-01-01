@@ -1,0 +1,52 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "#primary"
+    },
+    "elements": [
+        {
+            "from": [6,0,6],
+            "to": [10,8,10],
+            "faces": {
+                "west": {
+                    "uv": [6,7,10,15],
+                    "texture": "#primary"
+                },
+                "east": {
+                    "uv": [6,7,10,15],
+                    "texture": "#primary"
+                },
+                "north": {
+                    "uv": [6,7,10,15],
+                    "texture": "#primary"
+                },
+                "south": {
+                    "uv": [6,7,10,15],
+                    "texture": "#primary"
+                }
+            }
+        },
+        {
+            "from": [6,8,6],
+            "to": [10,16,10],
+            "faces": {
+                "west": {
+                    "uv": [6,1,10,9],
+                    "texture": "#primary"
+                },
+                "east": {
+                    "uv": [6,1,10,9],
+                    "texture": "#primary"
+                },
+                "north": {
+                    "uv": [6,1,10,9],
+                    "texture": "#primary"
+                },
+                "south": {
+                    "uv": [6,1,10,9],
+                    "texture": "#primary"
+                }
+            }
+        }
+    ]
+}

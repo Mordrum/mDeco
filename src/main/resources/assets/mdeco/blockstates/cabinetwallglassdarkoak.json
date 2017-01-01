@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:cabinetWallGlassDarkOak"},
+"facing=south":{"model":"mdeco:cabinetWallGlassDarkOak","y":180},
+"facing=west":{"model":"mdeco:cabinetWallGlassDarkOak","y":270},
+"facing=east":{"model":"mdeco:cabinetWallGlassDarkOak","y":90}
+}
+}

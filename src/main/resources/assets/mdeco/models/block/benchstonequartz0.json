@@ -1,0 +1,5 @@
+{
+"parent":"mdeco:block/_benchStone0",
+"textures":{
+"primary":"minecraft:blocks/quartz_block_top"}
+}

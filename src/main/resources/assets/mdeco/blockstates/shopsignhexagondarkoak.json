@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:shopSignHexagonDarkOak"},
+"facing=south":{"model":"mdeco:shopSignHexagonDarkOak","y":180},
+"facing=west":{"model":"mdeco:shopSignHexagonDarkOak","y":270},
+"facing=east":{"model":"mdeco:shopSignHexagonDarkOak","y":90}
+}
+}

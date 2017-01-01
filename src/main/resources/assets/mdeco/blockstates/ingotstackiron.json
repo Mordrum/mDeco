@@ -1,0 +1,10 @@
+{
+"variants":{
+"stacks=0":{"model":"mdeco:ingotStackIron0"},
+"stacks=1":{"model":"mdeco:ingotStackIron1"},
+"stacks=2":{"model":"mdeco:ingotStackIron2"},
+"stacks=3":{"model":"mdeco:ingotStackIron3"},
+"stacks=4":{"model":"mdeco:ingotStackIron4"},
+"stacks=5":{"model":"mdeco:ingotStackIron5"}
+}
+}

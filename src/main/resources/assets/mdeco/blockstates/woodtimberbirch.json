@@ -1,0 +1,16 @@
+{
+"variants":{
+"connected=0,orientation=0":{"model":"mdeco:woodTimberBirch0","x":270,"y":90},
+"connected=1,orientation=0":{"model":"mdeco:woodTimberBirch1","x":270,"y":90},
+"connected=2,orientation=0":{"model":"mdeco:woodTimberBirch2","x":270,"y":90},
+"connected=3,orientation=0":{"model":"mdeco:woodTimberBirch3","x":270,"y":90},
+"connected=0,orientation=1":{"model":"mdeco:woodTimberBirch0"},
+"connected=1,orientation=1":{"model":"mdeco:woodTimberBirch1"},
+"connected=2,orientation=1":{"model":"mdeco:woodTimberBirch2"},
+"connected=3,orientation=1":{"model":"mdeco:woodTimberBirch3"},
+"connected=0,orientation=2":{"model":"mdeco:woodTimberBirch0","x":270},
+"connected=1,orientation=2":{"model":"mdeco:woodTimberBirch1","x":270,"y":180},
+"connected=2,orientation=2":{"model":"mdeco:woodTimberBirch2","x":270,"y":180},
+"connected=3,orientation=2":{"model":"mdeco:woodTimberBirch3","x":270}
+}
+}

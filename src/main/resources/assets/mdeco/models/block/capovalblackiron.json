@@ -1,0 +1,5 @@
+{
+"parent":"mdeco:block/_capOval",
+"textures":{
+"primary":"mdeco:blocks/blockBlackIron"}
+}

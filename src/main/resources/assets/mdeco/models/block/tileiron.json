@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_tile",
+"textures":{
+"primary":"minecraft:blocks/iron_block",
+"trim":"minecraft:blocks/iron_block"}
+}

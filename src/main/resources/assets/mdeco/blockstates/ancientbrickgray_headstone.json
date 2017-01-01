@@ -1,0 +1,10 @@
+{
+"variants":{
+"facing=north_south,variant=short_cross":{"model":"mdeco:ancientBrickGray_headstone_short_cross"},
+"facing=west_east,variant=short_cross":{"model":"mdeco:ancientBrickGray_headstone_short_cross","y":90},
+"facing=north_south,variant=tall_cross":{"model":"mdeco:ancientBrickGray_headstone_tall_cross"},
+"facing=west_east,variant=tall_cross":{"model":"mdeco:ancientBrickGray_headstone_tall_cross","y":90},
+"facing=north_south,variant=rounded":{"model":"mdeco:ancientBrickGray_headstone_rounded"},
+"facing=west_east,variant=rounded":{"model":"mdeco:ancientBrickGray_headstone_rounded","y":90}
+}
+}

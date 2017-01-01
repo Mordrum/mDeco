@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_tile",
+"textures":{
+"primary":"minecraft:blocks/stone_slab_top",
+"trim":"minecraft:blocks/stone_slab_top"}
+}

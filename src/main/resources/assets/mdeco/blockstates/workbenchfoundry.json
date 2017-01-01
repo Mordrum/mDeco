@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:workbenchFoundry"},
+"facing=south":{"model":"mdeco:workbenchFoundry","y":180},
+"facing=west":{"model":"mdeco:workbenchFoundry","y":270},
+"facing=east":{"model":"mdeco:workbenchFoundry","y":90}
+}
+}

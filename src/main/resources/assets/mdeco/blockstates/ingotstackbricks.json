@@ -1,0 +1,10 @@
+{
+"variants":{
+"stacks=0":{"model":"mdeco:ingotStackBricks0"},
+"stacks=1":{"model":"mdeco:ingotStackBricks1"},
+"stacks=2":{"model":"mdeco:ingotStackBricks2"},
+"stacks=3":{"model":"mdeco:ingotStackBricks3"},
+"stacks=4":{"model":"mdeco:ingotStackBricks4"},
+"stacks=5":{"model":"mdeco:ingotStackBricks5"}
+}
+}

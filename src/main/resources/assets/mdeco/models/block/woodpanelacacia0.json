@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_woodPanel0",
+"textures":{
+"primary":"minecraft:blocks/planks_acacia",
+"trim":""}
+}

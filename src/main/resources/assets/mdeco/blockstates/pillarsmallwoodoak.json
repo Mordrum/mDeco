@@ -1,0 +1,8 @@
+{
+"variants":{
+"axis=x":{"model":"mdeco:pillarSmallWoodOak_side","y":90},
+"axis=y":{"model":"mdeco:pillarSmallWoodOak"},
+"axis=z":{"model":"mdeco:pillarSmallWoodOak_side"},
+"axis=none":{"model":"mdeco:pillarSmallWoodOak"}
+}
+}

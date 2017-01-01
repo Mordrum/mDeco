@@ -1,0 +1,7 @@
+{
+"parent":"block/outer_stairs",
+"textures":{
+"bottom":"mdeco:blocks/ancientBrickTan_normal",
+"top":"mdeco:blocks/ancientBrickTan_normal",
+"side":"mdeco:blocks/ancientBrickTan_normal"}
+}

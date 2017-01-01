@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_tableWood1",
+"textures":{
+"primary":"minecraft:blocks/planks_acacia",
+"trim":"minecraft:blocks/log_acacia"}
+}

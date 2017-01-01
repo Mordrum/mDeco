@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_coinBag",
+"textures":{
+"primary":"minecraft:blocks/gold_block",
+"trim":"mdeco:blocks/leather",
+"hardware":"minecraft:blocks/wool_colored_white"}
+}

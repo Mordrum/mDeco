@@ -1,0 +1,10 @@
+{
+"variants":{
+"connected=0":{"model":"mdeco:capSmallPyramidGold","x":180},
+"connected=1":{"model":"mdeco:capSmallPyramidGold"},
+"connected=2":{"model":"mdeco:capSmallPyramidGold","x":90},
+"connected=3":{"model":"mdeco:capSmallPyramidGold","x":270},
+"connected=4":{"model":"mdeco:capSmallPyramidGold","x":90,"y":270},
+"connected=5":{"model":"mdeco:capSmallPyramidGold","x":270,"y":270}
+}
+}

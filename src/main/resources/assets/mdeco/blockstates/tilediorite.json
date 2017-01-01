@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:tileDiorite"},
+"facing=south":{"model":"mdeco:tileDiorite","y":180},
+"facing=west":{"model":"mdeco:tileDiorite","y":270},
+"facing=east":{"model":"mdeco:tileDiorite","y":90}
+}
+}

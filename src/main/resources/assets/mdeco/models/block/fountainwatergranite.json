@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_fountainWater",
+"textures":{
+"primary":"minecraft:blocks/stone_granite",
+"trim":"minecraft:blocks/water_still",
+"hardware":"minecraft:blocks/water_flow"}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:wallLanternGold"},
+"facing=south":{"model":"mdeco:wallLanternGold","y":180},
+"facing=west":{"model":"mdeco:wallLanternGold","y":270},
+"facing=east":{"model":"mdeco:wallLanternGold","y":90}
+}
+}

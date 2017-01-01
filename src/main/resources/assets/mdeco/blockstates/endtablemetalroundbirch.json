@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:endTableMetalRoundBirch"},
+"facing=south":{"model":"mdeco:endTableMetalRoundBirch","y":180},
+"facing=west":{"model":"mdeco:endTableMetalRoundBirch","y":270},
+"facing=east":{"model":"mdeco:endTableMetalRoundBirch","y":90}
+}
+}

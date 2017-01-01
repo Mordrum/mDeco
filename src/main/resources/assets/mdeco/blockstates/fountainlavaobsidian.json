@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:fountainLavaObsidian"},
+"facing=south":{"model":"mdeco:fountainLavaObsidian","y":180},
+"facing=west":{"model":"mdeco:fountainLavaObsidian","y":270},
+"facing=east":{"model":"mdeco:fountainLavaObsidian","y":90}
+}
+}

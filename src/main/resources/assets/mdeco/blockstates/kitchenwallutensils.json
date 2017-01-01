@@ -1,0 +1,16 @@
+{
+"variants":{
+"facing=north,variant=set_0":{"model":"mdeco:kitchenWallUtensils0"},
+"facing=east,variant=set_0":{"model":"mdeco:kitchenWallUtensils0","y":90},
+"facing=south,variant=set_0":{"model":"mdeco:kitchenWallUtensils0","y":180},
+"facing=west,variant=set_0":{"model":"mdeco:kitchenWallUtensils0","y":270},
+"facing=north,variant=set_1":{"model":"mdeco:kitchenWallUtensils1"},
+"facing=east,variant=set_1":{"model":"mdeco:kitchenWallUtensils1","y":90},
+"facing=south,variant=set_1":{"model":"mdeco:kitchenWallUtensils1","y":180},
+"facing=west,variant=set_1":{"model":"mdeco:kitchenWallUtensils1","y":270},
+"facing=north,variant=set_2":{"model":"mdeco:kitchenWallUtensils2"},
+"facing=east,variant=set_2":{"model":"mdeco:kitchenWallUtensils2","y":90},
+"facing=south,variant=set_2":{"model":"mdeco:kitchenWallUtensils2","y":180},
+"facing=west,variant=set_2":{"model":"mdeco:kitchenWallUtensils2","y":270}
+}
+}

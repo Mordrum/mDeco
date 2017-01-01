@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_benchWoodMetalArm3",
+"textures":{
+"primary":"minecraft:blocks/planks_acacia",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:shopSignDomeSpruce"},
+"facing=south":{"model":"mdeco:shopSignDomeSpruce","y":180},
+"facing=west":{"model":"mdeco:shopSignDomeSpruce","y":270},
+"facing=east":{"model":"mdeco:shopSignDomeSpruce","y":90}
+}
+}

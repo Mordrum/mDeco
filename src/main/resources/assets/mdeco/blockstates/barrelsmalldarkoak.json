@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:barrelSmallDarkOak"},
+"facing=south":{"model":"mdeco:barrelSmallDarkOak","y":180},
+"facing=west":{"model":"mdeco:barrelSmallDarkOak","y":270},
+"facing=east":{"model":"mdeco:barrelSmallDarkOak","y":90}
+}
+}

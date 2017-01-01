@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_fountainLava",
+"textures":{
+"primary":"minecraft:blocks/nether_brick",
+"trim":"minecraft:blocks/lava_still",
+"hardware":"minecraft:blocks/lava_flow"}
+}

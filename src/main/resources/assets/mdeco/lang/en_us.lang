@@ -1,0 +1,752 @@
+container.cabinetBase=Base Cabinet
+container.cabinetWall=Wall Cabinet
+container.cabinetWallGlass=Glass Door Wall Cabinet
+container.curioBase=Curio Base
+container.curioTop=Curio Top
+container.deskWoodBasic=Basic Wood Desk
+container.kitchenTableSetting=Table Setting
+container.mantle=Fireplace Mantle
+container.marketCrate=Market Crate
+container.marketStand=Market Stand
+container.poleSign=Pole Sign
+container.shelfWood=Wood Shelf
+container.shopSign=Shop Sign
+container.sofa=Sofa
+container.storage=Storage
+container.wallLantern=Wall Lantern
+container.woodBox=Wood Box
+container.woodCrate=Wood Crate
+container.workbenchFoundry=Foundry
+container.workbenchSaw=Cutting Table
+
+creativeTab.blocks=DMP Blocks
+creativeTab.decorations=DMP Decorations
+
+decorationType.barrelLarge=Large Barrel
+decorationType.barrelSmall=Small Barrel
+decorationType.benchStone=Stone Bench
+decorationType.benchWood=Wood Bench
+decorationType.benchWoodMetalArm=Wood Metal Arm Bench
+decorationType.cabinetBase=Base Cabinet
+decorationType.cabinetWall=Wall Cabinet
+decorationType.cabinetWallGlass=Glass Door Wall Cabinet
+decorationType.capSmallPyramid=Small Pyramid Cap
+decorationType.capLargePyramid=Large Pyramid Cap
+decorationType.capOval=Oval Cap
+decorationType.capPlus=Plus Cap
+decorationType.capRound=Round Cap
+decorationType.capSquare=Square Cap
+decorationType.chain=Chain
+decorationType.chainLarge=Large Chain
+decorationType.chairBasic=Basic Chair
+decorationType.chairWood=Wood Chair
+decorationType.chandelierSmallRound=Small Round Chandelier
+decorationType.coinBag=Bag of Coins
+decorationType.coinStack=Stack of Coins
+decorationType.countertop=Countertop
+decorationType.curioBase=Curio Base
+decorationType.curioTop=Curio Top
+decorationType.curtainRod=Curtain Rod
+decorationType.curtainWool=Wool Curtain
+decorationType.deskHutchWoodBasic=Basic Wood Desk Hutch
+decorationType.deskWoodBasic=Basic Wood Desk
+decorationType.endTableWood=Wood End Table
+decorationType.endTableMetalRound=Round Metal End Table
+decorationType.fireplaceBellows=Fireplace Bellows
+decorationType.fireplacePokerSet=Fireplace Poker Set
+decorationType.fireplaceScreen=Fireplace Screen
+decorationType.fireplaceWoodRack=Fireplace Wood Rack
+decorationType.foodTrough=Food Trough
+decorationType.fountainLava=Lava Fountain
+decorationType.fountainWater=Water Fountain
+decorationType.ingotStack=Ingot Stack
+decorationType.kitchenKettle=Kitchen Kettle
+decorationType.kitchenPot=Kitchen Pot
+decorationType.kitchenShakers=Kitchen Shakers
+decorationType.kitchenTableSetting=Kitchen Table Setting
+decorationType.kitchenWallUtensils=Kitchen Wall Utensils
+decorationType.lanternOval=Oval Lantern
+decorationType.lanternPyramid=Pyramid Lantern
+decorationType.lanternPyramidGlass=Pyramid Glass Lantern
+decorationType.lanternRectangle=Rectangle Lantern
+decorationType.lanternRectangleGlass=Rectangle Glass Lantern
+decorationType.lanternRound=Round Lantern
+decorationType.mantle=Mantle
+decorationType.mantleColumn=Mantle Column
+decorationType.marketCrate=Market Crate
+decorationType.marketStand=Market Stand
+decorationType.palletStack=Pallet Stack
+decorationType.poleMetal=Metal Pole
+decorationType.poleMetalConnector=Metal Connector Pole
+decorationType.poleSign=Pole Sign
+decorationType.shelf=Shelf
+decorationType.shopSignCornerCut=Corner Cut Shop Sign
+decorationType.shopSignDome=Dome Shop Sign
+decorationType.shopSignGable=Gable Shop Sign
+decorationType.shopSignHexagon=Hexagon Shop Sign
+decorationType.shopSignRound=Round Shop Sign
+decorationType.shopSignSquare=Square Shop Sign
+decorationType.sofa=Sofa
+decorationType.standLargeMetal=Large Metal Stand
+decorationType.standLargeStone=Large Stone Stand
+decorationType.standSmallMetal=Small Metal Stand
+decorationType.standSmallStone=Small Stone Stand
+decorationType.standSmallWood=Small Wood Stand
+decorationType.supportPole=Support Pole
+decorationType.tableWood=Wood Table
+decorationType.tile=Tile
+decorationType.wallLantern=Wall Lantern
+decorationType.waterTrough=Water Trough
+decorationType.woodBox=Wood Box
+decorationType.woodCrate=Wood Crate
+decorationType.woodPanel=Wood Panel
+decorationType.woodTimber=Wood Timber
+decorationType.woodTimberConnector=Wood Timber Connector
+decorationType.woodBarkTimber=Bark Timber
+decorationType.woodBarkTimberConnector=Bark Timber Connector
+decorationType.woodTrim=Wood Trim
+
+gui.screen.mainMenu=Main Menu
+gui.screen.tools=Tools
+gui.screen.text.cancel=Cancel
+gui.screen.text.proceed=Proceed
+
+tile.blockBlackIron.name=Black Iron Block
+item.blackIronIngot.name=Black Iron Ingot
+item.blackIronNugget.name=Black Iron Nugget
+
+option.workbench.saw.cutTime=Cutting Table Cut Time
+option.workbench.foundry.particles=Foundry Particles
+
+tile.ancientBrickGray_block_normal.name=Ancient Gray Bricks
+tile.ancientBrickGray_block_mossy.name=Ancient Gray Mossy Bricks
+tile.ancientBrickGray_pillar_large_normal.name=Ancient Gray Brick Large Pillar
+tile.ancientBrickGray_pillar_large_mossy.name=Ancient Gray Brick Large Mossy Pillar
+tile.ancientBrickGray_pillar_small_normal.name=Ancient Gray Brick Small Pillar
+tile.ancientBrickGray_pillar_small_mossy.name=Ancient Gray Brick Small Mossy Pillar
+tile.ancientBrickGray_slab.name=Ancient Gray Bricks Slab
+tile.ancientBrickGray_stairs.name=Ancient Gray Bricks Stairs
+tile.ancientBrickGray_wall_mossy.name=Ancient Gray Bricks Mossy Wall
+tile.ancientBrickGray_wall_normal.name=Ancient Gray Bricks Wall
+tile.ancientBrickGray_headstone_short_cross.name=Ancient Gray Bricks Short Cross Headstone
+tile.ancientBrickGray_headstone_tall_cross.name=Ancient Gray Bricks Tall Cross Headstone
+tile.ancientBrickGray_headstone_rounded.name=Ancient Gray Bricks Rounded Headstone
+
+tile.ancientBrickTan_block_normal.name=Ancient Tan Bricks
+tile.ancientBrickTan_block_mossy.name=Ancient Tan Mossy Bricks
+tile.ancientBrickTan_pillar_large_normal.name=Ancient Tan Brick Large Pillar
+tile.ancientBrickTan_pillar_large_mossy.name=Ancient Tan Brick Large Mossy Pillar
+tile.ancientBrickTan_pillar_small_normal.name=Ancient Tan Brick Small Pillar
+tile.ancientBrickTan_pillar_small_mossy.name=Ancient Tan Brick Small Mossy Pillar
+tile.ancientBrickTan_slab.name=Ancient Tan Bricks Slab
+tile.ancientBrickTan_stairs.name=Ancient Tan Bricks Stairs
+tile.ancientBrickTan_wall_mossy.name=Ancient Tan Bricks Mossy Wall
+tile.ancientBrickTan_wall_normal.name=Ancient Tan Bricks Wall
+tile.ancientBrickTan_headstone_short_cross.name=Ancient Tan Bricks Short Cross Headstone
+tile.ancientBrickTan_headstone_tall_cross.name=Ancient Tan Bricks Tall Cross Headstone
+tile.ancientBrickTan_headstone_rounded.name=Ancient Tan Bricks Rounded Headstone
+
+tile.barrelLargeAcacia.name=Large Acacia Barrel
+tile.barrelLargeBirch.name=Large Birch Barrel
+tile.barrelLargeDarkOak.name=Large Dark Oak Barrel
+tile.barrelLargeJungle.name=Large Jungle Barrel
+tile.barrelLargeOak.name=Large Oak Barrel
+tile.barrelLargeSpruce.name=Large Spruce Barrel
+
+tile.barrelSmallAcacia.name=Small Acacia Barrel
+tile.barrelSmallBirch.name=Small Birch Barrel
+tile.barrelSmallDarkOak.name=Small Dark Oak Barrel
+tile.barrelSmallJungle.name=Small Jungle Barrel
+tile.barrelSmallOak.name=Small Oak Barrel
+tile.barrelSmallSpruce.name=Small Spruce Barrel
+
+tile.benchStoneAndesite.name=Andesite Bench
+tile.benchStoneCobblestone.name=Cobblestone Bench
+tile.benchStoneDiorite.name=Diorite Bench
+tile.benchStoneEndStone.name=End Stone Bench
+tile.benchStoneGranite.name=Granite Bench
+tile.benchStoneNetherBrick.name=NetherBrick Bench
+tile.benchStoneObsidian.name=Obsidian Bench
+tile.benchStonePrismarine.name=Prismarine Bench
+tile.benchStoneQuartz.name=Quartz Bench
+tile.benchStoneRedSandstone.name=Red Sandstone Bench
+tile.benchStoneSandstone.name=Sandstone Bench
+tile.benchStoneStone.name=Stone Bench
+
+tile.benchWoodAcacia.name=Acacia Wood Bench
+tile.benchWoodBirch.name=Birch Wood Bench
+tile.benchWoodDarkOak.name=Dark Oak Wood Bench
+tile.benchWoodJungle.name=Jungle Wood Bench
+tile.benchWoodOak.name=Oak Wood Bench
+tile.benchWoodSpruce.name=Spruce Wood Bench
+
+tile.benchWoodMetalArmAcacia.name=Acacia Wood Bench With Metal Arms
+tile.benchWoodMetalArmBirch.name=Birch Wood Bench With Metal Arms
+tile.benchWoodMetalArmDarkOak.name=Dark Oak Wood Bench With Metal Arms
+tile.benchWoodMetalArmJungle.name=Jungle Wood Bench With Metal Arms
+tile.benchWoodMetalArmOak.name=Oak Wood Bench With Metal Arms
+tile.benchWoodMetalArmSpruce.name=Spruce Wood Bench With Metal Arms
+
+tile.cabinetBaseAcacia.name=Acacia Base Cabinet
+tile.cabinetBaseBirch.name=Birch Base Cabinet
+tile.cabinetBaseDarkOak.name=Dark Oak Base Cabinet
+tile.cabinetBaseJungle.name=Jungle Base Cabinet
+tile.cabinetBaseOak.name=Oak Base Cabinet
+tile.cabinetBaseSpruce.name=Spruce Base Cabinet
+
+tile.cabinetWallAcacia.name=Acacia Wall Cabinet
+tile.cabinetWallBirch.name=Birch Wall Cabinet
+tile.cabinetWallDarkOak.name=Dark Oak Wall Cabinet
+tile.cabinetWallJungle.name=Jungle Wall Cabinet
+tile.cabinetWallOak.name=Oak Wall Cabinet
+tile.cabinetWallSpruce.name=Spruce Wall Cabinet
+
+tile.cabinetWallGlassAcacia.name=Glass Door Acacia Wall Cabinet
+tile.cabinetWallGlassBirch.name=Glass Door Birch Wall Cabinet
+tile.cabinetWallGlassDarkOak.name=Glass Door Dark Oak Wall Cabinet
+tile.cabinetWallGlassJungle.name=Glass Door Jungle Wall Cabinet
+tile.cabinetWallGlassOak.name=Glass Door Oak Wall Cabinet
+tile.cabinetWallGlassSpruce.name=Glass Door Spruce Wall Cabinet
+
+tile.capSmallPyramidIron.name=Small Pyramid Iron Cap
+tile.capSmallPyramidBlackIron.name=Small Pyramid Black Iron Cap
+tile.capSmallPyramidGold.name=Small Pyramid Gold Cap
+
+tile.capLargePyramidIron.name=Large Pyramid Iron Cap
+tile.capLargePyramidBlackIron.name=Large Pyramid Black Iron Cap
+tile.capLargePyramidGold.name=Large Pyramid Gold Cap
+
+tile.capOvalIron.name=Oval Iron Cap
+tile.capOvalBlackIron.name=Oval Black Iron Cap
+tile.capOvalGold.name=Oval Gold Cap
+
+tile.capPlusIron.name=Plus Iron Cap
+tile.capPlusBlackIron.name=Plus Black Iron Cap
+tile.capPlusGold.name=Plus Gold Cap
+
+tile.capRoundIron.name=Round Iron Cap
+tile.capRoundBlackIron.name=Round Black Iron Cap
+tile.capRoundGold.name=Round Gold Cap
+
+tile.capSquareIron.name=Square Iron Cap
+tile.capSquareBlackIron.name=Square Black Iron Cap
+tile.capSquareGold.name=Square Gold Cap
+
+tile.chairBasicAcacia.name=Basic Acacia Chair
+tile.chairBasicBirch.name=Basic Birch Chair
+tile.chairBasicDarkOak.name=Basic Dark Oak Chair
+tile.chairBasicJungle.name=Basic Jungle Chair
+tile.chairBasicOak.name=Basic Oak Chair
+tile.chairBasicSpruce.name=Basic Spruce Chair
+
+tile.chairBasicArmAcacia.name=Basic Armrest Acacia Chair
+tile.chairBasicArmBirch.name=Basic Armrest Birch Chair
+tile.chairBasicArmDarkOak.name=Basic Armrest Dark Oak Chair
+tile.chairBasicArmJungle.name=Basic Armrest Jungle Chair
+tile.chairBasicArmOak.name=Basic Armrest Oak Chair
+tile.chairBasicArmSpruce.name=Basic Armrest Spruce Chair
+
+tile.chainIron.name=Iron Chain
+tile.chainBlackIron.name=Black Iron Chain
+tile.chainGold.name=Gold Chain
+
+tile.chainLargeIron.name=Large Iron Chain
+tile.chainLargeBlackIron.name=Large Black Iron Chain
+tile.chainLargeGold.name=Large Gold Chain
+
+tile.chandelierSmallRoundIron.name=Small Round Iron Chandelier
+tile.chandelierSmallRoundBlackIron.name=Small Round Black Iron Chandelier
+tile.chandelierSmallRoundGold.name=Small Round Gold Chandelier
+
+tile.coinBagGold.name=Bag of Gold Coins
+tile.coinStackGold.name=Stack of Gold Coins
+
+tile.curioBaseIron.name=Iron Curio Base
+tile.curioBaseBlackIron.name=Black Iron Curio Base
+tile.curioBaseGold.name=Gold Curio Base
+
+tile.curioTopIron.name=Iron Curio Top
+tile.curioTopBlackIron.name=Black Iron Curio Top
+tile.curioTopGold.name=Gold Curio Top
+
+tile.curtainRodAcacia.name=Acacia Curtain Rod
+tile.curtainRodBirch.name=Birch Curtain Rod
+tile.curtainRodDarkOak.name=Dark Oak Curtain Rod
+tile.curtainRodJungle.name=Jungle Curtain Rod
+tile.curtainRodOak.name=Oak Curtain Rod
+tile.curtainRodSpruce.name=Spruce Curtain Rod
+
+tile.curtainWoolWhite.name=White Wool Curtain
+tile.curtainWoolOrange.name=Orange Wool Curtain
+tile.curtainWoolMagenta.name=Magenta Wool Curtain
+tile.curtainWoolLightBlue.name=Light Blue Wool Curtain
+tile.curtainWoolYellow.name=Yellow Wool Curtain
+tile.curtainWoolLime.name=Lime Wool Curtain
+tile.curtainWoolPink.name=Pink Wool Curtain
+tile.curtainWoolGray.name=Gray Wool Curtain
+tile.curtainWoolLightGray.name=Light Gray Wool Curtain
+tile.curtainWoolCyan.name=Cyan Wool Curtain
+tile.curtainWoolPurple.name=Purple Wool Curtain
+tile.curtainWoolBlue.name=Blue Wool Curtain
+tile.curtainWoolBrown.name=Brown Wool Curtain
+tile.curtainWoolGreen.name=Green Wool Curtain
+tile.curtainWoolRed.name=Red Wool Curtain
+tile.curtainWoolBlack.name=Black Wool Curtain
+
+tile.deskHutchWoodBasicAcacia.name=Basic Acacia Desk Hutch
+tile.deskHutchWoodBasicBirch.name=Basic Birch Desk Hutch
+tile.deskHutchWoodBasicDarkOak.name=Basic Dark Oak Desk Hutch
+tile.deskHutchWoodBasicJungle.name=Basic Jungle Desk Hutch
+tile.deskHutchWoodBasicOak.name=Basic Oak Desk Hutch
+tile.deskHutchWoodBasicSpruce.name=Basic Spruce Desk Hutch
+
+tile.deskWoodBasicAcacia.name=Basic Acacia Desk
+tile.deskWoodBasicBirch.name=Basic Birch Desk
+tile.deskWoodBasicDarkOak.name=Basic Dark Oak Desk
+tile.deskWoodBasicJungle.name=Basic Jungle Desk
+tile.deskWoodBasicOak.name=Basic Oak Desk
+tile.deskWoodBasicSpruce.name=Basic Spruce Desk
+
+tile.endTableMetalRoundAcacia.name=Acacia Round Metal End Table
+tile.endTableMetalRoundBirch.name=Birch Round Metal End Table
+tile.endTableMetalRoundDarkOak.name=Dark Oak Round Metal End Table
+tile.endTableMetalRoundGlass.name=Glass Round Metal End Table
+tile.endTableMetalRoundJungle.name=Jungle Round Metal End Table
+tile.endTableMetalRoundOak.name=Oak Round Metal End Table
+tile.endTableMetalRoundSpruce.name=Spruce Round Metal End Table
+
+tile.endTableWoodAcacia.name=Acacia End Table
+tile.endTableWoodBirch.name=Birch End Table
+tile.endTableWoodDarkOak.name=Dark Oak End Table
+tile.endTableWoodJungle.name=Jungle End Table
+tile.endTableWoodOak.name=Oak End Table
+tile.endTableWoodSpruce.name=Spruce End Table
+
+tile.fireplaceBellowsBlackIron.name=Black Iron Fireplace Bellows
+tile.fireplaceBellowsGold.name=Gold Fireplace Bellows
+tile.fireplaceBellowsIron.name=Iron Fireplace Bellows
+
+tile.fireplacePokerSetBlackIron.name=Black Iron Fireplace Poker Set
+tile.fireplacePokerSetGold.name=Gold Fireplace Poker Set
+tile.fireplacePokerSetIron.name=Iron Fireplace Poker Set
+
+tile.fireplaceScreenIron.name=Iron Fireplace Screen
+tile.fireplaceScreenBlackIron.name=Black Iron Fireplace Screen
+tile.fireplaceScreenGold.name=Gold Fireplace Screen
+
+tile.fireplaceWoodRackIron.name=Iron Fireplace Wood Rack
+tile.fireplaceWoodRackBlackIron.name=Black Iron Fireplace Wood Rack
+tile.fireplaceWoodRackGold.name=Gold Fireplace Wood Rack
+
+tile.foodTroughAcacia.name=Acacia Food Trough
+tile.foodTroughBirch.name=Birch Food Trough
+tile.foodTroughDarkOak.name=Dark Oak Food Trough
+tile.foodTroughJungle.name=Jungle Food Trough
+tile.foodTroughOak.name=Oak Food Trough
+tile.foodTroughSpruce.name=Spruce Food Trough
+
+tile.fountainLavaAndesite.name=Andesite Lava Fountain
+tile.fountainLavaCobblestone.name=Cobblestone Lava Fountain
+tile.fountainLavaDiorite.name=Diorite Lava Fountain
+tile.fountainLavaEndStone.name=End Stone Lava Fountain
+tile.fountainLavaGranite.name=Granite Lava Fountain
+tile.fountainLavaNetherBrick.name=Nether Brick Lava Fountain
+tile.fountainLavaObsidian.name=Obsidian Lava Fountain
+tile.fountainLavaPrismarine.name=Prismarine Lava Fountain
+tile.fountainLavaQuartz.name=Quartz Lava Fountain
+tile.fountainLavaRedSandstone.name=Red Sandstone Lava Fountain
+tile.fountainLavaSandstone.name=Sandstone Lava Fountain
+tile.fountainLavaStone.name=Stone Lava Fountain
+
+tile.fountainWaterAndesite.name=Andesite Water Fountain
+tile.fountainWaterCobblestone.name=Cobblestone Water Fountain
+tile.fountainWaterDiorite.name=Diorite Water Fountain
+tile.fountainWaterEndStone.name=End Stone Water Fountain
+tile.fountainWaterGranite.name=Granite Water Fountain
+tile.fountainWaterNetherBrick.name=Nether Brick Water Fountain
+tile.fountainWaterObsidian.name=Obsidian Water Fountain
+tile.fountainWaterPrismarine.name=Prismarine Water Fountain
+tile.fountainWaterQuartz.name=Quartz Water Fountain
+tile.fountainWaterRedSandstone.name=Red Sandstone Water Fountain
+tile.fountainWaterSandstone.name=Sandstone Water Fountain
+tile.fountainWaterStone.name=Stone Water Fountain
+
+tile.ingotStackIron.name=Iron Ingot Stack
+tile.ingotStackBlackIron.name=Black Iron Ingot Stack
+tile.ingotStackGold.name=Gold Ingot Stack
+tile.ingotStackBricks.name=Brick Stack
+tile.ingotStackNetherBricks.name=Nether Brick Stack
+
+tile.kitchenKettle.name=Kitchen Kettle
+tile.kitchenPot.name=Kitchen Pot
+tile.kitchenShakers.name=Kitchen Shakers
+tile.kitchenTableSetting.name=Kitchen Table Setting
+tile.kitchenWallUtensils.name=Kitchen Wall Utensils
+
+tile.lanternOvalIron.name=Oval Iron Lantern
+tile.lanternOvalBlackIron.name=Oval Black Iron Lantern
+tile.lanternOvalGold.name=Oval Gold Lantern
+
+tile.lanternPyramidIron.name=Pyramid Iron Lantern
+tile.lanternPyramidBlackIron.name=Pyramid Black Iron Lantern
+tile.lanternPyramidGold.name=Pyramid Gold Lantern
+
+tile.lanternPyramidGlassIron.name=Glass Pyramid Iron Lantern
+tile.lanternPyramidGlassBlackIron.name=Glass Pyramid Black Iron Lantern
+tile.lanternPyramidGlassGold.name=Glass Pyramid Gold Lantern
+
+tile.lanternRectangleIron.name=Rectangle Iron Lantern
+tile.lanternRectangleBlackIron.name=Rectangle Black Iron Lantern
+tile.lanternRectangleGold.name=Rectangle Gold Lantern
+
+tile.lanternRectangleGlassIron.name=Glass Rectangle Iron Lantern
+tile.lanternRectangleGlassBlackIron.name=Glass Rectangle Black Iron Lantern
+tile.lanternRectangleGlassGold.name=Glass Rectangle Gold Lantern
+
+tile.mantleAcacia.name=Acacia Mantle
+tile.mantleBirch.name=Birch Mantle
+tile.mantleDarkOak.name=Dark Oak Mantle
+tile.mantleJungle.name=Jungle Mantle
+tile.mantleOak.name=Oak Mantle
+tile.mantleSpruce.name=Spruce Mantle
+
+tile.mantleColumnAcacia.name=Acacia Mantle Column
+tile.mantleColumnBirch.name=Birch Mantle Column
+tile.mantleColumnDarkOak.name=Dark Oak Mantle Column
+tile.mantleColumnJungle.name=Jungle Mantle Column
+tile.mantleColumnOak.name=Oak Mantle Column
+tile.mantleColumnSpruce.name=Spruce Mantle Column
+
+tile.marketCrateAcacia.name=Acacia Market Crate
+tile.marketCrateBirch.name=Birch Market Crate
+tile.marketCrateDarkOak.name=Dark Oak Market Crate
+tile.marketCrateJungle.name=Jungle Market Crate
+tile.marketCrateOak.name=Oak Market Crate
+tile.marketCrateSpruce.name=Spruce Market Crate
+
+tile.marketStandAcacia.name=Acacia Market Stand
+tile.marketStandBirch.name=Birch Market Stand
+tile.marketStandDarkOak.name=Dark Oak Market Stand
+tile.marketStandJungle.name=Jungle Market Stand
+tile.marketStandOak.name=Oak Market Stand
+tile.marketStandSpruce.name=Spruce Market Stand
+
+tile.lanternRoundIron.name=Round Iron Lantern
+tile.lanternRoundBlackIron.name=Round Black Iron Lantern
+tile.lanternRoundGold.name=Round Gold Lantern
+
+tile.palletStackAcacia.name=Acacia Pallet Stack
+tile.palletStackBirch.name=Birch Pallet Stack
+tile.palletStackDarkOak.name=Dark Oak Pallet Stack
+tile.palletStackJungle.name=Jungle Pallet Stack
+tile.palletStackOak.name=Oak Pallet Stack
+tile.palletStackSpruce.name=Spruce Pallet Stack
+
+tile.pillarLargeWoodAcacia.name=Large Acacia Pillar
+tile.pillarLargeWoodBirch.name=Large Birch Pillar
+tile.pillarLargeWoodDarkOak.name=Large Dark Oak Pillar
+tile.pillarLargeWoodJungle.name=Large Jungle Pillar
+tile.pillarLargeWoodOak.name=Large Oak Pillar
+tile.pillarLargeWoodSpruce.name=Large Spruce Pillar
+
+tile.pillarLargeAndesite.name=Large Andesite Pillar
+tile.pillarLargeCobblestone.name=Large Cobblestone Pillar
+tile.pillarLargeDiorite.name=Large Diorite Pillar
+tile.pillarLargeEndStone.name=Large End Stone Pillar
+tile.pillarLargeGranite.name=Large Granite Pillar
+tile.pillarLargeNetherBrick.name=Large Nether Brick Pillar
+tile.pillarLargeObsidian.name=Large Obsidian Pillar
+tile.pillarLargePrismarine.name=Large Prismarine Pillar
+tile.pillarLargeQuartz.name=Large Quartz Pillar
+tile.pillarLargeRedSandstone.name=Large Red Sandstone Pillar
+tile.pillarLargeSandstone.name=Large Sandstone Pillar
+tile.pillarLargeStone.name=Large Stone Pillar
+
+tile.pillarSmallWoodAcacia.name=Small Acacia Pillar
+tile.pillarSmallWoodBirch.name=Small Birch Pillar
+tile.pillarSmallWoodDarkOak.name=Small Dark Oak Pillar
+tile.pillarSmallWoodJungle.name=Small Jungle Pillar
+tile.pillarSmallWoodOak.name=Small Oak Pillar
+tile.pillarSmallWoodSpruce.name=Small Spruce Pillar
+
+tile.pillarSmallAndesite.name=Small Andesite Pillar
+tile.pillarSmallCobblestone.name=Small Cobblestone Pillar
+tile.pillarSmallDiorite.name=Small Diorite Pillar
+tile.pillarSmallEndStone.name=Small End Stone Pillar
+tile.pillarSmallGranite.name=Small Granite Pillar
+tile.pillarSmallNetherBrick.name=Small Nether Brick Pillar
+tile.pillarSmallObsidian.name=Small Obsidian Pillar
+tile.pillarSmallPrismarine.name=Small Prismarine Pillar
+tile.pillarSmallQuartz.name=Small Quartz Pillar
+tile.pillarSmallRedSandstone.name=Small Red Sandstone Pillar
+tile.pillarSmallSandstone.name=Small Sandstone Pillar
+tile.pillarSmallStone.name=Small Stone Pillar
+
+tile.poleIron.name=Iron Pole
+tile.poleBlackIron.name=Black Iron Pole
+tile.poleGold.name=Gold Pole
+
+tile.poleConnectorIron.name=Iron Connector Pole
+tile.poleConnectorBlackIron.name=Black Iron Connector Pole
+tile.poleConnectorGold.name=Gold Connector Pole
+
+tile.poleSignBlackIronAcacia.name=Black Iron Acacia Pole Sign
+tile.poleSignBlackIronBirch.name=Black Iron Birch Pole Sign
+tile.poleSignBlackIronDarkOak.name=Black Iron Dark Oak Pole Sign
+tile.poleSignBlackIronJungle.name=Black Iron Jungle Pole Sign
+tile.poleSignBlackIronOak.name=Black Iron Oak Pole Sign
+tile.poleSignBlackIronSpruce.name=Black Iron Spruce Pole Sign
+
+tile.poleSignIronAcacia.name=Iron Acacia Pole Sign
+tile.poleSignIronBirch.name=Iron Birch Pole Sign
+tile.poleSignIronDarkOak.name=Iron Dark Oak Pole Sign
+tile.poleSignIronJungle.name=Iron Jungle Pole Sign
+tile.poleSignIronOak.name=Iron Oak Pole Sign
+tile.poleSignIronSpruce.name=Iron Spruce Pole Sign
+
+tile.poleSignGoldAcacia.name=Gold Acacia Pole Sign
+tile.poleSignGoldBirch.name=Gold Birch Pole Sign
+tile.poleSignGoldDarkOak.name=Gold Dark Oak Pole Sign
+tile.poleSignGoldJungle.name=Gold Jungle Pole Sign
+tile.poleSignGoldOak.name=Gold Oak Pole Sign
+tile.poleSignGoldSpruce.name=Gold Spruce Pole Sign
+
+tile.shelfAcacia.name=Acacia Shelf
+tile.shelfBirch.name=Birch Shelf
+tile.shelfDarkOak.name=Dark Oak Shelf
+tile.shelfJungle.name=Jungle Shelf
+tile.shelfOak.name=Oak Shelf
+tile.shelfSpruce.name=Spruce Shelf
+
+tile.shopSignCornerCutAcacia.name=Corner Cut Acacia Shop Sign
+tile.shopSignCornerCutBirch.name=Corner Cut Birch Shop Sign
+tile.shopSignCornerCutDarkOak.name=Corner Cut Dark Oak Shop Sign
+tile.shopSignCornerCutJungle.name=Corner Cut Jungle Shop Sign
+tile.shopSignCornerCutOak.name=Corner Cut Oak Shop Sign
+tile.shopSignCornerCutSpruce.name=Corner Cut Spruce Shop Sign
+
+tile.shopSignDomeAcacia.name=Dome Acacia Shop Sign
+tile.shopSignDomeBirch.name=Dome Birch Shop Sign
+tile.shopSignDomeDarkOak.name=Dome Dark Oak Shop Sign
+tile.shopSignDomeJungle.name=Dome Jungle Shop Sign
+tile.shopSignDomeOak.name=Dome Oak Shop Sign
+tile.shopSignDomeSpruce.name=Dome Spruce Shop Sign
+
+tile.shopSignGableAcacia.name=Gable Acacia Shop Sign
+tile.shopSignGableBirch.name=Gable Birch Shop Sign
+tile.shopSignGableDarkOak.name=Gable Dark Oak Shop Sign
+tile.shopSignGableJungle.name=Gable Jungle Shop Sign
+tile.shopSignGableOak.name=Gable Oak Shop Sign
+tile.shopSignGableSpruce.name=Gable Spruce Shop Sign
+
+tile.shopSignHexagonAcacia.name=Hexagon Acacia Shop Sign
+tile.shopSignHexagonBirch.name=Hexagon Birch Shop Sign
+tile.shopSignHexagonDarkOak.name=Hexagon Dark Oak Shop Sign
+tile.shopSignHexagonJungle.name=Hexagon Jungle Shop Sign
+tile.shopSignHexagonOak.name=Hexagon Oak Shop Sign
+tile.shopSignHexagonSpruce.name=Hexagon Spruce Shop Sign
+
+tile.shopSignRoundAcacia.name=Round Acacia Shop Sign
+tile.shopSignRoundBirch.name=Round Birch Shop Sign
+tile.shopSignRoundDarkOak.name=Round Dark Oak Shop Sign
+tile.shopSignRoundJungle.name=Round Jungle Shop Sign
+tile.shopSignRoundOak.name=Round Oak Shop Sign
+tile.shopSignRoundSpruce.name=Round Spruce Shop Sign
+
+tile.shopSignSquareAcacia.name=Square Acacia Shop Sign
+tile.shopSignSquareBirch.name=Square Birch Shop Sign
+tile.shopSignSquareDarkOak.name=Square Dark Oak Shop Sign
+tile.shopSignSquareJungle.name=Square Jungle Shop Sign
+tile.shopSignSquareOak.name=Square Oak Shop Sign
+tile.shopSignSquareSpruce.name=Square Spruce Shop Sign
+
+tile.sofaAcacia.name=Acacia Sofa
+tile.sofaBirch.name=Birch Sofa
+tile.sofaDarkOak.name=Dark Oak Sofa
+tile.sofaJungle.name=Jungle Sofa
+tile.sofaOak.name=Oak Sofa
+tile.sofaSpruce.name=Spruce Sofa
+
+tile.standLargeStoneAndesite.name=Large Andesite Stand
+tile.standLargeStoneCobblestone.name=Large Cobblestone Stand
+tile.standLargeStoneDiamond.name=Large Diamond Stand
+tile.standLargeStoneDiorite.name=Large Diorite Stand
+tile.standLargeStoneEmerald.name=Large Emerald Stand
+tile.standLargeStoneEndStone.name=Large End Stone Stand
+tile.standLargeStoneGranite.name=Large Granite Stand
+tile.standLargeStoneLapis.name=Large Lapis Stand
+tile.standLargeStoneNetherBrick.name=Large NetherBrick Stand
+tile.standLargeStoneObsidian.name=Large Obsidian Stand
+tile.standLargeStonePrismarine.name=Large Prismarine Stand
+tile.standLargeStoneQuartz.name=Large Quartz Stand
+tile.standLargeStoneRedSandstone.name=Large Red Sandstone Stand
+tile.standLargeStoneSandstone.name=Large Sandstone Stand
+tile.standLargeStoneStone.name=Large Stone Stand
+
+tile.standLargeMetalIron.name=Large Iron Stand
+tile.standLargeMetalBlackIron.name=Large Black Iron Stand
+tile.standLargeMetalGold.name=Large Gold Stand
+
+tile.standLargeWoodAcacia.name=Large Acacia Stand
+tile.standLargeWoodBirch.name=Large Birch Stand
+tile.standLargeWoodDarkOak.name=Large Dark Oak Stand
+tile.standLargeWoodJungle.name=Large Jungle Stand
+tile.standLargeWoodOak.name=Large Oak Stand
+tile.standLargeWoodSpruce.name=Large Spruce Stand
+
+tile.standSmallStoneAndesite.name=Small Andesite Stand
+tile.standSmallStoneCobblestone.name=Small Cobblestone Stand
+tile.standSmallStoneDiamond.name=Small Diamond Stand
+tile.standSmallStoneDiorite.name=Small Diorite Stand
+tile.standSmallStoneEmerald.name=Small Emerald Stand
+tile.standSmallStoneEndStone.name=Small End Stone Stand
+tile.standSmallStoneGranite.name=Small Granite Stand
+tile.standSmallStoneLapis.name=Small Lapis Stand
+tile.standSmallStoneNetherBrick.name=Small NetherBrick Stand
+tile.standSmallStoneObsidian.name=Small Obsidian Stand
+tile.standSmallStonePrismarine.name=Small Prismarine Stand
+tile.standSmallStoneQuartz.name=Small Quartz Stand
+tile.standSmallStoneRedSandstone.name=Small Red Sandstone Stand
+tile.standSmallStoneSandstone.name=Small Sandstone Stand
+tile.standSmallStoneStone.name=Small Stone Stand
+
+tile.standSmallMetalIron.name=Small Iron Stand
+tile.standSmallMetalBlackIron.name=Small Black Iron Stand
+tile.standSmallMetalGold.name=Small Gold Stand
+
+tile.standSmallWoodAcacia.name=Small Acacia Stand
+tile.standSmallWoodBirch.name=Small Birch Stand
+tile.standSmallWoodDarkOak.name=Small Dark Oak Stand
+tile.standSmallWoodJungle.name=Small Jungle Stand
+tile.standSmallWoodOak.name=Small Oak Stand
+tile.standSmallWoodSpruce.name=Small Spruce Stand
+
+tile.supportPoleBlackIron.name=Black Iron Support Pole
+tile.supportPoleIron.name=Iron Support Pole
+tile.supportPoleGold.name=Gold Support Pole
+
+tile.tableWoodAcacia.name=Acacia Table
+tile.tableWoodBirch.name=Birch Table
+tile.tableWoodDarkOak.name=Dark Oak Table
+tile.tableWoodJungle.name=Jungle Table
+tile.tableWoodOak.name=Oak Table
+tile.tableWoodSpruce.name=Spruce Table
+
+tile.tileAndesite.name=Andesite Tile
+tile.tileCobblestone.name=Cobblestone Tile
+tile.tileDiamond.name=Diamond Tile
+tile.tileDiorite.name=Diorite Tile
+tile.tileEmerald.name=Emerald Tile
+tile.tileEndStone.name=End Stone Tile
+tile.tileGranite.name=Granite Tile
+tile.tileLapis.name=Lapis Tile
+tile.tileNetherBrick.name=Nether Brick Tile
+tile.tileObsidian.name=Obsidian Tile
+tile.tilePrismarine.name=Prismarine Tile
+tile.tileQuartz.name=Quartz Tile
+tile.tileRedSandstone.name=Red Sandstone Tile
+tile.tileSandstone.name=Sandstone Tile
+tile.tileStone.name=Stone Tile
+tile.tileIron.name=Iron Tile
+tile.tileBlackIron.name=Black Iron Tile
+tile.tileGold.name=Gold Tile
+tile.tileClayWhite.name=White Clay Tile
+tile.tileClayOrange.name=Orange Clay Tile
+tile.tileClayMagenta.name=Magenta Clay Tile
+tile.tileClayLightBlue.name=Light Blue Clay Tile
+tile.tileClayYellow.name=Yellow Clay Tile
+tile.tileClayLime.name=Lime Clay Tile
+tile.tileClayPink.name=Pink Clay Tile
+tile.tileClayGray.name=Gray Clay Tile
+tile.tileClayLightGray.name=Light Gray Clay Tile
+tile.tileClayCyan.name=Cyan Clay Tile
+tile.tileClayPurple.name=Purple Clay Tile
+tile.tileClayBlue.name=Blue Clay Tile
+tile.tileClayBrown.name=Brown Clay Tile
+tile.tileClayGreen.name=Green Clay Tile
+tile.tileClayRed.name=Red Clay Tile
+tile.tileClayBlack.name=Black Clay Tile
+
+tile.wallLanternIron.name=Iron Wall Lantern
+tile.wallLanternBlackIron.name=Black Iron Wall Lantern
+tile.wallLanternGold.name=Gold Wall Lantern
+
+tile.waterTroughAcacia.name=Acacia Water Trough
+tile.waterTroughBirch.name=Birch Water Trough
+tile.waterTroughDarkOak.name=Dark Oak Water Trough
+tile.waterTroughJungle.name=Jungle Water Trough
+tile.waterTroughOak.name=Oak Water Trough
+tile.waterTroughSpruce.name=Spruce Water Trough
+
+tile.woodBoxAcacia.name=Acacia Box
+tile.woodBoxBirch.name=Birch Box
+tile.woodBoxDarkOak.name=Dark Oak Box
+tile.woodBoxJungle.name=Jungle Box
+tile.woodBoxOak.name=Oak Box
+tile.woodBoxSpruce.name=Spruce Box
+
+tile.woodCrateAcacia.name=Acacia Crate
+tile.woodCrateBirch.name=Birch Crate
+tile.woodCrateDarkOak.name=Dark Oak Crate
+tile.woodCrateJungle.name=Jungle Crate
+tile.woodCrateOak.name=Oak Crate
+tile.woodCrateSpruce.name=Spruce Crate
+
+tile.woodPanelAcacia.name=Acacia Panel
+tile.woodPanelBirch.name=Birch Panel
+tile.woodPanelDarkOak.name=Dark Oak Panel
+tile.woodPanelJungle.name=Jungle Panel
+tile.woodPanelOak.name=Oak Panel
+tile.woodPanelSpruce.name=Spruce Panel
+
+tile.woodBarkPanelAcacia.name=Acacia Bark Panel
+tile.woodBarkPanelBirch.name=Birch Bark Panel
+tile.woodBarkPanelDarkOak.name=Dark Oak Bark Panel
+tile.woodBarkPanelJungle.name=Jungle Bark Panel
+tile.woodBarkPanelOak.name=Oak Bark Panel
+tile.woodBarkPanelSpruce.name=Spruce Bark Panel
+
+tile.woodTimberAcacia.name=Acacia Timber
+tile.woodTimberBirch.name=Birch Timber
+tile.woodTimberDarkOak.name=Dark Oak Timber
+tile.woodTimberJungle.name=Jungle Timber
+tile.woodTimberOak.name=Oak Wood Timber
+tile.woodTimberSpruce.name=Spruce Timber
+
+tile.woodTimberConnectorAcacia.name=Acacia Timber Connector
+tile.woodTimberConnectorBirch.name=Birch Timber Connector
+tile.woodTimberConnectorDarkOak.name=Dark Oak Timber Connector
+tile.woodTimberConnectorJungle.name=Jungle Timber Connector
+tile.woodTimberConnectorOak.name=Oak Timber Connector
+tile.woodTimberConnectorSpruce.name=Spruce Timber Connector
+
+tile.woodBarkTimberAcacia.name=Acacia Bark Timber
+tile.woodBarkTimberBirch.name=Birch Bark Timber
+tile.woodBarkTimberDarkOak.name=Dark Oak Bark Timber
+tile.woodBarkTimberJungle.name=Jungle Bark Timber
+tile.woodBarkTimberOak.name=Oak Wood Bark Timber
+tile.woodBarkTimberSpruce.name=Spruce Bark Timber
+
+tile.woodBarkTimberConnectorAcacia.name=Acacia Bark Timber Connector
+tile.woodBarkTimberConnectorBirch.name=Birch Bark Timber Connector
+tile.woodBarkTimberConnectorDarkOak.name=Dark Oak Bark Timber Connector
+tile.woodBarkTimberConnectorJungle.name=Jungle Bark Timber Connector
+tile.woodBarkTimberConnectorOak.name=Oak Bark Timber Connector
+tile.woodBarkTimberConnectorSpruce.name=Spruce Bark Timber Connector
+
+tile.woodTrimAcacia.name=Acacia Trim
+tile.woodTrimBirch.name=Birch Trim
+tile.woodTrimDarkOak.name=Dark Oak Trim
+tile.woodTrimJungle.name=Jungle Trim
+tile.woodTrimOak.name=Oak Trim
+tile.woodTrimSpruce.name=Spruce Trim
+
+tile.woodBarkTrimAcacia.name=Acacia Bark Trim
+tile.woodBarkTrimBirch.name=Birch Bark Trim
+tile.woodBarkTrimDarkOak.name=Dark Oak Bark Trim
+tile.woodBarkTrimJungle.name=Jungle Bark Trim
+tile.woodBarkTrimOak.name=Oak Bark Trim
+tile.woodBarkTrimSpruce.name=Spruce Bark Trim
+
+tile.workbenchFoundry.name=Foundry
+tile.workbenchSaw.name=Cutting Table

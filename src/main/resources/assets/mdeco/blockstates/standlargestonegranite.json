@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStoneGranite"},
+"facing=south":{"model":"mdeco:standLargeStoneGranite","y":180},
+"facing=west":{"model":"mdeco:standLargeStoneGranite","y":270},
+"facing=east":{"model":"mdeco:standLargeStoneGranite","y":90}
+}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"connected=0":{"model":"mdeco:standSmallStoneGranite0"},
+"connected=1":{"model":"mdeco:standSmallStoneGranite1"},
+"connected=2":{"model":"mdeco:standSmallStoneGranite2"},
+"connected=3":{"model":"mdeco:standSmallStoneGranite3"}
+}
+}

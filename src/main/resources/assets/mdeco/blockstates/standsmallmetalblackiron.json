@@ -1,0 +1,8 @@
+{
+"variants":{
+"connected=0":{"model":"mdeco:standSmallMetalBlackIron0"},
+"connected=1":{"model":"mdeco:standSmallMetalBlackIron1"},
+"connected=2":{"model":"mdeco:standSmallMetalBlackIron2"},
+"connected=3":{"model":"mdeco:standSmallMetalBlackIron3"}
+}
+}

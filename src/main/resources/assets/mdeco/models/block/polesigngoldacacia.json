@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_poleSign",
+"textures":{
+"primary":"minecraft:blocks/planks_acacia",
+"hardware":"minecraft:blocks/gold_block"}
+}

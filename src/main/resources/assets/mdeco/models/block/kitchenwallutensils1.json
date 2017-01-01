@@ -1,0 +1,5 @@
+{
+"parent":"mdeco:block/_kitchenWallUtensils1",
+"textures":{
+"primary":"mdeco:blocks/blockBlackIron"}
+}

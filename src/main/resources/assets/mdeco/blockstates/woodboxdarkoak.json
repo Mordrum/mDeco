@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:woodBoxDarkOak"},
+"facing=south":{"model":"mdeco:woodBoxDarkOak","y":180},
+"facing=west":{"model":"mdeco:woodBoxDarkOak","y":270},
+"facing=east":{"model":"mdeco:woodBoxDarkOak","y":90}
+}
+}

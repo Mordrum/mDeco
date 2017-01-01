@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_standSmallStone2",
+"textures":{
+"primary":"minecraft:blocks/quartz_block_top",
+"trim":"minecraft:blocks/quartz_block_top"}
+}

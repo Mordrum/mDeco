@@ -1,0 +1,8 @@
+{
+"variants":{
+"axis=x":{"model":"mdeco:pillarSmallObsidian_side","y":90},
+"axis=y":{"model":"mdeco:pillarSmallObsidian"},
+"axis=z":{"model":"mdeco:pillarSmallObsidian_side"},
+"axis=none":{"model":"mdeco:pillarSmallObsidian"}
+}
+}

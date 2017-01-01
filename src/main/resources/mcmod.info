@@ -1,0 +1,14 @@
+[
+{
+  "modid": "decorationmegapack",
+  "name": "Decoration Mega Pack",
+  "description": "Add a large variety of decorations",
+  "url": "http://10paksmods.net",
+  "updateUrl": "",
+  "authorList": ["10paktimbits"],
+  "credits": "",
+  "logoFile": "decorationmegapack.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

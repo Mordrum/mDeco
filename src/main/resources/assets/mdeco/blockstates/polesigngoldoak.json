@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:poleSignGoldOak"},
+"facing=south":{"model":"mdeco:poleSignGoldOak","y":180},
+"facing=west":{"model":"mdeco:poleSignGoldOak","y":270},
+"facing=east":{"model":"mdeco:poleSignGoldOak","y":90}
+}
+}

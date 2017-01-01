@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_marketCrate0",
+"textures":{
+"primary":"minecraft:blocks/planks_acacia",
+"trim":"minecraft:blocks/log_acacia"}
+}

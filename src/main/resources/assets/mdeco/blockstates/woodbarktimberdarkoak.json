@@ -1,0 +1,16 @@
+{
+"variants":{
+"connected=0,orientation=0":{"model":"mdeco:woodBarkTimberDarkOak0","x":270,"y":90},
+"connected=1,orientation=0":{"model":"mdeco:woodBarkTimberDarkOak1","x":270,"y":90},
+"connected=2,orientation=0":{"model":"mdeco:woodBarkTimberDarkOak2","x":270,"y":90},
+"connected=3,orientation=0":{"model":"mdeco:woodBarkTimberDarkOak3","x":270,"y":90},
+"connected=0,orientation=1":{"model":"mdeco:woodBarkTimberDarkOak0"},
+"connected=1,orientation=1":{"model":"mdeco:woodBarkTimberDarkOak1"},
+"connected=2,orientation=1":{"model":"mdeco:woodBarkTimberDarkOak2"},
+"connected=3,orientation=1":{"model":"mdeco:woodBarkTimberDarkOak3"},
+"connected=0,orientation=2":{"model":"mdeco:woodBarkTimberDarkOak0","x":270},
+"connected=1,orientation=2":{"model":"mdeco:woodBarkTimberDarkOak1","x":270,"y":180},
+"connected=2,orientation=2":{"model":"mdeco:woodBarkTimberDarkOak2","x":270,"y":180},
+"connected=3,orientation=2":{"model":"mdeco:woodBarkTimberDarkOak3","x":270}
+}
+}

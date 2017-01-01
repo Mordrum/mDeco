@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:cabinetWallGlassSpruce"},
+"facing=south":{"model":"mdeco:cabinetWallGlassSpruce","y":180},
+"facing=west":{"model":"mdeco:cabinetWallGlassSpruce","y":270},
+"facing=east":{"model":"mdeco:cabinetWallGlassSpruce","y":90}
+}
+}

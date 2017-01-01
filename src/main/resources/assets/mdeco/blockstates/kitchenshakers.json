@@ -1,0 +1,12 @@
+{
+"variants":{
+"facing=north,variant=basic":{"model":"mdeco:kitchenShakers0"},
+"facing=east,variant=basic":{"model":"mdeco:kitchenShakers0","y":90},
+"facing=south,variant=basic":{"model":"mdeco:kitchenShakers0","y":180},
+"facing=west,variant=basic":{"model":"mdeco:kitchenShakers0","y":270},
+"facing=north,variant=napkin_holder":{"model":"mdeco:kitchenShakers1"},
+"facing=east,variant=napkin_holder":{"model":"mdeco:kitchenShakers1","y":90},
+"facing=south,variant=napkin_holder":{"model":"mdeco:kitchenShakers1","y":180},
+"facing=west,variant=napkin_holder":{"model":"mdeco:kitchenShakers1","y":270}
+}
+}

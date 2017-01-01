@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_wallLantern",
+"textures":{
+"primary":"minecraft:blocks/iron_block",
+"trim":"minecraft:blocks/glass_silver",
+"hardware":"mdeco:blocks/candle"}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:coinStackGold"},
+"facing=south":{"model":"mdeco:coinStackGold","y":180},
+"facing=west":{"model":"mdeco:coinStackGold","y":270},
+"facing=east":{"model":"mdeco:coinStackGold","y":90}
+}
+}

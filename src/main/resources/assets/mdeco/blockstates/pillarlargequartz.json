@@ -1,0 +1,8 @@
+{
+"variants":{
+"axis=x":{"model":"mdeco:pillarLargeQuartz_side","y":90},
+"axis=y":{"model":"mdeco:pillarLargeQuartz"},
+"axis=z":{"model":"mdeco:pillarLargeQuartz_side"},
+"axis=none":{"model":"mdeco:pillarLargeQuartz"}
+}
+}

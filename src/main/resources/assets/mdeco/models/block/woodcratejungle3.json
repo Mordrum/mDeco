@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_woodCrate3",
+"textures":{
+"primary":"minecraft:blocks/planks_jungle",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

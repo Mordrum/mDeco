@@ -1,0 +1,7 @@
+{
+"parent":"block/outer_stairs",
+"textures":{
+"bottom":"mdeco:blocks/ancientBrickGray_normal",
+"top":"mdeco:blocks/ancientBrickGray_normal",
+"side":"mdeco:blocks/ancientBrickGray_normal"}
+}

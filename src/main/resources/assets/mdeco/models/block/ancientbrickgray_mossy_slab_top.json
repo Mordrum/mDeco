@@ -1,0 +1,7 @@
+{
+"parent":"block/upper_slab",
+"textures":{
+"bottom":"mdeco:blocks/ancientBrickGray_mossy",
+"top":"mdeco:blocks/ancientBrickGray_mossy",
+"side":"mdeco:blocks/ancientBrickGray_mossy"}
+}

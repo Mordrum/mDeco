@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_cabinetBase",
+"textures":{
+"primary":"minecraft:blocks/planks_big_oak",
+"trim":"minecraft:blocks/log_big_oak_top",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

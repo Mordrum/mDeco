@@ -1,0 +1,5 @@
+{
+"parent":"mdeco:block/_poleMetalConnector7",
+"textures":{
+"primary":"minecraft:blocks/gold_block"}
+}

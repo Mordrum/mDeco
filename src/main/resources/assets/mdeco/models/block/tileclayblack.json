@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_tile",
+"textures":{
+"primary":"mdeco:blocks/clay_bordered_black",
+"trim":"mdeco:blocks/clay_bordered_black"}
+}

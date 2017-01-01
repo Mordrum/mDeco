@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_palletStack4",
+"textures":{
+"primary":"minecraft:blocks/planks_big_oak",
+"trim":"minecraft:blocks/log_big_oak"}
+}

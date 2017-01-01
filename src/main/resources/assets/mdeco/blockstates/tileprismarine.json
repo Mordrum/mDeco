@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:tilePrismarine"},
+"facing=south":{"model":"mdeco:tilePrismarine","y":180},
+"facing=west":{"model":"mdeco:tilePrismarine","y":270},
+"facing=east":{"model":"mdeco:tilePrismarine","y":90}
+}
+}

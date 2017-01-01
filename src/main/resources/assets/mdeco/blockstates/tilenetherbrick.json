@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:tileNetherBrick"},
+"facing=south":{"model":"mdeco:tileNetherBrick","y":180},
+"facing=west":{"model":"mdeco:tileNetherBrick","y":270},
+"facing=east":{"model":"mdeco:tileNetherBrick","y":90}
+}
+}

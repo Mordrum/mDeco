@@ -1,0 +1,12 @@
+{
+"variants":{
+"active=false,facing=north":{"model":"mdeco:workbenchSaw0"},
+"active=false,facing=south":{"model":"mdeco:workbenchSaw0","y":180},
+"active=false,facing=west":{"model":"mdeco:workbenchSaw0","y":270},
+"active=false,facing=east":{"model":"mdeco:workbenchSaw0","y":90},
+"active=true,facing=north":{"model":"mdeco:workbenchSaw1"},
+"active=true,facing=south":{"model":"mdeco:workbenchSaw1","y":180},
+"active=true,facing=west":{"model":"mdeco:workbenchSaw1","y":270},
+"active=true,facing=east":{"model":"mdeco:workbenchSaw1","y":90}
+}
+}

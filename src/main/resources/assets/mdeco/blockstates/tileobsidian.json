@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:tileObsidian"},
+"facing=south":{"model":"mdeco:tileObsidian","y":180},
+"facing=west":{"model":"mdeco:tileObsidian","y":270},
+"facing=east":{"model":"mdeco:tileObsidian","y":90}
+}
+}

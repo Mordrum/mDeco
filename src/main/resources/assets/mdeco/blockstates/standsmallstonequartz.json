@@ -1,0 +1,8 @@
+{
+"variants":{
+"connected=0":{"model":"mdeco:standSmallStoneQuartz0"},
+"connected=1":{"model":"mdeco:standSmallStoneQuartz1"},
+"connected=2":{"model":"mdeco:standSmallStoneQuartz2"},
+"connected=3":{"model":"mdeco:standSmallStoneQuartz3"}
+}
+}

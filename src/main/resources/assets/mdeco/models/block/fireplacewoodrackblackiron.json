@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_fireplaceWoodRack",
+"textures":{
+"primary":"minecraft:blocks/log_oak",
+"trim":"minecraft:blocks/log_oak_top",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

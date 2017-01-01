@@ -1,0 +1,8 @@
+{
+"variants":{
+"half=bottom,variant=normal":{"model":"mdeco:ancientBrickTan_normal_slab_bottom"},
+"half=top,variant=normal":{"model":"mdeco:ancientBrickTan_normal_slab_top"},
+"half=bottom,variant=mossy":{"model":"mdeco:ancientBrickTan_mossy_slab_bottom"},
+"half=top,variant=mossy":{"model":"mdeco:ancientBrickTan_mossy_slab_top"}
+}
+}

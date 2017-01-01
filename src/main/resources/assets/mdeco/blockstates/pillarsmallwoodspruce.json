@@ -1,0 +1,8 @@
+{
+"variants":{
+"axis=x":{"model":"mdeco:pillarSmallWoodSpruce_side","y":90},
+"axis=y":{"model":"mdeco:pillarSmallWoodSpruce"},
+"axis=z":{"model":"mdeco:pillarSmallWoodSpruce_side"},
+"axis=none":{"model":"mdeco:pillarSmallWoodSpruce"}
+}
+}

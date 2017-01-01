@@ -1,0 +1,12 @@
+{
+"variants":{
+"axis=x,variant=normal":{"model":"mdeco:ancientBrickGray_normal_pillar_large_side","y":90},
+"axis=y,variant=normal":{"model":"mdeco:ancientBrickGray_normal_pillar_large"},
+"axis=z,variant=normal":{"model":"mdeco:ancientBrickGray_normal_pillar_large_side"},
+"axis=none,variant=normal":{"model":"mdeco:ancientBrickGray_normal_pillar_large"},
+"axis=x,variant=mossy":{"model":"mdeco:ancientBrickGray_mossy_pillar_large_side","y":90},
+"axis=y,variant=mossy":{"model":"mdeco:ancientBrickGray_mossy_pillar_large"},
+"axis=z,variant=mossy":{"model":"mdeco:ancientBrickGray_mossy_pillar_large_side"},
+"axis=none,variant=mossy":{"model":"mdeco:ancientBrickGray_mossy_pillar_large"}
+}
+}

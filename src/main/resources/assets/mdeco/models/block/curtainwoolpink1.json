@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_curtainWool1",
+"textures":{
+"primary":"minecraft:blocks/wool_colored_pink",
+"trim":"minecraft:blocks/wool_colored_pink"}
+}

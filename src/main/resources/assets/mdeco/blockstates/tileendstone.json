@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:tileEndStone"},
+"facing=south":{"model":"mdeco:tileEndStone","y":180},
+"facing=west":{"model":"mdeco:tileEndStone","y":270},
+"facing=east":{"model":"mdeco:tileEndStone","y":90}
+}
+}

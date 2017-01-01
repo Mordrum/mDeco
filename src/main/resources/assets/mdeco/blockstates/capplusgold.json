@@ -1,0 +1,10 @@
+{
+"variants":{
+"connected=0":{"model":"mdeco:capPlusGold","x":180},
+"connected=1":{"model":"mdeco:capPlusGold"},
+"connected=2":{"model":"mdeco:capPlusGold","x":90},
+"connected=3":{"model":"mdeco:capPlusGold","x":270},
+"connected=4":{"model":"mdeco:capPlusGold","x":90,"y":270},
+"connected=5":{"model":"mdeco:capPlusGold","x":270,"y":270}
+}
+}

@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_standLargeStone",
+"textures":{
+"primary":"minecraft:blocks/stone_diorite",
+"trim":"minecraft:blocks/stone_diorite_smooth"}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:fireplacePokerSetBlackIron"},
+"facing=south":{"model":"mdeco:fireplacePokerSetBlackIron","y":180},
+"facing=west":{"model":"mdeco:fireplacePokerSetBlackIron","y":270},
+"facing=east":{"model":"mdeco:fireplacePokerSetBlackIron","y":90}
+}
+}

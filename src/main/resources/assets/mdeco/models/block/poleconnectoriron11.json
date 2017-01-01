@@ -1,0 +1,5 @@
+{
+"parent":"mdeco:block/_poleMetalConnector11",
+"textures":{
+"primary":"minecraft:blocks/iron_block"}
+}

@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_woodTimber1",
+"textures":{
+"primary":"minecraft:blocks/planks_birch",
+"trim":"minecraft:blocks/planks_birch"}
+}

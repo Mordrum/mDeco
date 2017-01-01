@@ -1,0 +1,8 @@
+{
+"variants":{
+"connected=0":{"model":"mdeco:standSmallStoneDiorite0"},
+"connected=1":{"model":"mdeco:standSmallStoneDiorite1"},
+"connected=2":{"model":"mdeco:standSmallStoneDiorite2"},
+"connected=3":{"model":"mdeco:standSmallStoneDiorite3"}
+}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"axis=x":{"model":"mdeco:pillarLargeDiorite_side","y":90},
+"axis=y":{"model":"mdeco:pillarLargeDiorite"},
+"axis=z":{"model":"mdeco:pillarLargeDiorite_side"},
+"axis=none":{"model":"mdeco:pillarLargeDiorite"}
+}
+}

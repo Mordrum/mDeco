@@ -1,0 +1,12 @@
+{
+"variants":{
+"facing=north,variant=lid_off":{"model":"mdeco:kitchenKettle0"},
+"facing=east,variant=lid_off":{"model":"mdeco:kitchenKettle0","y":90},
+"facing=south,variant=lid_off":{"model":"mdeco:kitchenKettle0","y":180},
+"facing=west,variant=lid_off":{"model":"mdeco:kitchenKettle0","y":270},
+"facing=north,variant=lid_on":{"model":"mdeco:kitchenKettle1"},
+"facing=east,variant=lid_on":{"model":"mdeco:kitchenKettle1","y":90},
+"facing=south,variant=lid_on":{"model":"mdeco:kitchenKettle1","y":180},
+"facing=west,variant=lid_on":{"model":"mdeco:kitchenKettle1","y":270}
+}
+}

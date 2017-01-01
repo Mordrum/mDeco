@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_mantleColumn2",
+"textures":{
+"primary":"minecraft:blocks/planks_jungle",
+"trim":"minecraft:blocks/log_jungle"}
+}

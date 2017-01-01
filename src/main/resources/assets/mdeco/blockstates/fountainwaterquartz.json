@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:fountainWaterQuartz"},
+"facing=south":{"model":"mdeco:fountainWaterQuartz","y":180},
+"facing=west":{"model":"mdeco:fountainWaterQuartz","y":270},
+"facing=east":{"model":"mdeco:fountainWaterQuartz","y":90}
+}
+}

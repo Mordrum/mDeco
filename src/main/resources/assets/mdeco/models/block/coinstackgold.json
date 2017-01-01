@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_coinStack",
+"textures":{
+"primary":"minecraft:blocks/gold_block",
+"trim":""}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:shopSignHexagonSpruce"},
+"facing=south":{"model":"mdeco:shopSignHexagonSpruce","y":180},
+"facing=west":{"model":"mdeco:shopSignHexagonSpruce","y":270},
+"facing=east":{"model":"mdeco:shopSignHexagonSpruce","y":90}
+}
+}

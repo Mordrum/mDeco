@@ -1,0 +1,5 @@
+{
+"parent":"mdeco:block/_headstone_rounded",
+"textures":{
+"texture":"mdeco:blocks/ancientBrickGray_normal"}
+}

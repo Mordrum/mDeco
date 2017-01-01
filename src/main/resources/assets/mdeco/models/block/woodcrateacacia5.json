@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_woodCrate5",
+"textures":{
+"primary":"minecraft:blocks/planks_acacia",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStoneAndesite"},
+"facing=south":{"model":"mdeco:standLargeStoneAndesite","y":180},
+"facing=west":{"model":"mdeco:standLargeStoneAndesite","y":270},
+"facing=east":{"model":"mdeco:standLargeStoneAndesite","y":90}
+}
+}

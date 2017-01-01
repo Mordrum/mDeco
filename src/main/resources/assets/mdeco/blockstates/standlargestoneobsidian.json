@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStoneObsidian"},
+"facing=south":{"model":"mdeco:standLargeStoneObsidian","y":180},
+"facing=west":{"model":"mdeco:standLargeStoneObsidian","y":270},
+"facing=east":{"model":"mdeco:standLargeStoneObsidian","y":90}
+}
+}

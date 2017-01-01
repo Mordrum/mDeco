@@ -1,0 +1,10 @@
+{
+"variants":{
+"connected=0":{"model":"mdeco:capSmallPyramidBlackIron","x":180},
+"connected=1":{"model":"mdeco:capSmallPyramidBlackIron"},
+"connected=2":{"model":"mdeco:capSmallPyramidBlackIron","x":90},
+"connected=3":{"model":"mdeco:capSmallPyramidBlackIron","x":270},
+"connected=4":{"model":"mdeco:capSmallPyramidBlackIron","x":90,"y":270},
+"connected=5":{"model":"mdeco:capSmallPyramidBlackIron","x":270,"y":270}
+}
+}

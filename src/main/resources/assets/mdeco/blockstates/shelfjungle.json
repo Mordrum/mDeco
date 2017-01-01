@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:shelfJungle"},
+"facing=south":{"model":"mdeco:shelfJungle","y":180},
+"facing=west":{"model":"mdeco:shelfJungle","y":270},
+"facing=east":{"model":"mdeco:shelfJungle","y":90}
+}
+}

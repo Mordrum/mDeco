@@ -1,0 +1,10 @@
+{
+"variants":{
+"connected=0":{"model":"mdeco:capSquareIron","x":180},
+"connected=1":{"model":"mdeco:capSquareIron"},
+"connected=2":{"model":"mdeco:capSquareIron","x":90},
+"connected=3":{"model":"mdeco:capSquareIron","x":270},
+"connected=4":{"model":"mdeco:capSquareIron","x":90,"y":270},
+"connected=5":{"model":"mdeco:capSquareIron","x":270,"y":270}
+}
+}

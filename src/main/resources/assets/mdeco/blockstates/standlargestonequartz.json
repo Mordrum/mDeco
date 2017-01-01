@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStoneQuartz"},
+"facing=south":{"model":"mdeco:standLargeStoneQuartz","y":180},
+"facing=west":{"model":"mdeco:standLargeStoneQuartz","y":270},
+"facing=east":{"model":"mdeco:standLargeStoneQuartz","y":90}
+}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:tileQuartz"},
+"facing=south":{"model":"mdeco:tileQuartz","y":180},
+"facing=west":{"model":"mdeco:tileQuartz","y":270},
+"facing=east":{"model":"mdeco:tileQuartz","y":90}
+}
+}

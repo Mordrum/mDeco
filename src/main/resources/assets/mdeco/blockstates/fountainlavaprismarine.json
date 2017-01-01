@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:fountainLavaPrismarine"},
+"facing=south":{"model":"mdeco:fountainLavaPrismarine","y":180},
+"facing=west":{"model":"mdeco:fountainLavaPrismarine","y":270},
+"facing=east":{"model":"mdeco:fountainLavaPrismarine","y":90}
+}
+}

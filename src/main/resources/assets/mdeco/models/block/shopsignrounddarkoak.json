@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_shopSignRound",
+"textures":{
+"primary":"minecraft:blocks/planks_big_oak",
+"trim":"minecraft:blocks/log_big_oak",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

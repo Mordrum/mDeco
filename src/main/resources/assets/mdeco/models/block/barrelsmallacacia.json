@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_barrelSmall",
+"textures":{
+"primary":"minecraft:blocks/planks_acacia",
+"trim":"minecraft:blocks/log_acacia",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

@@ -1,0 +1,80 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "#primary"
+    },
+    "elements": [
+        {
+            "from": [7,0,6.5],
+            "to": [9,16,7],
+            "faces": {
+                "west": {
+                    "uv": [15.5,0,16,16],
+                    "texture": "#primary"
+                },
+                "east": {
+                    "uv": [15.5,0,16,16],
+                    "texture": "#primary"
+                },
+                "north": {
+                    "uv": [14,0,16,16],
+                    "texture": "#primary"
+                }
+            }
+        },
+        {
+            "from": [7,0,9],
+            "to": [9,16,9.5],
+            "faces": {
+                "west": {
+                    "uv": [15.5,0,16,16],
+                    "texture": "#primary"
+                },
+                "east": {
+                    "uv": [15.5,0,16,16],
+                    "texture": "#primary"
+                },
+                "south": {
+                    "uv": [14,0,16,16],
+                    "texture": "#primary"
+                }
+            }
+        },
+        {
+            "from": [6.5,0,7],
+            "to": [7,16,9],
+            "faces": {
+                "west": {
+                    "uv": [14,0,16,16],
+                    "texture": "#primary"
+                },
+                "north": {
+                    "uv": [15.5,0,16,16],
+                    "texture": "#primary"
+                },
+                "south": {
+                    "uv": [15.5,0,16,16],
+                    "texture": "#primary"
+                }
+            }
+        },
+        {
+            "from": [9,0,7],
+            "to": [9.5,16,9],
+            "faces": {
+                "east": {
+                    "uv": [14,0,16,16],
+                    "texture": "#primary"
+                },
+                "north": {
+                    "uv": [15.5,0,16,16],
+                    "texture": "#primary"
+                },
+                "south": {
+                    "uv": [15.5,0,16,16],
+                    "texture": "#primary"
+                }
+            }
+        }
+    ]
+}

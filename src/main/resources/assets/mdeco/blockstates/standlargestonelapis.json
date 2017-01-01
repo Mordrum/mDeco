@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStoneLapis"},
+"facing=south":{"model":"mdeco:standLargeStoneLapis","y":180},
+"facing=west":{"model":"mdeco:standLargeStoneLapis","y":270},
+"facing=east":{"model":"mdeco:standLargeStoneLapis","y":90}
+}
+}

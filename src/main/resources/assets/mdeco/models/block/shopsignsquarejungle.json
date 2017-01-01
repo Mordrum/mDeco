@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_shopSignSquare",
+"textures":{
+"primary":"minecraft:blocks/planks_jungle",
+"trim":"minecraft:blocks/log_jungle",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

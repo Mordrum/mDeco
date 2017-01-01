@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_standSmallStone3",
+"textures":{
+"primary":"minecraft:blocks/emerald_block",
+"trim":"minecraft:blocks/emerald_block"}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:kitchenTableSetting"},
+"facing=south":{"model":"mdeco:kitchenTableSetting","y":180},
+"facing=west":{"model":"mdeco:kitchenTableSetting","y":270},
+"facing=east":{"model":"mdeco:kitchenTableSetting","y":90}
+}
+}

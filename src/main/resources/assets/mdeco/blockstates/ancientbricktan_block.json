@@ -1,0 +1,6 @@
+{
+"variants":{
+"variant=normal":{"model":"mdeco:ancientBrickTan_normal_block"},
+"variant=mossy":{"model":"mdeco:ancientBrickTan_mossy_block"}
+}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:tileGranite"},
+"facing=south":{"model":"mdeco:tileGranite","y":180},
+"facing=west":{"model":"mdeco:tileGranite","y":270},
+"facing=east":{"model":"mdeco:tileGranite","y":90}
+}
+}

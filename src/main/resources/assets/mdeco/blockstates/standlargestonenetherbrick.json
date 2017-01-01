@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStoneNetherBrick"},
+"facing=south":{"model":"mdeco:standLargeStoneNetherBrick","y":180},
+"facing=west":{"model":"mdeco:standLargeStoneNetherBrick","y":270},
+"facing=east":{"model":"mdeco:standLargeStoneNetherBrick","y":90}
+}
+}

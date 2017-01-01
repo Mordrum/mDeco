@@ -1,0 +1,5 @@
+{
+"parent":"mdeco:block/_poleMetal0",
+"textures":{
+"primary":"minecraft:blocks/iron_block"}
+}

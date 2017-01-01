@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_woodBarkTimberConnector9",
+"textures":{
+"primary":"minecraft:blocks/log_big_oak",
+"trim":"minecraft:blocks/log_big_oak_top"}
+}

@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_waterTrough0",
+"textures":{
+"primary":"minecraft:blocks/planks_acacia",
+"trim":"minecraft:blocks/log_acacia",
+"hardware":"minecraft:blocks/water_still"}
+}

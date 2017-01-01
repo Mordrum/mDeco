@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:curioTopBlackIron"},
+"facing=south":{"model":"mdeco:curioTopBlackIron","y":180},
+"facing=west":{"model":"mdeco:curioTopBlackIron","y":270},
+"facing=east":{"model":"mdeco:curioTopBlackIron","y":90}
+}
+}

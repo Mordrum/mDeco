@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStoneEndStone"},
+"facing=south":{"model":"mdeco:standLargeStoneEndStone","y":180},
+"facing=west":{"model":"mdeco:standLargeStoneEndStone","y":270},
+"facing=east":{"model":"mdeco:standLargeStoneEndStone","y":90}
+}
+}

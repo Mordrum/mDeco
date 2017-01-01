@@ -1,0 +1,8 @@
+{
+"variants":{
+"connected=0":{"model":"mdeco:standSmallStoneLapis0"},
+"connected=1":{"model":"mdeco:standSmallStoneLapis1"},
+"connected=2":{"model":"mdeco:standSmallStoneLapis2"},
+"connected=3":{"model":"mdeco:standSmallStoneLapis3"}
+}
+}

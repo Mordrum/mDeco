@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:tileRedSandstone"},
+"facing=south":{"model":"mdeco:tileRedSandstone","y":180},
+"facing=west":{"model":"mdeco:tileRedSandstone","y":270},
+"facing=east":{"model":"mdeco:tileRedSandstone","y":90}
+}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:fireplaceWoodRackGold"},
+"facing=south":{"model":"mdeco:fireplaceWoodRackGold","y":180},
+"facing=west":{"model":"mdeco:fireplaceWoodRackGold","y":270},
+"facing=east":{"model":"mdeco:fireplaceWoodRackGold","y":90}
+}
+}

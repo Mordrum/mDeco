@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStoneDiamond"},
+"facing=south":{"model":"mdeco:standLargeStoneDiamond","y":180},
+"facing=west":{"model":"mdeco:standLargeStoneDiamond","y":270},
+"facing=east":{"model":"mdeco:standLargeStoneDiamond","y":90}
+}
+}

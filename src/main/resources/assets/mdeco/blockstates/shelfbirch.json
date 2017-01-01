@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:shelfBirch"},
+"facing=south":{"model":"mdeco:shelfBirch","y":180},
+"facing=west":{"model":"mdeco:shelfBirch","y":270},
+"facing=east":{"model":"mdeco:shelfBirch","y":90}
+}
+}

@@ -1,0 +1,5 @@
+{
+"parent":"mdeco:block/_wall_ne",
+"textures":{
+"wall":"mdeco:blocks/ancientBrickGray_mossy"}
+}

@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_foodTrough0",
+"textures":{
+"primary":"minecraft:blocks/planks_birch",
+"trim":"minecraft:blocks/log_birch",
+"hardware":"minecraft:blocks/hay_block_top"}
+}

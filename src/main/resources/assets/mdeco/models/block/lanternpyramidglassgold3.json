@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_lanternPyramidGlass3",
+"textures":{
+"primary":"minecraft:blocks/gold_block",
+"trim":"minecraft:blocks/glass_white",
+"candle":"mdeco:blocks/candle"}
+}

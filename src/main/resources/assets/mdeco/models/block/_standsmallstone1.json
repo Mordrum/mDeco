@@ -1,0 +1,79 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "#primary"
+    },
+    "elements": [
+        {
+            "from": [6,1.5,6],
+            "to": [10,16,10],
+            "faces": {
+                "west": {
+                    "uv": [6,0,10,14.5],
+                    "texture": "#primary"
+                },
+                "east": {
+                    "uv": [6,0,10,14.5],
+                    "texture": "#primary"
+                },
+                "north": {
+                    "uv": [6,0,10,14.5],
+                    "texture": "#primary"
+                },
+                "south": {
+                    "uv": [6,0,10,14.5],
+                    "texture": "#primary"
+                }
+            }
+        },
+        {
+            "from": [4,0,4],
+            "to": [12,1,12],
+            "faces": {
+                "up": {
+                    "texture": "#primary"
+                },
+                "down": {
+                    "texture": "#primary"
+                },
+                "west": {
+                    "texture": "#trim"
+                },
+                "east": {
+                    "texture": "#trim"
+                },
+                "north": {
+                    "texture": "#trim"
+                },
+                "south": {
+                    "texture": "#trim"
+                }
+            }
+        },
+        {
+            "from": [5,1,5],
+            "to": [11,1.5,11],
+            "faces": {
+                "up": {
+                    "texture": "#primary"
+                },
+                "west": {
+                    "uv": [5,15.5,11,16],
+                    "texture": "#trim"
+                },
+                "east": {
+                    "uv": [5,15.5,11,16],
+                    "texture": "#trim"
+                },
+                "north": {
+                    "uv": [5,15.5,11,16],
+                    "texture": "#trim"
+                },
+                "south": {
+                    "uv": [5,15.5,11,16],
+                    "texture": "#trim"
+                }
+            }
+        }
+    ]
+}

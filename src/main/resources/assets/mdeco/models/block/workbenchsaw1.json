@@ -1,0 +1,9 @@
+{
+"parent":"mdeco:block/_workbenchSaw",
+"textures":{
+"top":"mdeco:blocks/workbenchSaw0",
+"side":"mdeco:blocks/workbenchSaw1",
+"back":"mdeco:blocks/workbenchSaw2",
+"front":"mdeco:blocks/workbenchSaw4",
+"bottom":"mdeco:blocks/workbenchSaw5"}
+}

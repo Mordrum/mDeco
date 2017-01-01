@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStonePrismarine"},
+"facing=south":{"model":"mdeco:standLargeStonePrismarine","y":180},
+"facing=west":{"model":"mdeco:standLargeStonePrismarine","y":270},
+"facing=east":{"model":"mdeco:standLargeStonePrismarine","y":90}
+}
+}

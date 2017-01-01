@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_kitchenShakers1",
+"textures":{
+"primary":"mdeco:blocks/blockBlackIron",
+"trim":"mdeco:blocks/glass25",
+"hardware":"mdeco:blocks/paper"}
+}

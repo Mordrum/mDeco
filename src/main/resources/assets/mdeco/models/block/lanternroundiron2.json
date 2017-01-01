@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_lanternRound2",
+"textures":{
+"primary":"minecraft:blocks/iron_block",
+"candle":"mdeco:blocks/candle"}
+}

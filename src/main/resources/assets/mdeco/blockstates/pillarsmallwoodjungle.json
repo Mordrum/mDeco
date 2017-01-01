@@ -1,0 +1,8 @@
+{
+"variants":{
+"axis=x":{"model":"mdeco:pillarSmallWoodJungle_side","y":90},
+"axis=y":{"model":"mdeco:pillarSmallWoodJungle"},
+"axis=z":{"model":"mdeco:pillarSmallWoodJungle_side"},
+"axis=none":{"model":"mdeco:pillarSmallWoodJungle"}
+}
+}

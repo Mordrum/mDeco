@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:barrelSmallJungle"},
+"facing=south":{"model":"mdeco:barrelSmallJungle","y":180},
+"facing=west":{"model":"mdeco:barrelSmallJungle","y":270},
+"facing=east":{"model":"mdeco:barrelSmallJungle","y":90}
+}
+}

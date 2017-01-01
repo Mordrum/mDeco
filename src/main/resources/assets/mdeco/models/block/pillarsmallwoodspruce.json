@@ -1,0 +1,5 @@
+{
+"parent":"mdeco:block/_pillar_small",
+"textures":{
+"material":"minecraft:blocks/log_spruce"}
+}

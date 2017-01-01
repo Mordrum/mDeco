@@ -1,0 +1,9 @@
+{
+"variants":{
+"stacks=0":{"model":"mdeco:palletStackBirch0"},
+"stacks=1":{"model":"mdeco:palletStackBirch1"},
+"stacks=2":{"model":"mdeco:palletStackBirch2"},
+"stacks=3":{"model":"mdeco:palletStackBirch3"},
+"stacks=4":{"model":"mdeco:palletStackBirch4"}
+}
+}

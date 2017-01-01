@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_tile",
+"textures":{
+"primary":"minecraft:blocks/stone_granite_smooth",
+"trim":"minecraft:blocks/stone_granite_smooth"}
+}

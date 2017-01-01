@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_lanternRectangleGlass5",
+"textures":{
+"primary":"minecraft:blocks/iron_block",
+"trim":"minecraft:blocks/glass_white",
+"candle":"mdeco:blocks/candle"}
+}

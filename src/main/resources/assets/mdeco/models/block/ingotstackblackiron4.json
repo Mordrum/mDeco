@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_ingotStack4",
+"textures":{
+"primary":"minecraft:blocks/planks_oak",
+"trim":"minecraft:blocks/log_oak",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

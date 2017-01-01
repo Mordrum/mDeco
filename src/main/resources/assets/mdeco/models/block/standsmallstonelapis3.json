@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_standSmallStone3",
+"textures":{
+"primary":"minecraft:blocks/lapis_block",
+"trim":"minecraft:blocks/lapis_block"}
+}

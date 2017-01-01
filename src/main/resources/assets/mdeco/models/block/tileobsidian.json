@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_tile",
+"textures":{
+"primary":"mdeco:blocks/obsidian_bordered",
+"trim":"mdeco:blocks/obsidian_bordered"}
+}

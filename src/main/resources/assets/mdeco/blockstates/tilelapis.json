@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:tileLapis"},
+"facing=south":{"model":"mdeco:tileLapis","y":180},
+"facing=west":{"model":"mdeco:tileLapis","y":270},
+"facing=east":{"model":"mdeco:tileLapis","y":90}
+}
+}

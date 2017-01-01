@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_chairBasic",
+"textures":{
+"primary":"minecraft:blocks/planks_birch",
+"trim":"minecraft:blocks/log_birch"}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:chairBasicArmSpruce"},
+"facing=south":{"model":"mdeco:chairBasicArmSpruce","y":180},
+"facing=west":{"model":"mdeco:chairBasicArmSpruce","y":270},
+"facing=east":{"model":"mdeco:chairBasicArmSpruce","y":90}
+}
+}

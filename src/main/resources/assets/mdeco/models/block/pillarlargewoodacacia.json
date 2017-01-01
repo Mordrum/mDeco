@@ -1,0 +1,5 @@
+{
+"parent":"mdeco:block/_pillar_large",
+"textures":{
+"material":"minecraft:blocks/log_acacia"}
+}

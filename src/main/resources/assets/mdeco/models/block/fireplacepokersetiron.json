@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_fireplacePokerSet",
+"textures":{
+"primary":"minecraft:blocks/iron_block",
+"trim":"minecraft:blocks/planks_oak",
+"hardware":"minecraft:blocks/wool_colored_brown"}
+}

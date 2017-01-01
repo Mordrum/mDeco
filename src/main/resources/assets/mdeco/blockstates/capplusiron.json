@@ -1,0 +1,10 @@
+{
+"variants":{
+"connected=0":{"model":"mdeco:capPlusIron","x":180},
+"connected=1":{"model":"mdeco:capPlusIron"},
+"connected=2":{"model":"mdeco:capPlusIron","x":90},
+"connected=3":{"model":"mdeco:capPlusIron","x":270},
+"connected=4":{"model":"mdeco:capPlusIron","x":90,"y":270},
+"connected=5":{"model":"mdeco:capPlusIron","x":270,"y":270}
+}
+}

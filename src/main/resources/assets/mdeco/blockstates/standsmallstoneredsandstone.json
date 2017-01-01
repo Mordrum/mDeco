@@ -1,0 +1,8 @@
+{
+"variants":{
+"connected=0":{"model":"mdeco:standSmallStoneRedSandstone0"},
+"connected=1":{"model":"mdeco:standSmallStoneRedSandstone1"},
+"connected=2":{"model":"mdeco:standSmallStoneRedSandstone2"},
+"connected=3":{"model":"mdeco:standSmallStoneRedSandstone3"}
+}
+}

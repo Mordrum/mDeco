@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_cabinetWall",
+"textures":{
+"primary":"minecraft:blocks/planks_acacia",
+"trim":"minecraft:blocks/log_acacia_top",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:endTableMetalRoundDarkOak"},
+"facing=south":{"model":"mdeco:endTableMetalRoundDarkOak","y":180},
+"facing=west":{"model":"mdeco:endTableMetalRoundDarkOak","y":270},
+"facing=east":{"model":"mdeco:endTableMetalRoundDarkOak","y":90}
+}
+}

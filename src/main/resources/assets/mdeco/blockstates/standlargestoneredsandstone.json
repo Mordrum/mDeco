@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStoneRedSandstone"},
+"facing=south":{"model":"mdeco:standLargeStoneRedSandstone","y":180},
+"facing=west":{"model":"mdeco:standLargeStoneRedSandstone","y":270},
+"facing=east":{"model":"mdeco:standLargeStoneRedSandstone","y":90}
+}
+}

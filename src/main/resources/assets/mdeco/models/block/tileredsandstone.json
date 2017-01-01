@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_tile",
+"textures":{
+"primary":"minecraft:blocks/red_sandstone_normal",
+"trim":"minecraft:blocks/red_sandstone_smooth"}
+}

@@ -1,0 +1,7 @@
+{
+"parent":"mdeco:block/_fountainLava",
+"textures":{
+"primary":"minecraft:blocks/stone_diorite",
+"trim":"minecraft:blocks/lava_still",
+"hardware":"minecraft:blocks/lava_flow"}
+}

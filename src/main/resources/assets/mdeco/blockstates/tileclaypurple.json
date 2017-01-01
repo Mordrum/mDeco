@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:tileClayPurple"},
+"facing=south":{"model":"mdeco:tileClayPurple","y":180},
+"facing=west":{"model":"mdeco:tileClayPurple","y":270},
+"facing=east":{"model":"mdeco:tileClayPurple","y":90}
+}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:fireplaceBellowsBlackIron"},
+"facing=south":{"model":"mdeco:fireplaceBellowsBlackIron","y":180},
+"facing=west":{"model":"mdeco:fireplaceBellowsBlackIron","y":270},
+"facing=east":{"model":"mdeco:fireplaceBellowsBlackIron","y":90}
+}
+}

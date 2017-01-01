@@ -1,0 +1,8 @@
+{
+"variants":{
+"axis=x":{"model":"mdeco:pillarLargeWoodAcacia_side","y":90},
+"axis=y":{"model":"mdeco:pillarLargeWoodAcacia"},
+"axis=z":{"model":"mdeco:pillarLargeWoodAcacia_side"},
+"axis=none":{"model":"mdeco:pillarLargeWoodAcacia"}
+}
+}

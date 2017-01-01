@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:endTableMetalRoundGlass"},
+"facing=south":{"model":"mdeco:endTableMetalRoundGlass","y":180},
+"facing=west":{"model":"mdeco:endTableMetalRoundGlass","y":270},
+"facing=east":{"model":"mdeco:endTableMetalRoundGlass","y":90}
+}
+}

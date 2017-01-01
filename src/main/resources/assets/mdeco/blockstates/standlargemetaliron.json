@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeMetalIron"},
+"facing=south":{"model":"mdeco:standLargeMetalIron","y":180},
+"facing=west":{"model":"mdeco:standLargeMetalIron","y":270},
+"facing=east":{"model":"mdeco:standLargeMetalIron","y":90}
+}
+}

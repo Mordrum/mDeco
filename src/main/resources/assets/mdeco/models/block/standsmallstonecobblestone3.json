@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_standSmallStone3",
+"textures":{
+"primary":"minecraft:blocks/cobblestone",
+"trim":"minecraft:blocks/cobblestone"}
+}

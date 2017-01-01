@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStoneCobblestone"},
+"facing=south":{"model":"mdeco:standLargeStoneCobblestone","y":180},
+"facing=west":{"model":"mdeco:standLargeStoneCobblestone","y":270},
+"facing=east":{"model":"mdeco:standLargeStoneCobblestone","y":90}
+}
+}

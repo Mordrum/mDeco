@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:shopSignGableAcacia"},
+"facing=south":{"model":"mdeco:shopSignGableAcacia","y":180},
+"facing=west":{"model":"mdeco:shopSignGableAcacia","y":270},
+"facing=east":{"model":"mdeco:shopSignGableAcacia","y":90}
+}
+}

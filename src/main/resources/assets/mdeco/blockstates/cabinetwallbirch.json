@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:cabinetWallBirch"},
+"facing=south":{"model":"mdeco:cabinetWallBirch","y":180},
+"facing=west":{"model":"mdeco:cabinetWallBirch","y":270},
+"facing=east":{"model":"mdeco:cabinetWallBirch","y":90}
+}
+}

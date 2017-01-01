@@ -1,0 +1,8 @@
+{
+"variants":{
+"axis=x":{"model":"mdeco:pillarSmallRedSandstone_side","y":90},
+"axis=y":{"model":"mdeco:pillarSmallRedSandstone"},
+"axis=z":{"model":"mdeco:pillarSmallRedSandstone_side"},
+"axis=none":{"model":"mdeco:pillarSmallRedSandstone"}
+}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"axis=x":{"model":"mdeco:pillarSmallNetherBrick_side","y":90},
+"axis=y":{"model":"mdeco:pillarSmallNetherBrick"},
+"axis=z":{"model":"mdeco:pillarSmallNetherBrick_side"},
+"axis=none":{"model":"mdeco:pillarSmallNetherBrick"}
+}
+}

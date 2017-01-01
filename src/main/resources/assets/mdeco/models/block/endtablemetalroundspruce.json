@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_endTableMetalRound",
+"textures":{
+"primary":"minecraft:blocks/planks_spruce",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

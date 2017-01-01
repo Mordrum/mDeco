@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standLargeStoneEmerald"},
+"facing=south":{"model":"mdeco:standLargeStoneEmerald","y":180},
+"facing=west":{"model":"mdeco:standLargeStoneEmerald","y":270},
+"facing=east":{"model":"mdeco:standLargeStoneEmerald","y":90}
+}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:deskHutchWoodBasicJungle"},
+"facing=south":{"model":"mdeco:deskHutchWoodBasicJungle","y":180},
+"facing=west":{"model":"mdeco:deskHutchWoodBasicJungle","y":270},
+"facing=east":{"model":"mdeco:deskHutchWoodBasicJungle","y":90}
+}
+}

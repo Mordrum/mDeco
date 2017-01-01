@@ -1,0 +1,5 @@
+{
+"parent":"mdeco:block/_chain",
+"textures":{
+"primary":"minecraft:blocks/iron_block"}
+}

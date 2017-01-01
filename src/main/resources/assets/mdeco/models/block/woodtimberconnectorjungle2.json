@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_woodTimberConnector2",
+"textures":{
+"primary":"minecraft:blocks/planks_jungle",
+"trim":"minecraft:blocks/planks_jungle"}
+}

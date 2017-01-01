@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_lanternPyramid5",
+"textures":{
+"primary":"mdeco:blocks/blockBlackIron",
+"candle":"mdeco:blocks/candle"}
+}

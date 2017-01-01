@@ -1,0 +1,8 @@
+{
+"variants":{
+"connected=0":{"model":"mdeco:standSmallStonePrismarine0"},
+"connected=1":{"model":"mdeco:standSmallStonePrismarine1"},
+"connected=2":{"model":"mdeco:standSmallStonePrismarine2"},
+"connected=3":{"model":"mdeco:standSmallStonePrismarine3"}
+}
+}

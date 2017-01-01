@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:shopSignDomeBirch"},
+"facing=south":{"model":"mdeco:shopSignDomeBirch","y":180},
+"facing=west":{"model":"mdeco:shopSignDomeBirch","y":270},
+"facing=east":{"model":"mdeco:shopSignDomeBirch","y":90}
+}
+}

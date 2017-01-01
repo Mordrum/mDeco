@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_woodTrim1",
+"textures":{
+"primary":"minecraft:blocks/log_birch",
+"trim":""}
+}

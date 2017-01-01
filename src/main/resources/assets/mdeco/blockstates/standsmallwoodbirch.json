@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standSmallWoodBirch"},
+"facing=south":{"model":"mdeco:standSmallWoodBirch","y":180},
+"facing=west":{"model":"mdeco:standSmallWoodBirch","y":270},
+"facing=east":{"model":"mdeco:standSmallWoodBirch","y":90}
+}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:fountainLavaEndStone"},
+"facing=south":{"model":"mdeco:fountainLavaEndStone","y":180},
+"facing=west":{"model":"mdeco:fountainLavaEndStone","y":270},
+"facing=east":{"model":"mdeco:fountainLavaEndStone","y":90}
+}
+}

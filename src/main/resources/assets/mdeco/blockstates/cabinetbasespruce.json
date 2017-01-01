@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:cabinetBaseSpruce"},
+"facing=south":{"model":"mdeco:cabinetBaseSpruce","y":180},
+"facing=west":{"model":"mdeco:cabinetBaseSpruce","y":270},
+"facing=east":{"model":"mdeco:cabinetBaseSpruce","y":90}
+}
+}

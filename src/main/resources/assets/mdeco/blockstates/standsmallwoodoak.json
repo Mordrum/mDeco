@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:standSmallWoodOak"},
+"facing=south":{"model":"mdeco:standSmallWoodOak","y":180},
+"facing=west":{"model":"mdeco:standSmallWoodOak","y":270},
+"facing=east":{"model":"mdeco:standSmallWoodOak","y":90}
+}
+}

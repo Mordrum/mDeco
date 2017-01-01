@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_woodTimberConnector10",
+"textures":{
+"primary":"minecraft:blocks/planks_big_oak",
+"trim":"minecraft:blocks/planks_big_oak"}
+}

@@ -1,0 +1,8 @@
+{
+"variants":{
+"facing=north":{"model":"mdeco:fountainWaterAndesite"},
+"facing=south":{"model":"mdeco:fountainWaterAndesite","y":180},
+"facing=west":{"model":"mdeco:fountainWaterAndesite","y":270},
+"facing=east":{"model":"mdeco:fountainWaterAndesite","y":90}
+}
+}

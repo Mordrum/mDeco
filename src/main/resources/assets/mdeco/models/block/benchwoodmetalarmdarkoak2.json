@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_benchWoodMetalArm2",
+"textures":{
+"primary":"minecraft:blocks/planks_big_oak",
+"hardware":"mdeco:blocks/blockBlackIron"}
+}

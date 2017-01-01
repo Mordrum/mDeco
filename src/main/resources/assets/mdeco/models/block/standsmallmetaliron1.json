@@ -1,0 +1,6 @@
+{
+"parent":"mdeco:block/_standSmallMetal1",
+"textures":{
+"primary":"minecraft:blocks/iron_block",
+"trim":"minecraft:blocks/iron_block"}
+}
