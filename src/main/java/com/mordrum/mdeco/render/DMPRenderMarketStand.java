@@ -9,18 +9,15 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import org.lwjgl.opengl.GL11;
 
 public class DMPRenderMarketStand extends TileEntitySpecialRenderer {
-   private RenderItem renderItem;
-   private RenderManager renderManager;
+	private RenderManager renderManager;
    public int jLast = 0;
 
    public DMPRenderMarketStand(RenderManager rm, RenderItem ri) {
       this.renderManager = rm;
-      this.renderItem = ri;
    }
 
    public void renderTileEntityAt(TileEntity te, double x, double y, double z, float p_180535_8_, int p_180535_9_) {
@@ -31,7 +28,7 @@ public class DMPRenderMarketStand extends TileEntitySpecialRenderer {
       BlockPos blockPos = te.getPos();
       IBlockState myBlockState = this.getWorld().getBlockState(blockPos);
       if(myBlockState.getBlock() instanceof DMPBlockMarketStand) {
-         int facing = ((EnumFacing)myBlockState.getValue(DMPBlockMarketStand.FACING)).getHorizontalIndex();
+         int facing = myBlockState.getValue(DMPBlockMarketStand.FACING).getHorizontalIndex();
          float posHeight = 0.0F;
          float pixel = 0.0625F;
 

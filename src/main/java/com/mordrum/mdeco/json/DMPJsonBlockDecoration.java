@@ -18,247 +18,269 @@ public abstract class DMPJsonBlockDecoration {
       DMPDecoration[] var4 = DMPDecoration.values();
       int var5 = var4.length;
 
-      for(int var6 = 0; var6 < var5; ++var6) {
-         DMPDecoration decoration = var4[var6];
-         if(decoration.decorationType == DMPDecorationType.barrelLarge) {
-            createDecorationModelFile(decoration, rootPath, true, true, false);
-            ++filesGenerated;
-         } else if(decoration.decorationType == DMPDecorationType.barrelSmall) {
-            createDecorationModelFile(decoration, rootPath, true, true, false);
-            ++filesGenerated;
-         } else {
-            int index;
-            if(decoration.decorationType == DMPDecorationType.benchWood) {
-               for(index = 0; index < 4; ++index) {
-                  createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                  ++filesGenerated;
-               }
-            } else if(decoration.decorationType == DMPDecorationType.benchWoodMetalArm) {
-               for(index = 0; index < 4; ++index) {
-                  createDecorationModelFileWithVariant(decoration, rootPath, index, false, true);
-                  ++filesGenerated;
-               }
-            } else if(decoration.decorationType == DMPDecorationType.benchStone) {
-               for(index = 0; index < 4; ++index) {
-                  createDecorationModelFileWithVariant(decoration, rootPath, index, false, false);
-                  ++filesGenerated;
-               }
-            } else if(decoration.decorationType == DMPDecorationType.cabinetBase) {
-               createDecorationModelFile(decoration, rootPath, true, true, false);
-               ++filesGenerated;
-            } else if(decoration.decorationType == DMPDecorationType.cabinetWall) {
-               createDecorationModelFile(decoration, rootPath, true, true, false);
-               ++filesGenerated;
-            } else if(decoration.decorationType == DMPDecorationType.cabinetWallGlass) {
-               createDecorationModelFile(decoration, rootPath, true, true, true);
-               ++filesGenerated;
-            } else if(decoration.decorationType != DMPDecorationType.capSmallPyramid && decoration.decorationType != DMPDecorationType.capLargePyramid && decoration.decorationType != DMPDecorationType.capOval && decoration.decorationType != DMPDecorationType.capPlus && decoration.decorationType != DMPDecorationType.capRound && decoration.decorationType != DMPDecorationType.capSquare) {
-               if(decoration.decorationType != DMPDecorationType.chain && decoration.decorationType != DMPDecorationType.chainLarge) {
-                  if(decoration.decorationType == DMPDecorationType.chandelierSmallRound) {
-                     createChandelierModelFile(decoration, rootPath, true);
-                     ++filesGenerated;
-                  } else if(decoration.decorationType == DMPDecorationType.coinBag) {
-                     createDecorationModelFile(decoration, rootPath, true, true, false);
-                     ++filesGenerated;
-                  } else if(decoration.decorationType == DMPDecorationType.curtainRod) {
-                     createDecorationModelFileWithVariant(decoration, rootPath, 0, true, false);
-                     createDecorationModelFileWithVariant(decoration, rootPath, 1, true, false);
-                     filesGenerated += 2;
-                  } else if(decoration.decorationType == DMPDecorationType.curtainWool) {
-                     createDecorationModelFileWithVariant(decoration, rootPath, 0, true, false);
-                     createDecorationModelFileWithVariant(decoration, rootPath, 1, true, false);
-                     filesGenerated += 2;
-                  } else if(decoration.decorationType == DMPDecorationType.deskHutchWoodBasic) {
-                     createDecorationModelFile(decoration, rootPath, true, true, false);
-                     ++filesGenerated;
-                  } else if(decoration.decorationType == DMPDecorationType.deskWoodBasic) {
-                     createDecorationModelFile(decoration, rootPath, true, true, false);
-                     ++filesGenerated;
-                  } else if(decoration.decorationType == DMPDecorationType.endTableMetalRound) {
-                     createDecorationModelFile(decoration, rootPath, false, true, false);
-                     ++filesGenerated;
-                  } else if(decoration.decorationType == DMPDecorationType.fireplaceBellows) {
-                     createDecorationModelFile(decoration, rootPath, true, true, false);
-                     ++filesGenerated;
-                  } else if(decoration.decorationType == DMPDecorationType.fireplacePokerSet) {
-                     createDecorationModelFile(decoration, rootPath, true, true, false);
-                     ++filesGenerated;
-                  } else if(decoration.decorationType == DMPDecorationType.fireplaceScreen) {
-                     for(index = 0; index < 8; ++index) {
-                        createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                        ++filesGenerated;
-                     }
-                  } else if(decoration.decorationType == DMPDecorationType.fireplaceWoodRack) {
-                     createDecorationModelFile(decoration, rootPath, true, true, false);
-                     ++filesGenerated;
-                  } else if(decoration.decorationType != DMPDecorationType.foodTrough && decoration.decorationType != DMPDecorationType.waterTrough) {
-                     if(decoration.decorationType != DMPDecorationType.fountainLava && decoration.decorationType != DMPDecorationType.fountainWater) {
-                        if(decoration.decorationType == DMPDecorationType.ingotStack) {
-                           for(index = 0; index < 6; ++index) {
-                              createDecorationModelFileWithVariant(decoration, rootPath, index, true, true);
-                              ++filesGenerated;
-                           }
-                        } else {
-                           int variantCount;
-                           if(decoration.decorationType == DMPDecorationType.kitchenKettle) {
-                              variantCount = DMPBlockKitchenKettle.EnumType.values().length;
+	   for (DMPDecoration decoration : var4) {
+		   if (decoration.decorationType == DMPDecorationType.barrelLarge) {
+			   createDecorationModelFile(decoration, rootPath, true, true, false);
+			   ++filesGenerated;
+		   } else if (decoration.decorationType == DMPDecorationType.barrelSmall) {
+			   createDecorationModelFile(decoration, rootPath, true, true, false);
+			   ++filesGenerated;
+		   } else {
+			   int index;
+			   if (decoration.decorationType == DMPDecorationType.benchWood) {
+				   for (index = 0; index < 4; ++index) {
+					   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+					   ++filesGenerated;
+				   }
+			   } else if (decoration.decorationType == DMPDecorationType.benchWoodMetalArm) {
+				   for (index = 0; index < 4; ++index) {
+					   createDecorationModelFileWithVariant(decoration, rootPath, index, false, true);
+					   ++filesGenerated;
+				   }
+			   } else if (decoration.decorationType == DMPDecorationType.benchStone) {
+				   for (index = 0; index < 4; ++index) {
+					   createDecorationModelFileWithVariant(decoration, rootPath, index, false, false);
+					   ++filesGenerated;
+				   }
+			   } else if (decoration.decorationType == DMPDecorationType.cabinetBase) {
+				   createDecorationModelFile(decoration, rootPath, true, true, false);
+				   ++filesGenerated;
+			   } else if (decoration.decorationType == DMPDecorationType.cabinetWall) {
+				   createDecorationModelFile(decoration, rootPath, true, true, false);
+				   ++filesGenerated;
+			   } else if (decoration.decorationType == DMPDecorationType.cabinetWallGlass) {
+				   createDecorationModelFile(decoration, rootPath, true, true, true);
+				   ++filesGenerated;
+			   } else if (decoration.decorationType != DMPDecorationType.capSmallPyramid &&
+					   decoration.decorationType != DMPDecorationType.capLargePyramid &&
+					   decoration.decorationType != DMPDecorationType.capOval &&
+					   decoration.decorationType != DMPDecorationType.capPlus &&
+					   decoration.decorationType != DMPDecorationType.capRound &&
+					   decoration.decorationType != DMPDecorationType.capSquare) {
+				   if (decoration.decorationType != DMPDecorationType.chain &&
+						   decoration.decorationType != DMPDecorationType.chainLarge) {
+					   if (decoration.decorationType == DMPDecorationType.chandelierSmallRound) {
+						   createChandelierModelFile(decoration, rootPath, true);
+						   ++filesGenerated;
+					   } else if (decoration.decorationType == DMPDecorationType.coinBag) {
+						   createDecorationModelFile(decoration, rootPath, true, true, false);
+						   ++filesGenerated;
+					   } else if (decoration.decorationType == DMPDecorationType.curtainRod) {
+						   createDecorationModelFileWithVariant(decoration, rootPath, 0, true, false);
+						   createDecorationModelFileWithVariant(decoration, rootPath, 1, true, false);
+						   filesGenerated += 2;
+					   } else if (decoration.decorationType == DMPDecorationType.curtainWool) {
+						   createDecorationModelFileWithVariant(decoration, rootPath, 0, true, false);
+						   createDecorationModelFileWithVariant(decoration, rootPath, 1, true, false);
+						   filesGenerated += 2;
+					   } else if (decoration.decorationType == DMPDecorationType.deskHutchWoodBasic) {
+						   createDecorationModelFile(decoration, rootPath, true, true, false);
+						   ++filesGenerated;
+					   } else if (decoration.decorationType == DMPDecorationType.deskWoodBasic) {
+						   createDecorationModelFile(decoration, rootPath, true, true, false);
+						   ++filesGenerated;
+					   } else if (decoration.decorationType == DMPDecorationType.endTableMetalRound) {
+						   createDecorationModelFile(decoration, rootPath, false, true, false);
+						   ++filesGenerated;
+					   } else if (decoration.decorationType == DMPDecorationType.fireplaceBellows) {
+						   createDecorationModelFile(decoration, rootPath, true, true, false);
+						   ++filesGenerated;
+					   } else if (decoration.decorationType == DMPDecorationType.fireplacePokerSet) {
+						   createDecorationModelFile(decoration, rootPath, true, true, false);
+						   ++filesGenerated;
+					   } else if (decoration.decorationType == DMPDecorationType.fireplaceScreen) {
+						   for (index = 0; index < 8; ++index) {
+							   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+							   ++filesGenerated;
+						   }
+					   } else if (decoration.decorationType == DMPDecorationType.fireplaceWoodRack) {
+						   createDecorationModelFile(decoration, rootPath, true, true, false);
+						   ++filesGenerated;
+					   } else if (decoration.decorationType != DMPDecorationType.foodTrough &&
+							   decoration.decorationType != DMPDecorationType.waterTrough) {
+						   if (decoration.decorationType != DMPDecorationType.fountainLava &&
+								   decoration.decorationType != DMPDecorationType.fountainWater) {
+							   if (decoration.decorationType == DMPDecorationType.ingotStack) {
+								   for (index = 0; index < 6; ++index) {
+									   createDecorationModelFileWithVariant(decoration, rootPath, index, true, true);
+									   ++filesGenerated;
+								   }
+							   } else {
+								   int variantCount;
+								   if (decoration.decorationType == DMPDecorationType.kitchenKettle) {
+									   variantCount = DMPBlockKitchenKettle.EnumType.values().length;
 
-                              for(index = 0; index < variantCount; ++index) {
-                                 createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                 ++filesGenerated;
-                              }
-                           } else if(decoration.decorationType == DMPDecorationType.kitchenPot) {
-                              variantCount = DMPBlockKitchenPot.EnumType.values().length;
+									   for (index = 0; index < variantCount; ++index) {
+										   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+										   ++filesGenerated;
+									   }
+								   } else if (decoration.decorationType == DMPDecorationType.kitchenPot) {
+									   variantCount = DMPBlockKitchenPot.EnumType.values().length;
 
-                              for(index = 0; index < variantCount; ++index) {
-                                 createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                 ++filesGenerated;
-                              }
-                           } else if(decoration.decorationType == DMPDecorationType.kitchenShakers) {
-                              variantCount = DMPBlockKitchenShakers.EnumType.values().length;
+									   for (index = 0; index < variantCount; ++index) {
+										   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+										   ++filesGenerated;
+									   }
+								   } else if (decoration.decorationType == DMPDecorationType.kitchenShakers) {
+									   variantCount = DMPBlockKitchenShakers.EnumType.values().length;
 
-                              for(index = 0; index < variantCount; ++index) {
-                                 createDecorationModelFileWithVariant(decoration, rootPath, index, true, true);
-                                 ++filesGenerated;
-                              }
-                           } else if(decoration.decorationType == DMPDecorationType.kitchenTableSetting) {
-                              createDecorationModelFile(decoration, rootPath, true, true, false);
-                              ++filesGenerated;
-                           } else if(decoration.decorationType == DMPDecorationType.kitchenWallUtensils) {
-                              variantCount = DMPBlockKitchenWallUtensils.EnumType.values().length;
+									   for (index = 0; index < variantCount; ++index) {
+										   createDecorationModelFileWithVariant(decoration, rootPath, index, true, true);
+										   ++filesGenerated;
+									   }
+								   } else if (decoration.decorationType == DMPDecorationType.kitchenTableSetting) {
+									   createDecorationModelFile(decoration, rootPath, true, true, false);
+									   ++filesGenerated;
+								   } else if (decoration.decorationType == DMPDecorationType.kitchenWallUtensils) {
+									   variantCount = DMPBlockKitchenWallUtensils.EnumType.values().length;
 
-                              for(index = 0; index < variantCount; ++index) {
-                                 createDecorationModelFileWithVariant(decoration, rootPath, index, false, false);
-                                 ++filesGenerated;
-                              }
-                           } else if((decoration.decorationType == DMPDecorationType.lanternOval || decoration.decorationType == DMPDecorationType.lanternPyramid || decoration.decorationType == DMPDecorationType.lanternPyramidGlass || decoration.decorationType == DMPDecorationType.lanternRectangle || decoration.decorationType == DMPDecorationType.lanternRectangleGlass || decoration.decorationType == DMPDecorationType.lanternRound) && MDeco.settings.contentLantern) {
-                              for(index = 0; index < 6; ++index) {
-                                 createLanternModelFile(decoration, rootPath, index, true);
-                                 ++filesGenerated;
-                              }
-                           } else if(decoration.decorationType == DMPDecorationType.mantle) {
-                              for(index = 0; index < 8; ++index) {
-                                 createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                 ++filesGenerated;
-                              }
-                           } else if(decoration.decorationType == DMPDecorationType.mantleColumn) {
-                              for(index = 0; index < 4; ++index) {
-                                 createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                 ++filesGenerated;
-                              }
-                           } else if(decoration.decorationType == DMPDecorationType.marketCrate) {
-                              for(index = 0; index < 4; ++index) {
-                                 createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                 ++filesGenerated;
-                              }
-                           } else if(decoration.decorationType == DMPDecorationType.marketStand) {
-                              for(index = 0; index < 4; ++index) {
-                                 createDecorationModelFileWithVariant(decoration, rootPath, index, true, true);
-                                 ++filesGenerated;
-                              }
-                           } else if(decoration.decorationType == DMPDecorationType.palletStack) {
-                              for(index = 0; index < 5; ++index) {
-                                 createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                 ++filesGenerated;
-                              }
-                           } else if(decoration.decorationType == DMPDecorationType.poleMetal) {
-                              for(index = 0; index < 5; ++index) {
-                                 createDecorationModelFileWithVariant(decoration, rootPath, index, false, false);
-                                 ++filesGenerated;
-                              }
-                           } else if(decoration.decorationType == DMPDecorationType.poleMetalConnector) {
-                              for(index = 0; index < 12; ++index) {
-                                 createDecorationModelFileWithVariant(decoration, rootPath, index, false, false);
-                                 ++filesGenerated;
-                              }
-                           } else if(decoration.decorationType == DMPDecorationType.poleSign) {
-                              createDecorationModelFile(decoration, rootPath, false, true, false);
-                              ++filesGenerated;
-                           } else if(decoration.decorationType == DMPDecorationType.shelf) {
-                              createDecorationModelFile(decoration, rootPath, true, false, false);
-                              ++filesGenerated;
-                           } else if(decoration.decorationType != DMPDecorationType.shopSignCornerCut && decoration.decorationType != DMPDecorationType.shopSignDome && decoration.decorationType != DMPDecorationType.shopSignGable && decoration.decorationType != DMPDecorationType.shopSignHexagon && decoration.decorationType != DMPDecorationType.shopSignRound && decoration.decorationType != DMPDecorationType.shopSignSquare) {
-                              if(decoration.decorationType == DMPDecorationType.sofa) {
-                                 for(index = 0; index < 5; ++index) {
-                                    createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                    ++filesGenerated;
-                                 }
-                              } else if(decoration.decorationType != DMPDecorationType.standSmallMetal && decoration.decorationType != DMPDecorationType.standSmallStone) {
-                                 if(decoration.decorationType == DMPDecorationType.supportPole) {
-                                    createDecorationModelFile(decoration, rootPath, false, false, false);
-                                    ++filesGenerated;
-                                 } else if(decoration.decorationType == DMPDecorationType.tableWood) {
-                                    for(index = 0; index < 16; ++index) {
-                                       createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                       ++filesGenerated;
-                                    }
-                                 } else if(decoration.decorationType == DMPDecorationType.wallLantern) {
-                                    createDecorationModelFile(decoration, rootPath, true, true, false);
-                                    ++filesGenerated;
-                                 } else if(decoration.decorationType == DMPDecorationType.woodCrate) {
-                                    for(index = 0; index < 9; ++index) {
-                                       createDecorationModelFileWithVariant(decoration, rootPath, index, false, true);
-                                       ++filesGenerated;
-                                    }
-                                 } else if(decoration.decorationType == DMPDecorationType.woodPanel) {
-                                    for(index = 0; index < 2; ++index) {
-                                       createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                       ++filesGenerated;
-                                    }
-                                 } else if(decoration.decorationType != DMPDecorationType.woodTimber && decoration.decorationType != DMPDecorationType.woodBarkTimber) {
-                                    if(decoration.decorationType != DMPDecorationType.woodTimberConnector && decoration.decorationType != DMPDecorationType.woodBarkTimberConnector) {
-                                       if(decoration.decorationType == DMPDecorationType.woodTrim) {
-                                          for(index = 0; index < 3; ++index) {
-                                             createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                             ++filesGenerated;
-                                          }
-                                       } else {
-                                          createDecorationModelFile(decoration, rootPath, true, false, false);
-                                          ++filesGenerated;
-                                       }
-                                    } else {
-                                       for(index = 0; index < 12; ++index) {
-                                          createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                          ++filesGenerated;
-                                       }
-                                    }
-                                 } else {
-                                    for(index = 0; index < 5; ++index) {
-                                       createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                       ++filesGenerated;
-                                    }
-                                 }
-                              } else {
-                                 for(index = 0; index < 4; ++index) {
-                                    createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
-                                    ++filesGenerated;
-                                 }
-                              }
-                           } else {
-                              createDecorationModelFile(decoration, rootPath, true, true, false);
-                              ++filesGenerated;
-                           }
-                        }
-                     } else {
-                        createDecorationModelFile(decoration, rootPath, true, true, false);
-                        ++filesGenerated;
-                     }
-                  } else {
-                     for(index = 0; index < 5; ++index) {
-                        createDecorationModelFileWithVariant(decoration, rootPath, index, true, true);
-                        ++filesGenerated;
-                     }
-                  }
-               } else {
-                  createDecorationModelFile(decoration, rootPath, false, false, false);
-                  ++filesGenerated;
-               }
-            } else {
-               createDecorationModelFile(decoration, rootPath, false, false, false);
-               ++filesGenerated;
-            }
-         }
-      }
+									   for (index = 0; index < variantCount; ++index) {
+										   createDecorationModelFileWithVariant(decoration, rootPath, index, false, false);
+										   ++filesGenerated;
+									   }
+								   } else if ((decoration.decorationType == DMPDecorationType.lanternOval ||
+										   decoration.decorationType == DMPDecorationType.lanternPyramid ||
+										   decoration.decorationType == DMPDecorationType.lanternPyramidGlass ||
+										   decoration.decorationType == DMPDecorationType.lanternRectangle ||
+										   decoration.decorationType == DMPDecorationType.lanternRectangleGlass ||
+										   decoration.decorationType == DMPDecorationType.lanternRound) &&
+										   MDeco.settings.contentLantern) {
+									   for (index = 0; index < 6; ++index) {
+										   createLanternModelFile(decoration, rootPath, index, true);
+										   ++filesGenerated;
+									   }
+								   } else if (decoration.decorationType == DMPDecorationType.mantle) {
+									   for (index = 0; index < 8; ++index) {
+										   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+										   ++filesGenerated;
+									   }
+								   } else if (decoration.decorationType == DMPDecorationType.mantleColumn) {
+									   for (index = 0; index < 4; ++index) {
+										   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+										   ++filesGenerated;
+									   }
+								   } else if (decoration.decorationType == DMPDecorationType.marketCrate) {
+									   for (index = 0; index < 4; ++index) {
+										   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+										   ++filesGenerated;
+									   }
+								   } else if (decoration.decorationType == DMPDecorationType.marketStand) {
+									   for (index = 0; index < 4; ++index) {
+										   createDecorationModelFileWithVariant(decoration, rootPath, index, true, true);
+										   ++filesGenerated;
+									   }
+								   } else if (decoration.decorationType == DMPDecorationType.palletStack) {
+									   for (index = 0; index < 5; ++index) {
+										   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+										   ++filesGenerated;
+									   }
+								   } else if (decoration.decorationType == DMPDecorationType.poleMetal) {
+									   for (index = 0; index < 5; ++index) {
+										   createDecorationModelFileWithVariant(decoration, rootPath, index, false, false);
+										   ++filesGenerated;
+									   }
+								   } else if (decoration.decorationType == DMPDecorationType.poleMetalConnector) {
+									   for (index = 0; index < 12; ++index) {
+										   createDecorationModelFileWithVariant(decoration, rootPath, index, false, false);
+										   ++filesGenerated;
+									   }
+								   } else if (decoration.decorationType == DMPDecorationType.poleSign) {
+									   createDecorationModelFile(decoration, rootPath, false, true, false);
+									   ++filesGenerated;
+								   } else if (decoration.decorationType == DMPDecorationType.shelf) {
+									   createDecorationModelFile(decoration, rootPath, true, false, false);
+									   ++filesGenerated;
+								   } else if (decoration.decorationType != DMPDecorationType.shopSignCornerCut &&
+										   decoration.decorationType != DMPDecorationType.shopSignDome &&
+										   decoration.decorationType != DMPDecorationType.shopSignGable &&
+										   decoration.decorationType != DMPDecorationType.shopSignHexagon &&
+										   decoration.decorationType != DMPDecorationType.shopSignRound &&
+										   decoration.decorationType != DMPDecorationType.shopSignSquare) {
+									   if (decoration.decorationType == DMPDecorationType.sofa) {
+										   for (index = 0; index < 5; ++index) {
+											   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+											   ++filesGenerated;
+										   }
+									   } else if (decoration.decorationType != DMPDecorationType.standSmallMetal &&
+											   decoration.decorationType != DMPDecorationType.standSmallStone) {
+										   if (decoration.decorationType == DMPDecorationType.supportPole) {
+											   createDecorationModelFile(decoration, rootPath, false, false, false);
+											   ++filesGenerated;
+										   } else if (decoration.decorationType == DMPDecorationType.tableWood) {
+											   for (index = 0; index < 16; ++index) {
+												   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+												   ++filesGenerated;
+											   }
+										   } else if (decoration.decorationType == DMPDecorationType.wallLantern) {
+											   createDecorationModelFile(decoration, rootPath, true, true, false);
+											   ++filesGenerated;
+										   } else if (decoration.decorationType == DMPDecorationType.woodCrate) {
+											   for (index = 0; index < 9; ++index) {
+												   createDecorationModelFileWithVariant(decoration, rootPath, index, false, true);
+												   ++filesGenerated;
+											   }
+										   } else if (decoration.decorationType == DMPDecorationType.woodPanel) {
+											   for (index = 0; index < 2; ++index) {
+												   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+												   ++filesGenerated;
+											   }
+										   } else if (decoration.decorationType != DMPDecorationType.woodTimber &&
+												   decoration.decorationType != DMPDecorationType.woodBarkTimber) {
+											   if (decoration.decorationType != DMPDecorationType.woodTimberConnector &&
+													   decoration.decorationType !=
+															   DMPDecorationType.woodBarkTimberConnector) {
+												   if (decoration.decorationType == DMPDecorationType.woodTrim) {
+													   for (index = 0; index < 3; ++index) {
+														   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+														   ++filesGenerated;
+													   }
+												   } else {
+													   createDecorationModelFile(decoration, rootPath, true, false, false);
+													   ++filesGenerated;
+												   }
+											   } else {
+												   for (index = 0; index < 12; ++index) {
+													   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+													   ++filesGenerated;
+												   }
+											   }
+										   } else {
+											   for (index = 0; index < 5; ++index) {
+												   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+												   ++filesGenerated;
+											   }
+										   }
+									   } else {
+										   for (index = 0; index < 4; ++index) {
+											   createDecorationModelFileWithVariant(decoration, rootPath, index, true, false);
+											   ++filesGenerated;
+										   }
+									   }
+								   } else {
+									   createDecorationModelFile(decoration, rootPath, true, true, false);
+									   ++filesGenerated;
+								   }
+							   }
+						   } else {
+							   createDecorationModelFile(decoration, rootPath, true, true, false);
+							   ++filesGenerated;
+						   }
+					   } else {
+						   for (index = 0; index < 5; ++index) {
+							   createDecorationModelFileWithVariant(decoration, rootPath, index, true, true);
+							   ++filesGenerated;
+						   }
+					   }
+				   } else {
+					   createDecorationModelFile(decoration, rootPath, false, false, false);
+					   ++filesGenerated;
+				   }
+			   } else {
+				   createDecorationModelFile(decoration, rootPath, false, false, false);
+				   ++filesGenerated;
+			   }
+		   }
+	   }
 
       filesGenerated += createBlockFiles(rootPath);
       filesGenerated += createWorkbenchFiles(rootPath);
@@ -269,8 +291,7 @@ public abstract class DMPJsonBlockDecoration {
       byte filesGenerated = 0;
       String blockName = MDeco.blocks.blockBlackIron.getUnlocalizedName().substring(5);
       createBlockModelFile(rootPath, blockName);
-      int filesGenerated1 = filesGenerated + 1;
-      return filesGenerated1;
+	   return filesGenerated + 1;
    }
 
    private static int createWorkbenchFiles(String rootPath) {

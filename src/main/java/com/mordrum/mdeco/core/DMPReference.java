@@ -51,8 +51,8 @@ public abstract class DMPReference {
    }
 
    public static void outputModStatisticsToConsole() {
-      MDeco.instance.logOutput(String.format("Blocks : %d", new Object[]{Integer.valueOf(getRegisteredBlocks())}));
-      MDeco.instance.logOutput(String.format("Items  : %d", new Object[]{Integer.valueOf(getRegisteredItems())}));
-      MDeco.instance.logOutput(String.format("Recipes: %d", new Object[]{Integer.valueOf(getRegisteredRecipes())}));
+      MDeco.instance.logOutput(String.format("Blocks : %d", getRegisteredBlocks()));
+      MDeco.instance.logOutput(String.format("Items  : %d", getRegisteredItems()));
+      MDeco.instance.logOutput(String.format("Recipes: %d", getRegisteredRecipes()));
    }
 }

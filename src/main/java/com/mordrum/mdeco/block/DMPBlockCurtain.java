@@ -4,7 +4,6 @@ import com.mordrum.mdeco.item.DMPItemCurtainWool;
 import com.mordrum.mdeco.object.DMPDecoration;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -27,7 +26,7 @@ public class DMPBlockCurtain extends DMPBlockDirectional {
 
    public DMPBlockCurtain(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(BOTTOM, Boolean.valueOf(false)).withProperty(FACING, EnumFacing.NORTH));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(BOTTOM, Boolean.FALSE).withProperty(FACING, EnumFacing.NORTH));
       this.useNeighborBrightness = true;
       this.blockSoundType = SoundType.CLOTH;
       com.mordrum.mdeco.Util.registerBlockAndItem(this, DMPItemCurtainWool.class, this.decoration.name());
@@ -35,11 +34,11 @@ public class DMPBlockCurtain extends DMPBlockDirectional {
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{BOTTOM, FACING});
+      return new BlockStateContainer(this, BOTTOM, FACING);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-      return state.withProperty(BOTTOM, Boolean.valueOf(this.isBottomCurtainBlock(worldIn, pos)));
+      return state.withProperty(BOTTOM, this.isBottomCurtainBlock(worldIn, pos));
    }
 
    public boolean isSideSolid(IBlockState base_state, IBlockAccess world, BlockPos pos, EnumFacing side) {
@@ -51,7 +50,8 @@ public class DMPBlockCurtain extends DMPBlockDirectional {
          return false;
       } else {
          Block blockAbove = worldIn.getBlockState(pos.up()).getBlock();
-         return blockAbove == null?false:blockAbove instanceof DMPBlockCurtain || blockAbove instanceof DMPBlockCurtainRod;
+         return blockAbove != null &&
+		         (blockAbove instanceof DMPBlockCurtain || blockAbove instanceof DMPBlockCurtainRod);
       }
    }
 
@@ -66,11 +66,11 @@ public class DMPBlockCurtain extends DMPBlockDirectional {
 
    protected boolean isBottomCurtainBlock(IBlockAccess worldIn, BlockPos pos) {
       Block blockBelow = worldIn.getBlockState(pos.down()).getBlock();
-      return blockBelow == null?false:!(blockBelow instanceof DMPBlockCurtain);
+      return blockBelow != null && !(blockBelow instanceof DMPBlockCurtain);
    }
 
    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-      boolean bottom = ((Boolean)state.getValue(BOTTOM)).booleanValue();
+      boolean bottom = state.getValue(BOTTOM);
       switch(state.getValue(FACING).ordinal()) {
       case 1:
          return bottom?AABB_BOTTOM_N:AABB_TOP_N;

@@ -12,11 +12,10 @@ public class DMPCreativeTabs {
       DMPTab[] var2 = DMPTab.values();
       int var3 = var2.length;
 
-      for(int var4 = 0; var4 < var3; ++var4) {
-         DMPTab tab = var2[var4];
-         DMPGuiCreativeTab newTab = new DMPGuiCreativeTab(tab);
-         this.creativeTabs.put(tab.name(), newTab);
-      }
+	   for (DMPTab tab : var2) {
+		   DMPGuiCreativeTab newTab = new DMPGuiCreativeTab(tab);
+		   this.creativeTabs.put(tab.name(), newTab);
+	   }
 
    }
 

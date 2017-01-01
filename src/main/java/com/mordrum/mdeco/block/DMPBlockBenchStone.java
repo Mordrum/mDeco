@@ -19,7 +19,7 @@ public class DMPBlockBenchStone extends DMPBlockConnectSides {
    }
 
    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-      EnumFacing facing = (EnumFacing)state.getValue(FACING);
+      EnumFacing facing = state.getValue(FACING);
       return facing != EnumFacing.NORTH && facing != EnumFacing.SOUTH?AABB_EW:AABB_NS;
    }
 }

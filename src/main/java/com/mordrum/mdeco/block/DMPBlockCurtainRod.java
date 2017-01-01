@@ -3,7 +3,6 @@ package com.mordrum.mdeco.block;
 import com.mordrum.mdeco.item.DMPItemCurtainRod;
 import com.mordrum.mdeco.object.DMPDecoration;
 import net.minecraft.block.Block;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -22,18 +21,18 @@ public class DMPBlockCurtainRod extends DMPBlockDirectional {
 
    public DMPBlockCurtainRod(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(CONNECTED, Boolean.valueOf(false)).withProperty(FACING, EnumFacing.NORTH));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(CONNECTED, Boolean.FALSE).withProperty(FACING, EnumFacing.NORTH));
       com.mordrum.mdeco.Util.registerBlockAndItem(this, DMPItemCurtainRod.class, this.decoration.name());
       this.registerOreDictName(this.decoration.oreDictName);
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{CONNECTED, FACING});
+      return new BlockStateContainer(this, CONNECTED, FACING);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
       Block blockBelow = worldIn.getBlockState(pos.down()).getBlock();
-      return blockBelow != null && blockBelow instanceof DMPBlockCurtain?state.withProperty(CONNECTED, Boolean.valueOf(true)):state.withProperty(CONNECTED, Boolean.valueOf(false));
+      return blockBelow != null && blockBelow instanceof DMPBlockCurtain?state.withProperty(CONNECTED, Boolean.TRUE):state.withProperty(CONNECTED, Boolean.FALSE);
    }
 
    public boolean isSideSolid(IBlockState base_state, IBlockAccess world, BlockPos pos, EnumFacing side) {

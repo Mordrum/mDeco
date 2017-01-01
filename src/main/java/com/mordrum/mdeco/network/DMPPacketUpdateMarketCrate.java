@@ -38,11 +38,9 @@ public class DMPPacketUpdateMarketCrate implements IMessage {
    public static class Handler implements IMessageHandler<DMPPacketUpdateMarketCrate, IMessage> {
       public IMessage onMessage(final DMPPacketUpdateMarketCrate message, final MessageContext ctx) {
          WorldServer mainThread = (WorldServer)ctx.getServerHandler().playerEntity.world;
-         mainThread.addScheduledTask(new Runnable() {
-            public void run() {
-               DMPTileEntityMarketCrate tileentity = (DMPTileEntityMarketCrate)ctx.getServerHandler().playerEntity.world.getTileEntity(message.pos);
-               tileentity.setDisplayText(message.displayText1, message.displayText2);
-            }
+         mainThread.addScheduledTask(() -> {
+            DMPTileEntityMarketCrate tileentity = (DMPTileEntityMarketCrate)ctx.getServerHandler().playerEntity.world.getTileEntity(message.pos);
+            tileentity.setDisplayText(message.displayText1, message.displayText2);
          });
          return null;
       }

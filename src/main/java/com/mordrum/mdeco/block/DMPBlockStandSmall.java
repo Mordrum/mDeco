@@ -3,7 +3,6 @@ package com.mordrum.mdeco.block;
 import com.mordrum.mdeco.item.DMPItemStandSmall;
 import com.mordrum.mdeco.object.DMPDecoration;
 import net.minecraft.block.Block;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -23,21 +22,21 @@ public class DMPBlockStandSmall extends DMPBlockBaseDecoration {
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{CONNECTED});
+      return new BlockStateContainer(this, CONNECTED);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
       Block blockAbove = worldIn.getBlockState(pos.up()).getBlock();
       Block blockBelow = worldIn.getBlockState(pos.down()).getBlock();
-      return blockAbove != null && blockBelow != null?(!(blockAbove instanceof DMPBlockStandSmall) && !(blockAbove instanceof DMPBlockLantern)?(!(blockBelow instanceof DMPBlockStandSmall) && !(blockBelow instanceof DMPBlockLantern)?this.getDefaultState().withProperty(CONNECTED, Integer.valueOf(3)):this.getDefaultState().withProperty(CONNECTED, Integer.valueOf(2))):(!(blockBelow instanceof DMPBlockStandSmall) && !(blockBelow instanceof DMPBlockLantern)?this.getDefaultState().withProperty(CONNECTED, Integer.valueOf(1)):this.getDefaultState().withProperty(CONNECTED, Integer.valueOf(0)))):worldIn.getBlockState(pos);
+      return blockAbove != null && blockBelow != null?(!(blockAbove instanceof DMPBlockStandSmall) && !(blockAbove instanceof DMPBlockLantern)?(!(blockBelow instanceof DMPBlockStandSmall) && !(blockBelow instanceof DMPBlockLantern)?this.getDefaultState().withProperty(CONNECTED, 3):this.getDefaultState().withProperty(CONNECTED, 2)):(!(blockBelow instanceof DMPBlockStandSmall) && !(blockBelow instanceof DMPBlockLantern)?this.getDefaultState().withProperty(CONNECTED, 1):this.getDefaultState().withProperty(CONNECTED, 0))):worldIn.getBlockState(pos);
    }
 
    public int getMetaFromState(IBlockState state) {
-      return ((Integer)state.getValue(CONNECTED)).intValue();
+      return state.getValue(CONNECTED);
    }
 
    public IBlockState getStateFromMeta(int meta) {
-      return this.getDefaultState().withProperty(CONNECTED, Integer.valueOf(meta));
+      return this.getDefaultState().withProperty(CONNECTED, meta);
    }
 
    public boolean isSideSolid(IBlockState base_state, IBlockAccess world, BlockPos pos, EnumFacing side) {

@@ -25,7 +25,7 @@ public class DMPBlockSupportPole extends DMPBlockDirectional {
    }
 
    public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock) {
-      EnumFacing facing = (EnumFacing)state.getValue(FACING);
+      EnumFacing facing = state.getValue(FACING);
       if(worldIn.isAirBlock(pos.offset(facing)) || !worldIn.isSideSolid(pos.offset(facing), facing.getOpposite())) {
          this.dropBlockAsItem(worldIn, pos, state, 1);
          worldIn.setBlockToAir(pos);
@@ -34,7 +34,7 @@ public class DMPBlockSupportPole extends DMPBlockDirectional {
    }
 
    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-      EnumFacing facing = (EnumFacing)state.getValue(FACING);
+      EnumFacing facing = state.getValue(FACING);
       return facing != EnumFacing.EAST && facing != EnumFacing.WEST?AABB_NS:AABB_EW;
    }
 }

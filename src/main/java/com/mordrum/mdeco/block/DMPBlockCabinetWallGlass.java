@@ -6,7 +6,6 @@ import com.mordrum.mdeco.object.DMPDecoration;
 import com.mordrum.mdeco.tileentity.DMPTileEntityCabinetWallGlass;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -49,7 +48,7 @@ public class DMPBlockCabinetWallGlass extends DMPBlockStorage implements ITileEn
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{FACING});
+      return new BlockStateContainer(this, FACING);
    }
 
    public IBlockState getStateFromMeta(int meta) {
@@ -57,7 +56,7 @@ public class DMPBlockCabinetWallGlass extends DMPBlockStorage implements ITileEn
    }
 
    public int getMetaFromState(IBlockState state) {
-      return ((EnumFacing)state.getValue(FACING)).getHorizontalIndex();
+      return state.getValue(FACING).getHorizontalIndex();
    }
 
    public boolean isOpaqueCube(IBlockState state) {
@@ -93,7 +92,7 @@ public class DMPBlockCabinetWallGlass extends DMPBlockStorage implements ITileEn
    }
 
    public boolean isSideSolid(IBlockState base_state, IBlockAccess worldIn, BlockPos pos, EnumFacing side) {
-      EnumFacing facing = (EnumFacing)base_state.getValue(FACING);
+      EnumFacing facing = base_state.getValue(FACING);
       return side == facing;
    }
 

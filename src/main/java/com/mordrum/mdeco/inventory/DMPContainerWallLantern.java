@@ -44,7 +44,7 @@ public class DMPContainerWallLantern extends Container {
 
    public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
       ItemStack itemstack = null;
-      Slot slot = (Slot)this.inventorySlots.get(index);
+      Slot slot = this.inventorySlots.get(index);
       if(slot != null && slot.getHasStack()) {
          ItemStack itemstack1 = slot.getStack();
          itemstack = itemstack1.copy();
@@ -57,7 +57,7 @@ public class DMPContainerWallLantern extends Container {
          }
 
          if(itemstack1.getCount() == 0) {
-            slot.putStack((ItemStack)null);
+            slot.putStack(null);
          } else {
             slot.onSlotChanged();
          }
@@ -86,7 +86,9 @@ public class DMPContainerWallLantern extends Container {
             return false;
          } else {
             Block block = Block.getBlockFromItem(item);
-            return block == null?false:block == Blocks.STAINED_GLASS || block == Blocks.STAINED_GLASS_PANE || block == Blocks.WOOL || block == Blocks.CARPET || block == Blocks.STAINED_HARDENED_CLAY;
+            return block != null &&
+		            (block == Blocks.STAINED_GLASS || block == Blocks.STAINED_GLASS_PANE || block == Blocks.WOOL ||
+				            block == Blocks.CARPET || block == Blocks.STAINED_HARDENED_CLAY);
          }
       }
 

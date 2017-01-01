@@ -81,7 +81,7 @@ public class DMPBlockShopSign extends DMPBlockDirectional implements ITileEntity
    }
 
    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-      EnumFacing facing = (EnumFacing)state.getValue(FACING);
+      EnumFacing facing = state.getValue(FACING);
       return facing != EnumFacing.EAST && facing != EnumFacing.WEST?AABB_NS:AABB_EW;
    }
 }

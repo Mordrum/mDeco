@@ -20,14 +20,12 @@ import net.minecraft.util.math.BlockPos;
 import org.lwjgl.opengl.GL11;
 
 public class DMPRenderCabinetBase extends TileEntitySpecialRenderer {
-   private RenderItem renderItem;
-   private RenderManager renderManager;
+	private RenderManager renderManager;
    private final Minecraft mc = Minecraft.getMinecraft();
    public int jLast = 0;
 
    public DMPRenderCabinetBase(RenderManager rm, RenderItem ri) {
       this.renderManager = rm;
-      this.renderItem = ri;
    }
 
    public void renderTileEntityAt(TileEntity te, double x, double y, double z, float p_180535_8_, int p_180535_9_) {
@@ -38,7 +36,7 @@ public class DMPRenderCabinetBase extends TileEntitySpecialRenderer {
       BlockPos blockPos = te.getPos();
       IBlockState myBlockState = this.getWorld().getBlockState(blockPos);
       if(myBlockState.getBlock() instanceof DMPBlockCabinetBase) {
-         EnumFacing facing = (EnumFacing)myBlockState.getValue(DMPBlockCabinetBase.FACING);
+         EnumFacing facing = myBlockState.getValue(DMPBlockCabinetBase.FACING);
          Block block = te.getCountertopTile();
          if(block != null) {
             Tessellator tessellator = Tessellator.getInstance();

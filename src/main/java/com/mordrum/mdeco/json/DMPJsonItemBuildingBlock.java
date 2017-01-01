@@ -22,47 +22,46 @@ public class DMPJsonItemBuildingBlock {
       DMPAncientBlockType[] var3 = DMPAncientBlockType.values();
       int var4 = var3.length;
 
-      for(int var5 = 0; var5 < var4; ++var5) {
-         DMPAncientBlockType blockType = var3[var5];
-         DMPBlockBrick.EnumType[] var7 = DMPBlockBrick.EnumType.values();
-         int var8 = var7.length;
+	   for (DMPAncientBlockType blockType : var3) {
+		   DMPBlockBrick.EnumType[] var7 = DMPBlockBrick.EnumType.values();
+		   int var8 = var7.length;
 
-         String variantName;
-         int var9;
-         for(var9 = 0; var9 < var8; ++var9) {
-            DMPBlockBrick.EnumType variantHeadstone = var7[var9];
-            variantName = String.format("%s_%s_block", new Object[]{blockType.name(), variantHeadstone.name()});
-            createBlockModelFile(rootPath, variantName);
-            ++filesGenerated;
-            variantName = String.format("%s_%s", new Object[]{blockType.name(), variantHeadstone.name()});
-            createSlabModelFile(rootPath, variantName);
-            ++filesGenerated;
-            variantName = String.format("%s_%s", new Object[]{blockType.name(), variantHeadstone.name()});
-            createDoubleSlabModelFile(rootPath, variantName);
-            ++filesGenerated;
-            variantName = String.format("%s_%s_wall", new Object[]{blockType.name(), variantHeadstone.name()});
-            createWallModelFile(rootPath, variantName);
-            ++filesGenerated;
-            variantName = String.format("%s_%s_pillar_large", new Object[]{blockType.name(), variantHeadstone.name()});
-            createBlockModelFile(rootPath, variantName);
-            ++filesGenerated;
-            variantName = String.format("%s_%s_pillar_small", new Object[]{blockType.name(), variantHeadstone.name()});
-            createBlockModelFile(rootPath, variantName);
-            ++filesGenerated;
-         }
+		   String variantName;
+		   int var9;
+		   for (var9 = 0; var9 < var8; ++var9) {
+			   DMPBlockBrick.EnumType variantHeadstone = var7[var9];
+			   variantName = String.format("%s_%s_block", blockType.name(), variantHeadstone.name());
+			   createBlockModelFile(rootPath, variantName);
+			   ++filesGenerated;
+			   variantName = String.format("%s_%s", blockType.name(), variantHeadstone.name());
+			   createSlabModelFile(rootPath, variantName);
+			   ++filesGenerated;
+			   variantName = String.format("%s_%s", blockType.name(), variantHeadstone.name());
+			   createDoubleSlabModelFile(rootPath, variantName);
+			   ++filesGenerated;
+			   variantName = String.format("%s_%s_wall", blockType.name(), variantHeadstone.name());
+			   createWallModelFile(rootPath, variantName);
+			   ++filesGenerated;
+			   variantName = String.format("%s_%s_pillar_large", blockType.name(), variantHeadstone.name());
+			   createBlockModelFile(rootPath, variantName);
+			   ++filesGenerated;
+			   variantName = String.format("%s_%s_pillar_small", blockType.name(), variantHeadstone.name());
+			   createBlockModelFile(rootPath, variantName);
+			   ++filesGenerated;
+		   }
 
-         createStairsModelFile(rootPath, blockType.name());
-         ++filesGenerated;
-         DMPBlockBrickHeadstone.EnumType[] var11 = DMPBlockBrickHeadstone.EnumType.values();
-         var8 = var11.length;
+		   createStairsModelFile(rootPath, blockType.name());
+		   ++filesGenerated;
+		   DMPBlockBrickHeadstone.EnumType[] var11 = DMPBlockBrickHeadstone.EnumType.values();
+		   var8 = var11.length;
 
-         for(var9 = 0; var9 < var8; ++var9) {
-            DMPBlockBrickHeadstone.EnumType var12 = var11[var9];
-            variantName = String.format("%s_headstone_%s", new Object[]{blockType.name(), var12.name()});
-            createBlockModelFile(rootPath, variantName);
-            ++filesGenerated;
-         }
-      }
+		   for (var9 = 0; var9 < var8; ++var9) {
+			   DMPBlockBrickHeadstone.EnumType var12 = var11[var9];
+			   variantName = String.format("%s_headstone_%s", blockType.name(), var12.name());
+			   createBlockModelFile(rootPath, variantName);
+			   ++filesGenerated;
+		   }
+	   }
 
       return filesGenerated;
    }
@@ -72,16 +71,15 @@ public class DMPJsonItemBuildingBlock {
       DMPBuildingBlock[] var2 = DMPBuildingBlock.values();
       int var3 = var2.length;
 
-      for(int var4 = 0; var4 < var3; ++var4) {
-         DMPBuildingBlock buildingBlock = var2[var4];
-         if(buildingBlock.blockType == DMPBuildingBlockType.pillarLarge) {
-            createBlockModelFile(rootPath, buildingBlock.name());
-            ++filesGenerated;
-         } else if(buildingBlock.blockType == DMPBuildingBlockType.pillarSmall) {
-            createBlockModelFile(rootPath, buildingBlock.name());
-            ++filesGenerated;
-         }
-      }
+	   for (DMPBuildingBlock buildingBlock : var2) {
+		   if (buildingBlock.blockType == DMPBuildingBlockType.pillarLarge) {
+			   createBlockModelFile(rootPath, buildingBlock.name());
+			   ++filesGenerated;
+		   } else if (buildingBlock.blockType == DMPBuildingBlockType.pillarSmall) {
+			   createBlockModelFile(rootPath, buildingBlock.name());
+			   ++filesGenerated;
+		   }
+	   }
 
       return filesGenerated;
    }

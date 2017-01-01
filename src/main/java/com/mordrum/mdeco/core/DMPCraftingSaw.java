@@ -9,12 +9,12 @@ public class DMPCraftingSaw {
       DMPWorkbenchSawMaterials[] var4 = DMPWorkbenchSawMaterials.values();
       int var5 = var4.length;
 
-      for(int var6 = 0; var6 < var5; ++var6) {
-         DMPWorkbenchSawMaterials materials = var4[var6];
-         if(materials.itemInput == itemInput && materials.variantInput == variantInput && materials.itemOutput == itemOutput) {
-            return true;
-         }
-      }
+	   for (DMPWorkbenchSawMaterials materials : var4) {
+		   if (materials.itemInput == itemInput && materials.variantInput == variantInput &&
+				   materials.itemOutput == itemOutput) {
+			   return true;
+		   }
+	   }
 
       return false;
    }
@@ -26,12 +26,11 @@ public class DMPCraftingSaw {
          DMPWorkbenchSawMaterials[] var2 = DMPWorkbenchSawMaterials.values();
          int var3 = var2.length;
 
-         for(int var4 = 0; var4 < var3; ++var4) {
-            DMPWorkbenchSawMaterials materials = var2[var4];
-            if(materials.itemOutput == itemOutput) {
-               return materials.outputAmount;
-            }
-         }
+	      for (DMPWorkbenchSawMaterials materials : var2) {
+		      if (materials.itemOutput == itemOutput) {
+			      return materials.outputAmount;
+		      }
+	      }
 
          return 0;
       }
@@ -42,12 +41,11 @@ public class DMPCraftingSaw {
          DMPWorkbenchSawMaterials[] var3 = DMPWorkbenchSawMaterials.values();
          int var4 = var3.length;
 
-         for(int var5 = 0; var5 < var4; ++var5) {
-            DMPWorkbenchSawMaterials materials = var3[var5];
-            if(materials.itemInput == itemInput && materials.variantInput == variantInput) {
-               return true;
-            }
-         }
+	      for (DMPWorkbenchSawMaterials materials : var3) {
+		      if (materials.itemInput == itemInput && materials.variantInput == variantInput) {
+			      return true;
+		      }
+	      }
 
          return false;
       } else {
@@ -62,12 +60,11 @@ public class DMPCraftingSaw {
          DMPWorkbenchSawMaterials[] var2 = DMPWorkbenchSawMaterials.values();
          int var3 = var2.length;
 
-         for(int var4 = 0; var4 < var3; ++var4) {
-            DMPWorkbenchSawMaterials materials = var2[var4];
-            if(materials.itemOutput == itemOutput) {
-               return true;
-            }
-         }
+	      for (DMPWorkbenchSawMaterials materials : var2) {
+		      if (materials.itemOutput == itemOutput) {
+			      return true;
+		      }
+	      }
 
          return false;
       }
@@ -82,12 +79,11 @@ public class DMPCraftingSaw {
          DMPWorkbenchSawMaterials[] var4 = DMPWorkbenchSawMaterials.values();
          int var5 = var4.length;
 
-         for(int var6 = 0; var6 < var5; ++var6) {
-            DMPWorkbenchSawMaterials materials = var4[var6];
-            if(materials.itemInput == itemInput && materials.variantInput == variantInput) {
-               return new ItemStack(materials.itemOutput, materials.outputAmount, 0);
-            }
-         }
+	      for (DMPWorkbenchSawMaterials materials : var4) {
+		      if (materials.itemInput == itemInput && materials.variantInput == variantInput) {
+			      return new ItemStack(materials.itemOutput, materials.outputAmount, 0);
+		      }
+	      }
 
          return null;
       }

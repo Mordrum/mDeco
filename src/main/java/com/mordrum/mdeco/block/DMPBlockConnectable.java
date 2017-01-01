@@ -1,7 +1,6 @@
 package com.mordrum.mdeco.block;
 
 import com.mordrum.mdeco.object.DMPDecoration;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -17,15 +16,18 @@ public class DMPBlockConnectable extends DMPBlockBaseDecoration {
 
    public DMPBlockConnectable(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(EAST, Boolean.valueOf(false)).withProperty(NORTH, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(EAST, Boolean.FALSE).withProperty(NORTH, Boolean.FALSE).withProperty(SOUTH, Boolean.FALSE).withProperty(WEST, Boolean.FALSE));
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{EAST, NORTH, WEST, SOUTH});
+      return new BlockStateContainer(this, EAST, NORTH, WEST, SOUTH);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-      return state.withProperty(EAST, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.EAST))).withProperty(NORTH, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.NORTH))).withProperty(SOUTH, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.SOUTH))).withProperty(WEST, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.WEST)));
+      return state.withProperty(EAST, this.canConnectTo(worldIn, pos, EnumFacing.EAST)).withProperty(NORTH, this
+		      .canConnectTo(worldIn, pos, EnumFacing.NORTH)).withProperty(SOUTH, this
+		      .canConnectTo(worldIn, pos, EnumFacing.SOUTH)).withProperty(WEST, this
+		      .canConnectTo(worldIn, pos, EnumFacing.WEST));
    }
 
    public int getMetaFromState(IBlockState state) {

@@ -38,12 +38,11 @@ public class DMPContainerWorkbenchSaw extends Container {
    public void detectAndSendChanges() {
       super.detectAndSendChanges();
 
-      for(int i = 0; i < this.listeners.size(); ++i) {
-         IContainerListener icrafting = (IContainerListener) this.listeners.get(i);
-         if(this.cutTime != this.tileEntityWorkbenchSaw.getField(0)) {
-            icrafting.sendProgressBarUpdate(this, 0, this.tileEntityWorkbenchSaw.getField(0));
-         }
-      }
+	   for (IContainerListener icrafting : this.listeners) {
+		   if (this.cutTime != this.tileEntityWorkbenchSaw.getField(0)) {
+			   icrafting.sendProgressBarUpdate(this, 0, this.tileEntityWorkbenchSaw.getField(0));
+		   }
+	   }
 
       this.cutTime = this.tileEntityWorkbenchSaw.getField(0);
    }
@@ -59,7 +58,7 @@ public class DMPContainerWorkbenchSaw extends Container {
 
    public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
       ItemStack itemstack = null;
-      Slot slot = (Slot)this.inventorySlots.get(index);
+      Slot slot = this.inventorySlots.get(index);
       if(slot != null && slot.getHasStack()) {
          ItemStack itemstack1 = slot.getStack();
          itemstack = itemstack1.copy();
@@ -90,7 +89,7 @@ public class DMPContainerWorkbenchSaw extends Container {
          }
 
          if(itemstack1.getCount() == 0) {
-            slot.putStack((ItemStack)null);
+            slot.putStack(null);
          } else {
             slot.onSlotChanged();
          }
@@ -129,7 +128,8 @@ public class DMPContainerWorkbenchSaw extends Container {
       }
 
       public boolean isItemValid(ItemStack stack) {
-         return stack != null? MDeco.recipes.workbenchSawRecipes.isWorkbenchSawInputMaterial(stack.getItem(), stack.getItemDamage()):false;
+         return stack != null &&
+		         MDeco.recipes.workbenchSawRecipes.isWorkbenchSawInputMaterial(stack.getItem(), stack.getItemDamage());
       }
 
       public int getSlotStackLimit() {

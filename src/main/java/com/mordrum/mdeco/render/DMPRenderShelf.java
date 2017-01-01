@@ -9,25 +9,22 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import org.lwjgl.opengl.GL11;
 
 public class DMPRenderShelf extends TileEntitySpecialRenderer {
-   private RenderItem renderItem;
-   private RenderManager renderManager;
+	private RenderManager renderManager;
    public int jLast = 0;
 
    public DMPRenderShelf(RenderManager rm, RenderItem ri) {
       this.renderManager = rm;
-      this.renderItem = ri;
    }
 
    public void render(DMPTileEntityShelf te, double x, double y, double z, float par6, int par7) {
       BlockPos blockPos = te.getPos();
       IBlockState myBlockState = this.getWorld().getBlockState(blockPos);
       if(myBlockState.getBlock() instanceof DMPBlockShelf) {
-         int facing = ((EnumFacing)myBlockState.getValue(DMPBlockShelf.FACING)).getHorizontalIndex();
+         int facing = myBlockState.getValue(DMPBlockShelf.FACING).getHorizontalIndex();
 
          for(int i = 0; i < 8; ++i) {
             if(te.getStackInSlot(i) != null) {

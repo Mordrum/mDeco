@@ -8,7 +8,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -37,7 +36,7 @@ public class DMPBlockBrick extends Block {
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{VARIANT});
+      return new BlockStateContainer(this, VARIANT);
    }
 
    public IBlockState getStateFromMeta(int meta) {
@@ -57,21 +56,20 @@ public class DMPBlockBrick extends Block {
       EnumType[] var4 = EnumType.values();
       int var5 = var4.length;
 
-      for(int var6 = 0; var6 < var5; ++var6) {
-         EnumType blockbrick$enumtype = var4[var6];
-         list.add(new ItemStack(itemIn, 1, blockbrick$enumtype.getMetadata()));
-      }
+	   for (EnumType blockbrick$enumtype : var4) {
+		   list.add(new ItemStack(itemIn, 1, blockbrick$enumtype.getMetadata()));
+	   }
 
    }
 
-   public static enum EnumType implements IStringSerializable {
+   public enum EnumType implements IStringSerializable {
       normal(0),
       mossy(1);
 
       private static final EnumType[] META_LOOKUP = new EnumType[values().length];
       private final int meta;
 
-      private EnumType(int meta) {
+      EnumType(int meta) {
          this.meta = meta;
       }
 
@@ -99,10 +97,9 @@ public class DMPBlockBrick extends Block {
          EnumType[] var0 = values();
          int var1 = var0.length;
 
-         for(int var2 = 0; var2 < var1; ++var2) {
-            EnumType blockbrick$enumtype = var0[var2];
-            META_LOOKUP[blockbrick$enumtype.getMetadata()] = blockbrick$enumtype;
-         }
+	      for (EnumType blockbrick$enumtype : var0) {
+		      META_LOOKUP[blockbrick$enumtype.getMetadata()] = blockbrick$enumtype;
+	      }
 
       }
    }

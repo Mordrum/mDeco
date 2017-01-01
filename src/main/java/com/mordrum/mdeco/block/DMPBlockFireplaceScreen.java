@@ -3,7 +3,6 @@ package com.mordrum.mdeco.block;
 import com.mordrum.mdeco.item.DMPItemFireplaceScreen;
 import com.mordrum.mdeco.object.DMPDecoration;
 import net.minecraft.block.Block;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -24,22 +23,22 @@ public class DMPBlockFireplaceScreen extends DMPBlockConnectSides {
 
    public DMPBlockFireplaceScreen(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(BOTTOM, Boolean.valueOf(true)).withProperty(FACING, EnumFacing.NORTH).withProperty(LEFT, Boolean.valueOf(false)).withProperty(RIGHT, Boolean.valueOf(false)));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(BOTTOM, Boolean.TRUE).withProperty(FACING, EnumFacing.NORTH).withProperty(LEFT, Boolean.FALSE).withProperty(RIGHT, Boolean.FALSE));
       com.mordrum.mdeco.Util.registerBlockAndItem(this, DMPItemFireplaceScreen.class, this.decoration.name());
       this.registerOreDictName(this.decoration.oreDictName);
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{BOTTOM, FACING, LEFT, RIGHT});
+      return new BlockStateContainer(this, BOTTOM, FACING, LEFT, RIGHT);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
       IBlockState newState = super.getActualState(state, worldIn, pos);
       Block blockAbove = worldIn.getBlockState(pos.up()).getBlock();
       if(blockAbove == this) {
-         newState = newState.withProperty(BOTTOM, Boolean.valueOf(true));
+         newState = newState.withProperty(BOTTOM, Boolean.TRUE);
       } else {
-         newState = newState.withProperty(BOTTOM, Boolean.valueOf(false));
+         newState = newState.withProperty(BOTTOM, Boolean.FALSE);
       }
 
       return newState;
@@ -51,7 +50,7 @@ public class DMPBlockFireplaceScreen extends DMPBlockConnectSides {
    }
 
    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-      EnumFacing facing = (EnumFacing)state.getValue(FACING);
+      EnumFacing facing = state.getValue(FACING);
       return facing == EnumFacing.NORTH?AABB_N:(facing == EnumFacing.SOUTH?AABB_S:(facing == EnumFacing.WEST?AABB_W:(facing == EnumFacing.EAST?AABB_E:
 		      FULL_BLOCK_AABB)));
    }

@@ -24,11 +24,14 @@ public class DMPBlockCap extends DMPBlockConnectOne {
    public boolean canPlaceBlockOnSide(World worldIn, BlockPos pos, EnumFacing side) {
       IBlockState stateTarget = worldIn.getBlockState(pos.offset(side.getOpposite()));
       Block block = stateTarget.getBlock();
-      return block == null?false:(side == EnumFacing.DOWN && block instanceof DMPBlockWallLantern?true:(side != EnumFacing.DOWN && side != EnumFacing.UP || block != Blocks.COBBLESTONE_WALL && !(block instanceof BlockWall)?block.isSideSolid(stateTarget, worldIn, pos.offset(side.getOpposite()), side):true));
+      return block != null && (side == EnumFacing.DOWN && block instanceof DMPBlockWallLantern || (
+		      !(side != EnumFacing.DOWN && side != EnumFacing.UP ||
+				      block != Blocks.COBBLESTONE_WALL && !(block instanceof BlockWall)) ||
+				      block.isSideSolid(stateTarget, worldIn, pos.offset(side.getOpposite()), side)));
    }
 
    public boolean isSideSolid(IBlockState base_state, IBlockAccess world, BlockPos pos, EnumFacing side) {
-      int direction = ((Integer)base_state.getValue(CONNECTED)).intValue();
+      int direction = base_state.getValue(CONNECTED);
       switch(direction) {
       case 0:
          return side == EnumFacing.UP;
@@ -59,7 +62,7 @@ public class DMPBlockCap extends DMPBlockConnectOne {
    }
 
    private boolean canBlockStay(World worldIn, BlockPos pos) {
-      EnumFacing facing = EnumFacing.getFront(((Integer)worldIn.getBlockState(pos).getValue(CONNECTED)).intValue());
+      EnumFacing facing = EnumFacing.getFront(worldIn.getBlockState(pos).getValue(CONNECTED));
       return this.canPlaceBlockOnSide(worldIn, pos, facing);
    }
 }

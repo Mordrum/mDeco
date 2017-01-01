@@ -2,7 +2,6 @@ package com.mordrum.mdeco.block;
 
 import com.mordrum.mdeco.object.DMPDecoration;
 import net.minecraft.block.Block;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
@@ -21,11 +20,11 @@ public class DMPBlockConnectSides extends DMPBlockBaseDecoration {
 
    public DMPBlockConnectSides(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(LEFT, Boolean.valueOf(false)).withProperty(RIGHT, Boolean.valueOf(false)));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(LEFT, Boolean.FALSE).withProperty(RIGHT, Boolean.FALSE));
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{FACING, LEFT, RIGHT});
+      return new BlockStateContainer(this, FACING, LEFT, RIGHT);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
@@ -34,13 +33,17 @@ public class DMPBlockConnectSides extends DMPBlockBaseDecoration {
          return state;
       } else {
          if(actualState.getValue(FACING) == EnumFacing.NORTH) {
-            actualState = actualState.withProperty(LEFT, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.WEST))).withProperty(RIGHT, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.EAST)));
+            actualState = actualState.withProperty(LEFT, this.canConnectTo(worldIn, pos, EnumFacing.WEST)).withProperty(RIGHT, this
+		            .canConnectTo(worldIn, pos, EnumFacing.EAST));
          } else if(actualState.getValue(FACING) == EnumFacing.EAST) {
-            actualState = actualState.withProperty(LEFT, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.NORTH))).withProperty(RIGHT, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.SOUTH)));
+            actualState = actualState.withProperty(LEFT, this.canConnectTo(worldIn, pos, EnumFacing.NORTH)).withProperty(RIGHT, this
+		            .canConnectTo(worldIn, pos, EnumFacing.SOUTH));
          } else if(actualState.getValue(FACING) == EnumFacing.SOUTH) {
-            actualState = actualState.withProperty(LEFT, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.EAST))).withProperty(RIGHT, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.WEST)));
+            actualState = actualState.withProperty(LEFT, this.canConnectTo(worldIn, pos, EnumFacing.EAST)).withProperty(RIGHT, this
+		            .canConnectTo(worldIn, pos, EnumFacing.WEST));
          } else if(actualState.getValue(FACING) == EnumFacing.WEST) {
-            actualState = actualState.withProperty(LEFT, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.SOUTH))).withProperty(RIGHT, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.NORTH)));
+            actualState = actualState.withProperty(LEFT, this.canConnectTo(worldIn, pos, EnumFacing.SOUTH)).withProperty(RIGHT, this
+		            .canConnectTo(worldIn, pos, EnumFacing.NORTH));
          }
 
          return actualState;
@@ -48,7 +51,7 @@ public class DMPBlockConnectSides extends DMPBlockBaseDecoration {
    }
 
    public int getMetaFromState(IBlockState state) {
-      return ((EnumFacing)state.getValue(FACING)).getHorizontalIndex();
+      return state.getValue(FACING).getHorizontalIndex();
    }
 
    public IBlockState getStateFromMeta(int meta) {
@@ -71,13 +74,13 @@ public class DMPBlockConnectSides extends DMPBlockBaseDecoration {
 
    protected boolean canConnectTo(IBlockAccess worldIn, BlockPos pos, EnumFacing dirFromNewBlock) {
       IBlockState actualState = worldIn.getBlockState(pos);
-      EnumFacing newBlockFacing = (EnumFacing)actualState.getValue(FACING);
+      EnumFacing newBlockFacing = actualState.getValue(FACING);
       Block block = worldIn.getBlockState(pos.offset(dirFromNewBlock)).getBlock();
       if(block != this) {
          return false;
       } else {
          IBlockState connectBlockState = worldIn.getBlockState(pos.offset(dirFromNewBlock));
-         EnumFacing connectBlockFacing = (EnumFacing)connectBlockState.getValue(FACING);
+         EnumFacing connectBlockFacing = connectBlockState.getValue(FACING);
          return this.strictSideConnection?newBlockFacing == connectBlockFacing:newBlockFacing == connectBlockFacing || newBlockFacing == connectBlockFacing.getOpposite();
       }
    }

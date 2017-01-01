@@ -189,7 +189,7 @@ public class DMPTileEntitySofa extends TileEntityLockable implements IInventory 
    }
 
    public ITextComponent getDisplayName() {
-      return (ITextComponent)(this.hasCustomName()?new TextComponentString(this.getName()):new TextComponentTranslation(this.getName(), new Object[0]));
+      return this.hasCustomName()?new TextComponentString(this.getName()):new TextComponentTranslation(this.getName());
    }
 
    public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn) {

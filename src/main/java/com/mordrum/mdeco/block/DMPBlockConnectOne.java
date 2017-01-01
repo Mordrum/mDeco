@@ -1,7 +1,6 @@
 package com.mordrum.mdeco.block;
 
 import com.mordrum.mdeco.object.DMPDecoration;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -16,11 +15,11 @@ public class DMPBlockConnectOne extends DMPBlockBaseDecoration {
 
    public DMPBlockConnectOne(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(CONNECTED, Integer.valueOf(1)));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(CONNECTED, 1));
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{CONNECTED});
+      return new BlockStateContainer(this, CONNECTED);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
@@ -28,11 +27,11 @@ public class DMPBlockConnectOne extends DMPBlockBaseDecoration {
    }
 
    public int getMetaFromState(IBlockState state) {
-      return ((Integer)state.getValue(CONNECTED)).intValue();
+      return state.getValue(CONNECTED);
    }
 
    public IBlockState getStateFromMeta(int meta) {
-      return this.getDefaultState().withProperty(CONNECTED, Integer.valueOf(meta));
+      return this.getDefaultState().withProperty(CONNECTED, meta);
    }
 
    public boolean canPlaceBlockOnSide(World worldIn, BlockPos pos, EnumFacing side) {
@@ -47,7 +46,7 @@ public class DMPBlockConnectOne extends DMPBlockBaseDecoration {
       float pixel = 0.0625F;
       float width = this.decoration.decorationType.getBoundingWidth() * pixel;
       float height = this.decoration.decorationType.getBoundingHeight() * pixel;
-      int direction = ((Integer)state.getValue(CONNECTED)).intValue();
+      int direction = state.getValue(CONNECTED);
       switch(direction) {
       case 0:
          return new AxisAlignedBB((double)(0.5F - width), (double)(1.0F - height), (double)(0.5F - width), (double)(0.5F + width), 1.0D, (double)(0.5F + width));

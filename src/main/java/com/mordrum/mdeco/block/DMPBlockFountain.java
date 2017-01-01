@@ -36,9 +36,9 @@ public class DMPBlockFountain extends DMPBlockDirectional {
    @SideOnly(Side.CLIENT)
    public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand) {
       if(this.decoration.decorationType == DMPDecorationType.fountainLava) {
-         worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, (double)((float)pos.getX() + 0.5F), (double)((float)pos.getY() + 1.0F), (double)((float)pos.getZ() + 0.5F), 0.0D, 0.0D, 0.0D, new int[0]);
+         worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, (double)((float)pos.getX() + 0.5F), (double)((float)pos.getY() + 1.0F), (double)((float)pos.getZ() + 0.5F), 0.0D, 0.0D, 0.0D);
       } else if(this.decoration.decorationType == DMPDecorationType.fountainWater) {
-         worldIn.spawnParticle(EnumParticleTypes.WATER_SPLASH, (double)((float)pos.getX() + 0.5F), (double)((float)pos.getY() + 1.0F), (double)((float)pos.getZ() + 0.5F), 0.0D, 0.0D, 0.0D, new int[0]);
+         worldIn.spawnParticle(EnumParticleTypes.WATER_SPLASH, (double)((float)pos.getX() + 0.5F), (double)((float)pos.getY() + 1.0F), (double)((float)pos.getZ() + 0.5F), 0.0D, 0.0D, 0.0D);
       }
 
    }

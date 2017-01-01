@@ -2,7 +2,6 @@ package com.mordrum.mdeco.block;
 
 import com.mordrum.mdeco.item.DMPItemWoodTrim;
 import com.mordrum.mdeco.object.DMPDecoration;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -26,15 +25,15 @@ public class DMPBlockWoodTrim extends DMPBlockDirectional {
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{CONNECTED, FACING});
+      return new BlockStateContainer(this, CONNECTED, FACING);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-      return state.withProperty(CONNECTED, Integer.valueOf(this.getConnectedIndex(state, worldIn, pos)));
+      return state.withProperty(CONNECTED, this.getConnectedIndex(state, worldIn, pos));
    }
 
    public boolean isSideSolid(IBlockState base_state, IBlockAccess world, BlockPos pos, EnumFacing side) {
-      return (EnumFacing)base_state.getValue(FACING) == side;
+      return base_state.getValue(FACING) == side;
    }
 
    private int getConnectedIndex(IBlockState state, IBlockAccess worldIn, BlockPos pos) {

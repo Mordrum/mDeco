@@ -30,14 +30,14 @@ public class DMPItemCurtainWool extends ItemBlock {
       } else {
          if(facing == EnumFacing.DOWN) {
             if(worldIn.getBlockState(pos).getBlock() instanceof DMPBlockCurtain) {
-               facing = (EnumFacing)worldIn.getBlockState(pos).getValue(DMPBlockCurtain.FACING);
+               facing = worldIn.getBlockState(pos).getValue(DMPBlockCurtain.FACING);
                posTarget = pos.down();
             } else {
                if(!(worldIn.getBlockState(pos).getBlock() instanceof DMPBlockCurtainRod)) {
                   return EnumActionResult.FAIL;
                }
 
-               facing = (EnumFacing)worldIn.getBlockState(pos).getValue(DMPBlockCurtainRod.FACING);
+               facing = worldIn.getBlockState(pos).getValue(DMPBlockCurtainRod.FACING);
                posTarget = pos.down();
             }
          } else if(facing == EnumFacing.NORTH) {
@@ -55,9 +55,9 @@ public class DMPItemCurtainWool extends ItemBlock {
             Block blockAbove = worldIn.getBlockState(posAbove).getBlock();
             if(blockAbove != null) {
                if(blockAbove instanceof DMPBlockCurtain) {
-                  facing = (EnumFacing)worldIn.getBlockState(posAbove).getValue(DMPBlockCurtain.FACING);
+                  facing = worldIn.getBlockState(posAbove).getValue(DMPBlockCurtain.FACING);
                } else if(blockAbove instanceof DMPBlockCurtainRod) {
-                  facing = (EnumFacing)worldIn.getBlockState(posAbove).getValue(DMPBlockCurtainRod.FACING);
+                  facing = worldIn.getBlockState(posAbove).getValue(DMPBlockCurtainRod.FACING);
                }
             }
 

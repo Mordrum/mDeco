@@ -26,13 +26,11 @@ import net.minecraft.util.math.BlockPos;
 import org.lwjgl.opengl.GL11;
 
 public class DMPRenderCurioBase extends TileEntitySpecialRenderer {
-   private RenderItem renderItem;
-   private RenderManager renderManager;
+	private RenderManager renderManager;
    public int jLast = 0;
 
    public DMPRenderCurioBase(RenderManager rm, RenderItem ri) {
       this.renderManager = rm;
-      this.renderItem = ri;
    }
 
    public void renderTileEntityAt(TileEntity te, double x, double y, double z, float p_180535_8_, int p_180535_9_) {
@@ -43,7 +41,7 @@ public class DMPRenderCurioBase extends TileEntitySpecialRenderer {
       BlockPos blockPos = te.getPos();
       IBlockState myBlockState = this.getWorld().getBlockState(blockPos);
       if(myBlockState.getBlock() instanceof DMPBlockCurioBase) {
-         EnumFacing facing = (EnumFacing)myBlockState.getValue(DMPBlockCurioBase.FACING);
+         EnumFacing facing = myBlockState.getValue(DMPBlockCurioBase.FACING);
 
          for(int i = 0; i < 4; ++i) {
             if(te.getStackInSlot(i) != null) {

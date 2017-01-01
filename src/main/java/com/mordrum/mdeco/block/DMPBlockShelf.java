@@ -5,7 +5,6 @@ import com.mordrum.mdeco.item.DMPItemShelf;
 import com.mordrum.mdeco.object.DMPDecoration;
 import com.mordrum.mdeco.tileentity.DMPTileEntityShelf;
 import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -38,7 +37,7 @@ public class DMPBlockShelf extends DMPBlockStorage implements ITileEntityProvide
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{FACING});
+      return new BlockStateContainer(this, FACING);
    }
 
    public IBlockState getStateFromMeta(int meta) {
@@ -51,7 +50,7 @@ public class DMPBlockShelf extends DMPBlockStorage implements ITileEntityProvide
    }
 
    public int getMetaFromState(IBlockState state) {
-      return ((EnumFacing)state.getValue(FACING)).getIndex();
+      return state.getValue(FACING).getIndex();
    }
 
    public boolean isOpaqueCube(IBlockState state) {
@@ -85,7 +84,7 @@ public class DMPBlockShelf extends DMPBlockStorage implements ITileEntityProvide
    }
 
    public boolean isSideSolid(IBlockState base_state, IBlockAccess world, BlockPos pos, EnumFacing side) {
-      EnumFacing facing = (EnumFacing)base_state.getValue(FACING);
+      EnumFacing facing = base_state.getValue(FACING);
       return side == facing;
    }
 

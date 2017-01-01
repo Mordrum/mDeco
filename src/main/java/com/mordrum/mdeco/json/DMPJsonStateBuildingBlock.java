@@ -23,25 +23,24 @@ public class DMPJsonStateBuildingBlock {
       DMPAncientBlockType[] var2 = DMPAncientBlockType.values();
       int var3 = var2.length;
 
-      for(int var4 = 0; var4 < var3; ++var4) {
-         DMPAncientBlockType blockType = var2[var4];
-         createBlockFile(rootPath, blockType.name());
-         ++filesGenerated;
-         createSlabFile(rootPath, blockType.name());
-         ++filesGenerated;
-         createDoubleSlabFile(rootPath, blockType.name());
-         ++filesGenerated;
-         createStairsFile(rootPath, blockType.name());
-         ++filesGenerated;
-         createWallFile(rootPath, blockType.name());
-         ++filesGenerated;
-         createAncientStonePillarFile(rootPath, blockType.name(), true);
-         ++filesGenerated;
-         createAncientStonePillarFile(rootPath, blockType.name(), false);
-         ++filesGenerated;
-         createHeadstoneFile(rootPath, blockType.name());
-         ++filesGenerated;
-      }
+	   for (DMPAncientBlockType blockType : var2) {
+		   createBlockFile(rootPath, blockType.name());
+		   ++filesGenerated;
+		   createSlabFile(rootPath, blockType.name());
+		   ++filesGenerated;
+		   createDoubleSlabFile(rootPath, blockType.name());
+		   ++filesGenerated;
+		   createStairsFile(rootPath, blockType.name());
+		   ++filesGenerated;
+		   createWallFile(rootPath, blockType.name());
+		   ++filesGenerated;
+		   createAncientStonePillarFile(rootPath, blockType.name(), true);
+		   ++filesGenerated;
+		   createAncientStonePillarFile(rootPath, blockType.name(), false);
+		   ++filesGenerated;
+		   createHeadstoneFile(rootPath, blockType.name());
+		   ++filesGenerated;
+	   }
 
       return filesGenerated;
    }
@@ -51,16 +50,15 @@ public class DMPJsonStateBuildingBlock {
       DMPBuildingBlock[] var2 = DMPBuildingBlock.values();
       int var3 = var2.length;
 
-      for(int var4 = 0; var4 < var3; ++var4) {
-         DMPBuildingBlock buildingBlock = var2[var4];
-         if(buildingBlock.blockType == DMPBuildingBlockType.pillarLarge) {
-            createPillarFile(rootPath, buildingBlock);
-            ++filesGenerated;
-         } else if(buildingBlock.blockType == DMPBuildingBlockType.pillarSmall) {
-            createPillarFile(rootPath, buildingBlock);
-            ++filesGenerated;
-         }
-      }
+	   for (DMPBuildingBlock buildingBlock : var2) {
+		   if (buildingBlock.blockType == DMPBuildingBlockType.pillarLarge) {
+			   createPillarFile(rootPath, buildingBlock);
+			   ++filesGenerated;
+		   } else if (buildingBlock.blockType == DMPBuildingBlockType.pillarSmall) {
+			   createPillarFile(rootPath, buildingBlock);
+			   ++filesGenerated;
+		   }
+	   }
 
       return filesGenerated;
    }
@@ -82,12 +80,16 @@ public class DMPJsonStateBuildingBlock {
                DMPBlockBrick.EnumType[] e = DMPBlockBrick.EnumType.values();
                int var8 = e.length;
 
-               for(int var9 = 0; var9 < var8; ++var9) {
-                  DMPBlockBrick.EnumType variant = e[var9];
-                  String variantName = String.format("%s_%s_block", new Object[]{name, variant.name()});
-                  printwriter.println(String.format("\"variant=%s\":{\"model\":\"%s:%s\"}%s", new Object[]{variant.name(), "mdeco", variantName, index < variantCount - 1?",":""}));
-                  ++index;
-               }
+	            for (DMPBlockBrick.EnumType variant : e) {
+		            String variantName = String.format("%s_%s_block", name, variant.name());
+		            printwriter.println(String.format("\"variant=%s\":{\"model\":\"%s:%s\"}%s", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            variantName,
+				            index < variantCount - 1 ? "," : ""
+		            }));
+		            ++index;
+	            }
 
                printwriter.println("}");
                printwriter.println("}");
@@ -117,13 +119,21 @@ public class DMPJsonStateBuildingBlock {
                DMPBlockBrick.EnumType[] e = DMPBlockBrick.EnumType.values();
                int var8 = e.length;
 
-               for(int var9 = 0; var9 < var8; ++var9) {
-                  DMPBlockBrick.EnumType variant = e[var9];
-                  String modelFile = String.format("%s_%s", new Object[]{name, variant.name()});
-                  printwriter.println(String.format("\"half=bottom,variant=%s\":{\"model\":\"%s:%s_slab_bottom\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"half=top,variant=%s\":{\"model\":\"%s:%s_slab_top\"}%s", new Object[]{variant.name(), "mdeco", modelFile, index < variantCount - 1?",":""}));
-                  ++index;
-               }
+	            for (DMPBlockBrick.EnumType variant : e) {
+		            String modelFile = String.format("%s_%s", name, variant.name());
+		            printwriter.println(String.format("\"half=bottom,variant=%s\":{\"model\":\"%s:%s_slab_bottom\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"half=top,variant=%s\":{\"model\":\"%s:%s_slab_top\"}%s", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile,
+				            index < variantCount - 1 ? "," : ""
+		            }));
+		            ++index;
+	            }
 
                printwriter.println("}");
                printwriter.println("}");
@@ -153,13 +163,21 @@ public class DMPJsonStateBuildingBlock {
                DMPBlockBrick.EnumType[] e = DMPBlockBrick.EnumType.values();
                int var8 = e.length;
 
-               for(int var9 = 0; var9 < var8; ++var9) {
-                  DMPBlockBrick.EnumType variant = e[var9];
-                  String variantName = String.format("%s_%s", new Object[]{name, variant.name()});
-                  printwriter.println(String.format("\"half=bottom,variant=%s\":{\"model\":\"%s:%s_slab_double\"},", new Object[]{variant.name(), "mdeco", variantName}));
-                  printwriter.println(String.format("\"half=top,variant=%s\":{\"model\":\"%s:%s_slab_double\"}%s", new Object[]{variant.name(), "mdeco", variantName, index < variantCount - 1?",":""}));
-                  ++index;
-               }
+	            for (DMPBlockBrick.EnumType variant : e) {
+		            String variantName = String.format("%s_%s", name, variant.name());
+		            printwriter.println(String.format("\"half=bottom,variant=%s\":{\"model\":\"%s:%s_slab_double\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            variantName
+		            }));
+		            printwriter.println(String.format("\"half=top,variant=%s\":{\"model\":\"%s:%s_slab_double\"}%s", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            variantName,
+				            index < variantCount - 1 ? "," : ""
+		            }));
+		            ++index;
+	            }
 
                printwriter.println("}");
                printwriter.println("}");
@@ -254,15 +272,31 @@ public class DMPJsonStateBuildingBlock {
                DMPBlockBrick.EnumType[] e = DMPBlockBrick.EnumType.values();
                int var10 = e.length;
 
-               for(int var11 = 0; var11 < var10; ++var11) {
-                  DMPBlockBrick.EnumType variant = e[var11];
-                  String modelFile = String.format("%s_%s%s", new Object[]{name, variant.name(), pillarType});
-                  printwriter.println(String.format("\"axis=x,variant=%s\":{\"model\":\"%s:%s_side\",\"y\":90},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"axis=y,variant=%s\":{\"model\":\"%s:%s\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"axis=z,variant=%s\":{\"model\":\"%s:%s_side\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"axis=none,variant=%s\":{\"model\":\"%s:%s\"}%s", new Object[]{variant.name(), "mdeco", modelFile, index < variantCount - 1?",":""}));
-                  ++index;
-               }
+	            for (DMPBlockBrick.EnumType variant : e) {
+		            String modelFile = String.format("%s_%s%s", name, variant.name(), pillarType);
+		            printwriter.println(String.format("\"axis=x,variant=%s\":{\"model\":\"%s:%s_side\",\"y\":90},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"axis=y,variant=%s\":{\"model\":\"%s:%s\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"axis=z,variant=%s\":{\"model\":\"%s:%s_side\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"axis=none,variant=%s\":{\"model\":\"%s:%s\"}%s", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile,
+				            index < variantCount - 1 ? "," : ""
+		            }));
+		            ++index;
+	            }
 
                printwriter.println("}");
                printwriter.println("}");
@@ -292,43 +326,171 @@ public class DMPJsonStateBuildingBlock {
                DMPBlockBrick.EnumType[] e = DMPBlockBrick.EnumType.values();
                int var8 = e.length;
 
-               for(int var9 = 0; var9 < var8; ++var9) {
-                  DMPBlockBrick.EnumType variant = e[var9];
-                  String modelFile = String.format("%s_%s_wall", new Object[]{name, variant.name()});
-                  printwriter.println(String.format("\"east=false,north=false,south=false,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_post\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=true,south=false,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_n\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=false,south=false,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_n\",\"y\":90,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=false,south=true,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_n\",\"y\":180,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=false,south=false,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_n\",\"y\":270,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=true,south=false,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_ne\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=false,south=true,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_ne\",\"y\":90,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=false,south=true,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_ne\",\"y\":180,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=true,south=false,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_ne\",\"y\":270,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=true,south=true,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_ns\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=false,south=false,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_ns\",\"y\":90,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=true,south=true,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_nse\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=false,south=true,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_nse\",\"y\":90,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=true,south=true,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_nse\",\"y\":180,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=true,south=false,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_nse\",\"y\":270,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=true,south=true,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_nsew\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=false,south=false,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_post\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=true,south=false,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_n\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=false,south=false,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_n\",\"y\":90,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=false,south=true,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_n\",\"y\":180,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=false,south=false,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_n\",\"y\":270,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=true,south=false,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_ne\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=false,south=true,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_ne\",\"y\":90,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=false,south=true,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_ne\",\"y\":180,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=true,south=false,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_ne\",\"y\":270,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=true,south=true,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_ns_above\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=false,south=false,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_ns_above\",\"y\":90,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=true,south=true,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_nse\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=false,south=true,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_nse\",\"y\":90,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=false,north=true,south=true,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_nse\",\"y\":180,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=true,south=false,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_nse\",\"y\":270,\"uvlock\":true},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"east=true,north=true,south=true,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_nsew\"}%s", new Object[]{variant.name(), "mdeco", modelFile, index < variantCount - 1?",":""}));
-                  ++index;
-               }
+	            for (DMPBlockBrick.EnumType variant : e) {
+		            String modelFile = String.format("%s_%s_wall", name, variant.name());
+		            printwriter.println(String.format("\"east=false,north=false,south=false,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_post\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=true,south=false,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_n\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=false,south=false,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_n\",\"y\":90,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=false,south=true,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_n\",\"y\":180,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=false,south=false,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_n\",\"y\":270,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=true,south=false,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_ne\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=false,south=true,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_ne\",\"y\":90,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=false,south=true,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_ne\",\"y\":180,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=true,south=false,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_ne\",\"y\":270,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=true,south=true,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_ns\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=false,south=false,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_ns\",\"y\":90,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=true,south=true,up=false,variant=%s,west=false\":{\"model\":\"%s:%s_nse\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=false,south=true,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_nse\",\"y\":90,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=true,south=true,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_nse\",\"y\":180,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=true,south=false,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_nse\",\"y\":270,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=true,south=true,up=false,variant=%s,west=true\":{\"model\":\"%s:%s_nsew\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=false,south=false,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_post\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=true,south=false,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_n\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=false,south=false,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_n\",\"y\":90,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=false,south=true,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_n\",\"y\":180,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=false,south=false,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_n\",\"y\":270,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=true,south=false,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_ne\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=false,south=true,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_ne\",\"y\":90,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=false,south=true,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_ne\",\"y\":180,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=true,south=false,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_ne\",\"y\":270,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=true,south=true,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_ns_above\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=false,south=false,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_ns_above\",\"y\":90,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=true,south=true,up=true,variant=%s,west=false\":{\"model\":\"%s:%s_nse\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=false,south=true,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_nse\",\"y\":90,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=false,north=true,south=true,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_nse\",\"y\":180,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=true,south=false,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_nse\",\"y\":270,\"uvlock\":true},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"east=true,north=true,south=true,up=true,variant=%s,west=true\":{\"model\":\"%s:%s_nsew\"}%s", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile,
+				            index < variantCount - 1 ? "," : ""
+		            }));
+		            ++index;
+	            }
 
                printwriter.println("}");
                printwriter.println("}");
@@ -358,13 +520,21 @@ public class DMPJsonStateBuildingBlock {
                DMPBlockBrickHeadstone.EnumType[] e = DMPBlockBrickHeadstone.EnumType.values();
                int var8 = e.length;
 
-               for(int var9 = 0; var9 < var8; ++var9) {
-                  DMPBlockBrickHeadstone.EnumType variant = e[var9];
-                  String modelFile = String.format("%s_headstone_%s", new Object[]{name, variant.name()});
-                  printwriter.println(String.format("\"facing=north_south,variant=%s\":{\"model\":\"%s:%s\"},", new Object[]{variant.name(), "mdeco", modelFile}));
-                  printwriter.println(String.format("\"facing=west_east,variant=%s\":{\"model\":\"%s:%s\",\"y\":90}%s", new Object[]{variant.name(), "mdeco", modelFile, index < variantCount - 1?",":""}));
-                  ++index;
-               }
+	            for (DMPBlockBrickHeadstone.EnumType variant : e) {
+		            String modelFile = String.format("%s_headstone_%s", name, variant.name());
+		            printwriter.println(String.format("\"facing=north_south,variant=%s\":{\"model\":\"%s:%s\"},", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile
+		            }));
+		            printwriter.println(String.format("\"facing=west_east,variant=%s\":{\"model\":\"%s:%s\",\"y\":90}%s", new Object[]{
+				            variant.name(),
+				            "mdeco",
+				            modelFile,
+				            index < variantCount - 1 ? "," : ""
+		            }));
+		            ++index;
+	            }
 
                printwriter.println("}");
                printwriter.println("}");

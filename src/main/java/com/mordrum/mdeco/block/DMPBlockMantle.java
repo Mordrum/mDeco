@@ -6,7 +6,6 @@ import com.mordrum.mdeco.object.DMPDecoration;
 import com.mordrum.mdeco.tileentity.DMPTileEntityMantle;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -34,7 +33,7 @@ public class DMPBlockMantle extends DMPBlockStorage implements ITileEntityProvid
 
    public DMPBlockMantle(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(POSITION, Integer.valueOf(0)));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(POSITION, 0));
       com.mordrum.mdeco.Util.registerBlockAndItem(this, DMPItemMantle.class, this.decoration.name());
       this.registerOreDictName(this.decoration.oreDictName);
    }
@@ -45,14 +44,14 @@ public class DMPBlockMantle extends DMPBlockStorage implements ITileEntityProvid
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{FACING, POSITION});
+      return new BlockStateContainer(this, FACING, POSITION);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
       Block blockLeft = null;
       Block blockRight = null;
       Block blockBelow = worldIn.getBlockState(pos.down()).getBlock();
-      EnumFacing facing = (EnumFacing)state.getValue(FACING);
+      EnumFacing facing = state.getValue(FACING);
       switch(facing.ordinal()) {
       case 1:
          blockLeft = worldIn.getBlockState(pos.west()).getBlock();
@@ -85,7 +84,7 @@ public class DMPBlockMantle extends DMPBlockStorage implements ITileEntityProvid
             position1 += 4;
          }
 
-         return super.getActualState(state, worldIn, pos).withProperty(POSITION, Integer.valueOf(position1));
+         return super.getActualState(state, worldIn, pos).withProperty(POSITION, position1);
       }
    }
 

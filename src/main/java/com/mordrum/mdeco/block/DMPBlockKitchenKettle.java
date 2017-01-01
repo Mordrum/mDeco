@@ -2,7 +2,6 @@ package com.mordrum.mdeco.block;
 
 import com.mordrum.mdeco.item.DMPItemKitchenKettle;
 import com.mordrum.mdeco.object.DMPDecoration;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
@@ -31,7 +30,7 @@ public class DMPBlockKitchenKettle extends DMPBlockBaseDecoration {
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{FACING, VARIANT});
+      return new BlockStateContainer(this, FACING, VARIANT);
    }
 
    public IBlockState getStateFromMeta(int meta) {
@@ -41,7 +40,7 @@ public class DMPBlockKitchenKettle extends DMPBlockBaseDecoration {
    public int getMetaFromState(IBlockState state) {
       byte b0 = 0;
       int i = b0 | ((EnumType)state.getValue(VARIANT)).getMetadata();
-      i |= ((EnumFacing)state.getValue(FACING)).getHorizontalIndex() << 2;
+      i |= state.getValue(FACING).getHorizontalIndex() << 2;
       return i;
    }
 
@@ -64,14 +63,14 @@ public class DMPBlockKitchenKettle extends DMPBlockBaseDecoration {
       VARIANT = PropertyEnum.create("variant", EnumType.class);
    }
 
-   public static enum EnumType implements IStringSerializable {
+   public enum EnumType implements IStringSerializable {
       lid_off(0),
       lid_on(1);
 
       private static final EnumType[] META_LOOKUP = new EnumType[values().length];
       private final int meta;
 
-      private EnumType(int meta) {
+      EnumType(int meta) {
          this.meta = meta;
       }
 
@@ -108,10 +107,9 @@ public class DMPBlockKitchenKettle extends DMPBlockBaseDecoration {
          EnumType[] var0 = values();
          int var1 = var0.length;
 
-         for(int var2 = 0; var2 < var1; ++var2) {
-            EnumType decoration$enumtype = var0[var2];
-            META_LOOKUP[decoration$enumtype.getMetadata()] = decoration$enumtype;
-         }
+	      for (EnumType decoration$enumtype : var0) {
+		      META_LOOKUP[decoration$enumtype.getMetadata()] = decoration$enumtype;
+	      }
 
       }
    }

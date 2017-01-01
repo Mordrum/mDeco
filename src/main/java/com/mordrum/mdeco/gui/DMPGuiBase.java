@@ -67,7 +67,6 @@ public abstract class DMPGuiBase extends GuiScreen {
             return;
          case 2:
             this.mc.displayGuiScreen(this.parentGuiScreen);
-            return;
          }
       }
 

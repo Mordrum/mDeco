@@ -48,7 +48,7 @@ public class DMPBlockBrickPillar extends Block {
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{AXIS, VARIANT});
+      return new BlockStateContainer(this, AXIS, VARIANT);
    }
 
    public IBlockState getStateFromMeta(int meta) {
@@ -102,10 +102,9 @@ public class DMPBlockBrickPillar extends Block {
       DMPBlockBrick.EnumType[] var4 = DMPBlockBrick.EnumType.values();
       int var5 = var4.length;
 
-      for(int var6 = 0; var6 < var5; ++var6) {
-         DMPBlockBrick.EnumType blockwall$enumtype = var4[var6];
-         list.add(new ItemStack(itemIn, 1, blockwall$enumtype.getMetadata()));
-      }
+	   for (DMPBlockBrick.EnumType blockwall$enumtype : var4) {
+		   list.add(new ItemStack(itemIn, 1, blockwall$enumtype.getMetadata()));
+	   }
 
    }
 
@@ -122,14 +121,14 @@ public class DMPBlockBrickPillar extends Block {
       return this.getCollisionBoundingBox(state, worldIn, pos).offset(pos);
    }
 
-   public static enum EnumAxis implements IStringSerializable {
+   public enum EnumAxis implements IStringSerializable {
       x(0),
       y(1),
       z(2);
 
       private final int meta;
 
-      private EnumAxis(int meta) {
+      EnumAxis(int meta) {
          this.meta = meta;
       }
 

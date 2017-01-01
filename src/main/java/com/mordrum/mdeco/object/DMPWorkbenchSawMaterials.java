@@ -82,7 +82,7 @@ public enum DMPWorkbenchSawMaterials {
    public Item itemOutput;
    public int outputAmount;
 
-   private DMPWorkbenchSawMaterials(Item itemInput, int variantInput, Item itemOutput, int outputAmount) {
+   DMPWorkbenchSawMaterials(Item itemInput, int variantInput, Item itemOutput, int outputAmount) {
       this.itemInput = itemInput;
       this.variantInput = variantInput;
       this.itemOutput = itemOutput;

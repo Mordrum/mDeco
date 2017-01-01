@@ -35,8 +35,8 @@ public class DMPBlockChandelierSmall extends DMPBlockBaseDecoration {
    }
 
    private void spawnCandleParticles(World worldIn, double x, double y, double z) {
-      worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, x, y, z, 0.0D, 0.0D, 0.0D, new int[0]);
-      worldIn.spawnParticle(EnumParticleTypes.FLAME, x, y, z, 0.0D, 0.0D, 0.0D, new int[0]);
+      worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, x, y, z, 0.0D, 0.0D, 0.0D);
+      worldIn.spawnParticle(EnumParticleTypes.FLAME, x, y, z, 0.0D, 0.0D, 0.0D);
    }
 
    public boolean canPlaceBlockOnSide(World worldIn, BlockPos pos, EnumFacing side) {

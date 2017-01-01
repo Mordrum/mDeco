@@ -22,8 +22,8 @@ import net.minecraft.util.text.TextComponentTranslation;
 public class DMPTileEntityMarketCrate extends TileEntityLockable implements IInventory {
    private static final int TOTAL_SLOTS = 15;
    private ItemStack[] storageItems = new ItemStack[15];
-   private String displayText1 = new String("");
-   private String displayText2 = new String("");
+   private String displayText1 = "";
+   private String displayText2 = "";
    public boolean open = false;
    public int numPlayersUsing = 0;
 
@@ -129,7 +129,9 @@ public class DMPTileEntityMarketCrate extends TileEntityLockable implements IInv
    }
 
    public boolean isUsableByPlayer(EntityPlayer player) {
-      return this.world.getTileEntity(this.pos) != this?false:player.getDistanceSq((double)this.pos.getX() + 0.5D, (double)this.pos.getY() + 0.5D, (double)this.pos.getZ() + 0.5D) <= 64.0D;
+      return this.world.getTileEntity(this.pos) == this && player.getDistanceSq(
+		      (double) this.pos.getX() + 0.5D, (double) this.pos.getY() + 0.5D, (double) this.pos.getZ() + 0.5D) <=
+		      64.0D;
    }
 
    public boolean receiveClientEvent(int id, int type) {
@@ -192,7 +194,7 @@ public class DMPTileEntityMarketCrate extends TileEntityLockable implements IInv
    }
 
    public ITextComponent getDisplayName() {
-      return (ITextComponent)(this.hasCustomName()?new TextComponentString(this.getName()):new TextComponentTranslation(this.getName(), new Object[0]));
+      return this.hasCustomName()?new TextComponentString(this.getName()):new TextComponentTranslation(this.getName());
    }
 
    public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn) {

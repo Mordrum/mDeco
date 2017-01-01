@@ -5,11 +5,10 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 
 public class DMPItemPoleConnector extends ItemBlock {
-   private DMPBlockPoleConnector decorationBlock;
 
-   public DMPItemPoleConnector(Block block) {
+	public DMPItemPoleConnector(Block block) {
       super(block);
       this.setUnlocalizedName(block.getUnlocalizedName().substring(5));
-      this.decorationBlock = (DMPBlockPoleConnector)block;
+		DMPBlockPoleConnector decorationBlock = (DMPBlockPoleConnector) block;
    }
 }

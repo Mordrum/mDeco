@@ -4,7 +4,6 @@ import com.mordrum.mdeco.item.DMPItemWoodPanel;
 import com.mordrum.mdeco.object.DMPDecoration;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -23,22 +22,22 @@ public class DMPBlockWoodPanel extends DMPBlockDirectional {
 
    public DMPBlockWoodPanel(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(CONNECTED, Integer.valueOf(0)).withProperty(FACING, EnumFacing.NORTH));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(CONNECTED, 0).withProperty(FACING, EnumFacing.NORTH));
       this.setSoundType(SoundType.WOOD);
       com.mordrum.mdeco.Util.registerBlockAndItem(this, DMPItemWoodPanel.class, this.decoration.name());
       this.registerOreDictName(this.decoration.oreDictName);
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{CONNECTED, FACING});
+      return new BlockStateContainer(this, CONNECTED, FACING);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-      return state.withProperty(CONNECTED, Integer.valueOf(this.getConnectedIndex(worldIn, pos, (EnumFacing)state.getValue(FACING))));
+      return state.withProperty(CONNECTED, this.getConnectedIndex(worldIn, pos, state.getValue(FACING)));
    }
 
    public boolean isSideSolid(IBlockState base_state, IBlockAccess world, BlockPos pos, EnumFacing side) {
-      return (EnumFacing)base_state.getValue(FACING) == side;
+      return base_state.getValue(FACING) == side;
    }
 
    public int getConnectedIndex(IBlockAccess worldIn, BlockPos pos, EnumFacing facing) {
@@ -86,7 +85,7 @@ public class DMPBlockWoodPanel extends DMPBlockDirectional {
 
    protected boolean canConnectTo(World worldIn, BlockPos pos) {
       Block block = worldIn.getBlockState(pos).getBlock();
-      return block == null?false:block == this;
+      return block != null && block == this;
    }
 
    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {

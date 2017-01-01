@@ -28,6 +28,6 @@ public class DMPItemBrickWall extends ItemBlock {
    }
 
    public String getUnlocalizedName(ItemStack itemStack) {
-      return String.format("%s_%s", new Object[]{this.block.getUnlocalizedName(), DMPBlockBrick.EnumType.byMetadata(itemStack.getMetadata()).name()});
+      return String.format("%s_%s", this.block.getUnlocalizedName(), DMPBlockBrick.EnumType.byMetadata(itemStack.getMetadata()).name());
    }
 }

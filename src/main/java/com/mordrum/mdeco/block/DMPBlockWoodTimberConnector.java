@@ -26,12 +26,20 @@ public class DMPBlockWoodTimberConnector extends DMPBlockConnectAll {
    public boolean canPlaceBlockOnSide(World worldIn, BlockPos pos, EnumFacing side) {
       IBlockState stateTarget = worldIn.getBlockState(pos.offset(side.getOpposite()));
       Block block = stateTarget.getBlock();
-      return block == null?false:(!(block instanceof BlockGlass) && !(block instanceof BlockGlowstone) && !(block instanceof BlockStainedGlass)?((block instanceof BlockWall || block instanceof BlockFence) && (side == EnumFacing.DOWN || side == EnumFacing.UP)?true:block.isSideSolid(stateTarget, worldIn, pos.offset(side.getOpposite()), side)):true);
+      return block != null && (!(!(block instanceof BlockGlass) && !(block instanceof BlockGlowstone) &&
+		      !(block instanceof BlockStainedGlass)) || (
+		      (block instanceof BlockWall || block instanceof BlockFence) &&
+				      (side == EnumFacing.DOWN || side == EnumFacing.UP) ||
+				      block.isSideSolid(stateTarget, worldIn, pos.offset(side.getOpposite()), side)));
    }
 
    protected boolean canConnectTo(IBlockAccess worldIn, BlockPos pos, EnumFacing side) {
       IBlockState stateTarget = worldIn.getBlockState(pos.offset(side));
       Block block = stateTarget.getBlock();
-      return block == null?false:(!(block instanceof BlockGlass) && !(block instanceof BlockGlowstone) && !(block instanceof BlockStainedGlass)?(!(block instanceof BlockWall) && !(block instanceof BlockFence) || side != EnumFacing.DOWN && side != EnumFacing.UP?block.isSideSolid(stateTarget, worldIn, pos.offset(side), side.getOpposite()):true):true);
+      return block != null && (!(!(block instanceof BlockGlass) && !(block instanceof BlockGlowstone) &&
+		      !(block instanceof BlockStainedGlass)) || (
+		      !(!(block instanceof BlockWall) && !(block instanceof BlockFence) ||
+				      side != EnumFacing.DOWN && side != EnumFacing.UP) ||
+				      block.isSideSolid(stateTarget, worldIn, pos.offset(side), side.getOpposite())));
    }
 }

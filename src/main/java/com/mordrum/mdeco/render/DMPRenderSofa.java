@@ -22,14 +22,12 @@ import net.minecraft.util.EnumFacing;
 import org.lwjgl.opengl.GL11;
 
 public class DMPRenderSofa extends TileEntitySpecialRenderer {
-   private RenderItem renderItem;
-   private RenderManager renderManager;
+	private RenderManager renderManager;
    private final Minecraft mc = Minecraft.getMinecraft();
    public int jLast = 0;
 
    public DMPRenderSofa(RenderManager rm, RenderItem ri) {
       this.renderManager = rm;
-      this.renderItem = ri;
    }
 
    public void renderTileEntityAt(TileEntity te, double x, double y, double z, float p_180535_8_, int p_180535_9_) {
@@ -84,10 +82,10 @@ public class DMPRenderSofa extends TileEntitySpecialRenderer {
    }
 
    private void renderCushionBack(VertexBuffer vertexBuffer, IBlockState sofaState, TextureAtlasSprite spriteBack) {
-      boolean bFore = ((Boolean)sofaState.getValue(DMPBlockSofa.CONNECT_FORE)).booleanValue();
-      boolean bLeft = ((Boolean)sofaState.getValue(DMPBlockSofa.CONNECT_LEFT)).booleanValue();
-      boolean bRight = ((Boolean)sofaState.getValue(DMPBlockSofa.CONNECT_RIGHT)).booleanValue();
-      EnumFacing facing = (EnumFacing)sofaState.getValue(DMPBlockSofa.FACING);
+      boolean bFore = sofaState.getValue(DMPBlockSofa.CONNECT_FORE);
+      boolean bLeft = sofaState.getValue(DMPBlockSofa.CONNECT_LEFT);
+      boolean bRight = sofaState.getValue(DMPBlockSofa.CONNECT_RIGHT);
+      EnumFacing facing = sofaState.getValue(DMPBlockSofa.FACING);
       double pixel = 0.0625D;
       if(facing == EnumFacing.NORTH) {
          vertexBuffer.pos(pixel * 14.0D, pixel * 6.0D, pixel * 4.0D).tex((double)spriteBack.getInterpolatedU(14.0D), (double)spriteBack.getInterpolatedV(6.0D)).endVertex();
@@ -414,10 +412,10 @@ public class DMPRenderSofa extends TileEntitySpecialRenderer {
    }
 
    private void renderCushionBottom(VertexBuffer vertexBuffer, IBlockState sofaState, TextureAtlasSprite spriteBottom) {
-      boolean bFore = ((Boolean)sofaState.getValue(DMPBlockSofa.CONNECT_FORE)).booleanValue();
-      boolean bLeft = ((Boolean)sofaState.getValue(DMPBlockSofa.CONNECT_LEFT)).booleanValue();
-      boolean bRight = ((Boolean)sofaState.getValue(DMPBlockSofa.CONNECT_RIGHT)).booleanValue();
-      EnumFacing facing = (EnumFacing)sofaState.getValue(DMPBlockSofa.FACING);
+      boolean bFore = sofaState.getValue(DMPBlockSofa.CONNECT_FORE);
+      boolean bLeft = sofaState.getValue(DMPBlockSofa.CONNECT_LEFT);
+      boolean bRight = sofaState.getValue(DMPBlockSofa.CONNECT_RIGHT);
+      EnumFacing facing = sofaState.getValue(DMPBlockSofa.FACING);
       double pixel = 0.0625D;
       if(facing == EnumFacing.NORTH) {
          vertexBuffer.pos(pixel * 14.0D, pixel * 8.0D, pixel * 15.0D).tex((double)spriteBottom.getInterpolatedU(14.0D), (double)spriteBottom.getInterpolatedV(15.0D)).endVertex();

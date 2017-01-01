@@ -17,13 +17,11 @@ import net.minecraft.util.math.BlockPos;
 import org.lwjgl.opengl.GL11;
 
 public class DMPRenderMarketCrate extends TileEntitySpecialRenderer {
-   private RenderItem renderItem;
-   private RenderManager renderManager;
+	private RenderManager renderManager;
    public int jLast = 0;
 
    public DMPRenderMarketCrate(RenderManager rm, RenderItem ri) {
       this.renderManager = rm;
-      this.renderItem = ri;
    }
 
    public void renderTileEntityAt(TileEntity te, double x, double y, double z, float p_180535_8_, int p_180535_9_) {
@@ -34,7 +32,7 @@ public class DMPRenderMarketCrate extends TileEntitySpecialRenderer {
       BlockPos blockPos = te.getPos();
       IBlockState myBlockState = this.getWorld().getBlockState(blockPos);
       if(myBlockState.getBlock() instanceof DMPBlockMarketCrate) {
-         EnumFacing facing = (EnumFacing)myBlockState.getValue(DMPBlockMarketCrate.FACING);
+         EnumFacing facing = myBlockState.getValue(DMPBlockMarketCrate.FACING);
          ItemStack stackDye1 = te.getStackInSlot(13);
          ItemStack stackDye2 = te.getStackInSlot(14);
 

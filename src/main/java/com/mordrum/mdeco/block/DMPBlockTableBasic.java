@@ -35,14 +35,14 @@ public class DMPBlockTableBasic extends DMPBlockConnectableDirectional {
          orientation = playerOrientation;
       }
 
-      return this.getDefaultState().withProperty(ORIENTATION, Integer.valueOf(orientation));
+      return this.getDefaultState().withProperty(ORIENTATION, orientation);
    }
 
    private int getOrientationAfterPlaced(World worldIn, BlockPos pos, int playerOrientation) {
       Block block = worldIn.getBlockState(pos.north()).getBlock();
       int neighborOrientation;
       if(block == this) {
-         neighborOrientation = Integer.valueOf(((Integer)worldIn.getBlockState(pos.north()).getValue(ORIENTATION)).intValue()).intValue();
+         neighborOrientation = worldIn.getBlockState(pos.north()).getValue(ORIENTATION);
          neighborOrientation = neighborOrientation != 0 && neighborOrientation != 2?0:1;
          if(playerOrientation == neighborOrientation) {
             return neighborOrientation;
@@ -51,7 +51,7 @@ public class DMPBlockTableBasic extends DMPBlockConnectableDirectional {
 
       block = worldIn.getBlockState(pos.east()).getBlock();
       if(block == this) {
-         neighborOrientation = Integer.valueOf(((Integer)worldIn.getBlockState(pos.east()).getValue(ORIENTATION)).intValue()).intValue();
+         neighborOrientation = worldIn.getBlockState(pos.east()).getValue(ORIENTATION);
          neighborOrientation = neighborOrientation != 0 && neighborOrientation != 2?0:1;
          if(playerOrientation == neighborOrientation) {
             return neighborOrientation;
@@ -60,7 +60,7 @@ public class DMPBlockTableBasic extends DMPBlockConnectableDirectional {
 
       block = worldIn.getBlockState(pos.south()).getBlock();
       if(block == this) {
-         neighborOrientation = Integer.valueOf(((Integer)worldIn.getBlockState(pos.south()).getValue(ORIENTATION)).intValue()).intValue();
+         neighborOrientation = worldIn.getBlockState(pos.south()).getValue(ORIENTATION);
          neighborOrientation = neighborOrientation != 0 && neighborOrientation != 2?0:1;
          if(playerOrientation == neighborOrientation) {
             return neighborOrientation;
@@ -69,7 +69,7 @@ public class DMPBlockTableBasic extends DMPBlockConnectableDirectional {
 
       block = worldIn.getBlockState(pos.west()).getBlock();
       if(block == this) {
-         neighborOrientation = Integer.valueOf(((Integer)worldIn.getBlockState(pos.west()).getValue(ORIENTATION)).intValue()).intValue();
+         neighborOrientation = worldIn.getBlockState(pos.west()).getValue(ORIENTATION);
          neighborOrientation = neighborOrientation != 0 && neighborOrientation != 2?0:1;
          if(playerOrientation == neighborOrientation) {
             return neighborOrientation;

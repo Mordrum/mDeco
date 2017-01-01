@@ -9,18 +9,15 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import org.lwjgl.opengl.GL11;
 
 public class DMPRenderCabinetWallGlass extends TileEntitySpecialRenderer {
-   private RenderItem renderItem;
-   private RenderManager renderManager;
+	private RenderManager renderManager;
    public int jLast = 0;
 
    public DMPRenderCabinetWallGlass(RenderManager rm, RenderItem ri) {
       this.renderManager = rm;
-      this.renderItem = ri;
    }
 
    public void renderTileEntityAt(TileEntity te, double x, double y, double z, float p_180535_8_, int p_180535_9_) {
@@ -31,7 +28,7 @@ public class DMPRenderCabinetWallGlass extends TileEntitySpecialRenderer {
       BlockPos blockPos = te.getPos();
       IBlockState myBlockState = this.getWorld().getBlockState(blockPos);
       if(myBlockState.getBlock() instanceof DMPBlockCabinetWallGlass) {
-         int facing = ((EnumFacing)myBlockState.getValue(DMPBlockCabinetWallGlass.FACING)).getHorizontalIndex();
+         int facing = myBlockState.getValue(DMPBlockCabinetWallGlass.FACING).getHorizontalIndex();
 
          for(int i = 0; i < 8; ++i) {
             if(te.getStackInSlot(i) != null) {

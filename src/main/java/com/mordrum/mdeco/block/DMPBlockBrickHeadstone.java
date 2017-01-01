@@ -8,7 +8,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -47,7 +46,7 @@ public class DMPBlockBrickHeadstone extends Block {
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{FACING, VARIANT});
+      return new BlockStateContainer(this, FACING, VARIANT);
    }
 
    public IBlockState getStateFromMeta(int meta) {
@@ -94,14 +93,13 @@ public class DMPBlockBrickHeadstone extends Block {
       EnumType[] var4 = EnumType.values();
       int var5 = var4.length;
 
-      for(int var6 = 0; var6 < var5; ++var6) {
-         EnumType headstone$enumtype = var4[var6];
-         list.add(new ItemStack(itemIn, 1, headstone$enumtype.getMetadata()));
-      }
+	   for (EnumType headstone$enumtype : var4) {
+		   list.add(new ItemStack(itemIn, 1, headstone$enumtype.getMetadata()));
+	   }
 
    }
 
-   public static enum EnumType implements IStringSerializable {
+   public enum EnumType implements IStringSerializable {
       short_cross(0),
       tall_cross(1),
       rounded(2);
@@ -109,7 +107,7 @@ public class DMPBlockBrickHeadstone extends Block {
       private static final EnumType[] META_LOOKUP = new EnumType[values().length];
       private final int meta;
 
-      private EnumType(int meta) {
+      EnumType(int meta) {
          this.meta = meta;
       }
 
@@ -137,22 +135,21 @@ public class DMPBlockBrickHeadstone extends Block {
          EnumType[] var0 = values();
          int var1 = var0.length;
 
-         for(int var2 = 0; var2 < var1; ++var2) {
-            EnumType headstone$enumtype = var0[var2];
-            META_LOOKUP[headstone$enumtype.getMetadata()] = headstone$enumtype;
-         }
+	      for (EnumType headstone$enumtype : var0) {
+		      META_LOOKUP[headstone$enumtype.getMetadata()] = headstone$enumtype;
+	      }
 
       }
    }
 
-   public static enum EnumDirection implements IStringSerializable {
+   public enum EnumDirection implements IStringSerializable {
       north_south(0),
       west_east(1);
 
       private static final EnumDirection[] META_LOOKUP = new EnumDirection[values().length];
       private final int meta;
 
-      private EnumDirection(int meta) {
+      EnumDirection(int meta) {
          this.meta = meta;
       }
 
@@ -180,10 +177,9 @@ public class DMPBlockBrickHeadstone extends Block {
          EnumDirection[] var0 = values();
          int var1 = var0.length;
 
-         for(int var2 = 0; var2 < var1; ++var2) {
-            EnumDirection headstone$enumfacing = var0[var2];
-            META_LOOKUP[headstone$enumfacing.getMetadata()] = headstone$enumfacing;
-         }
+	      for (EnumDirection headstone$enumfacing : var0) {
+		      META_LOOKUP[headstone$enumfacing.getMetadata()] = headstone$enumfacing;
+	      }
 
       }
    }

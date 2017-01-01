@@ -5,12 +5,11 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 
 public class DMPItemPalletStack extends ItemBlock {
-   private DMPBlockPalletStack decorationBlock;
 
-   public DMPItemPalletStack(Block block) {
+	public DMPItemPalletStack(Block block) {
       super(block);
       this.setUnlocalizedName(block.getUnlocalizedName().substring(5));
-      this.decorationBlock = (DMPBlockPalletStack)block;
+		DMPBlockPalletStack decorationBlock = (DMPBlockPalletStack) block;
    }
 
    public int getMetadata(int damage) {

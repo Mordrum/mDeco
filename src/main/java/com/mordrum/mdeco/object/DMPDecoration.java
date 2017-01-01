@@ -487,7 +487,7 @@ public enum DMPDecoration {
    public final String textureHardware;
    public final String textureExtra;
 
-   private DMPDecoration(String oreDictName, DMPDecorationType decorationType, Material material, String texturePrimary, String textureTrim, String textureHardware, String textureExtra) {
+   DMPDecoration(String oreDictName, DMPDecorationType decorationType, Material material, String texturePrimary, String textureTrim, String textureHardware, String textureExtra) {
       this.oreDictName = oreDictName;
       this.decorationType = decorationType;
       this.material = material;

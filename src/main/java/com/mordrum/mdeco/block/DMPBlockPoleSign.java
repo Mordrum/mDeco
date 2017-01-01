@@ -74,7 +74,7 @@ public class DMPBlockPoleSign extends DMPBlockDirectional implements ITileEntity
 		}
 		IBlockState state = world.getBlockState(pos);
 
-		if (!canBlockStay(world, pos, (EnumFacing) state.getValue(FACING))) {
+		if (!canBlockStay(world, pos, state.getValue(FACING))) {
 			this.dropBlockAsItem(world, pos, state, 1);
 			world.setBlockToAir(pos);
 		}
@@ -93,7 +93,7 @@ public class DMPBlockPoleSign extends DMPBlockDirectional implements ITileEntity
 			DMPDecorationType decorationType = ((DMPBlockBaseDecoration) worldIn.getBlockState(posTarget)
 					.getBlock()).getDecorationType();
 			if (decorationType == DMPDecorationType.poleMetal) {
-				if (((Integer) worldIn.getBlockState(posTarget).getValue(DMPBlockPole.ORIENTATION)).intValue() == 1) {
+				if (worldIn.getBlockState(posTarget).getValue(DMPBlockPole.ORIENTATION) == 1) {
 					return true;
 				}
 			} else if (decorationType == DMPDecorationType.poleMetalConnector) {
@@ -103,8 +103,8 @@ public class DMPBlockPoleSign extends DMPBlockDirectional implements ITileEntity
 				}
 
 				IBlockState actualState = block.getActualState(worldIn.getBlockState(posTarget), worldIn, posTarget);
-				if (((Boolean) actualState.getValue(DMPBlockPoleConnector.DOWN)).booleanValue() &&
-						((Boolean) actualState.getValue(DMPBlockPoleConnector.UP)).booleanValue()) {
+				if (actualState.getValue(DMPBlockPoleConnector.DOWN) &&
+						actualState.getValue(DMPBlockPoleConnector.UP)) {
 					return true;
 				}
 			}
@@ -118,7 +118,7 @@ public class DMPBlockPoleSign extends DMPBlockDirectional implements ITileEntity
 	}
 
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-		EnumFacing facing = (EnumFacing) state.getValue(FACING);
+		EnumFacing facing = state.getValue(FACING);
 		return facing == EnumFacing.NORTH ? AABB_N : (facing == EnumFacing.SOUTH ? AABB_S :
 				(facing == EnumFacing.WEST ? AABB_W : (facing == EnumFacing.EAST ? AABB_E : Block.FULL_BLOCK_AABB)));
 	}

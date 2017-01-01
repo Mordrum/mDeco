@@ -30,6 +30,6 @@ public class DMPItems {
    }
 
    public boolean isItemMetalIngot(Item item) {
-      return item == null?false:item == Items.IRON_INGOT || item == Items.GOLD_INGOT || item == this.blackIronIngot;
+      return item != null && (item == Items.IRON_INGOT || item == Items.GOLD_INGOT || item == this.blackIronIngot);
    }
 }

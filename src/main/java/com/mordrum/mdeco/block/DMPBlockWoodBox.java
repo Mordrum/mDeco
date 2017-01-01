@@ -5,7 +5,6 @@ import com.mordrum.mdeco.tileentity.DMPTileEntityWoodBox;
 import com.mordrum.mdeco.item.DMPItemWoodBox;
 import com.mordrum.mdeco.object.DMPDecoration;
 import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -36,7 +35,7 @@ public class DMPBlockWoodBox extends DMPBlockStorage implements ITileEntityProvi
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{FACING});
+      return new BlockStateContainer(this, FACING);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {

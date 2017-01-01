@@ -71,7 +71,7 @@ public enum DMPConnectionsAll {
    public final int yRotation;
    public final String stateString;
 
-   private DMPConnectionsAll(int modelID, int xRotation, int yRotation, String stateString) {
+   DMPConnectionsAll(int modelID, int xRotation, int yRotation, String stateString) {
       this.modelID = modelID;
       this.xRotation = xRotation;
       this.yRotation = yRotation;

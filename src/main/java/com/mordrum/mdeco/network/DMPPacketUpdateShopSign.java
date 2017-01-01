@@ -38,11 +38,9 @@ public class DMPPacketUpdateShopSign implements IMessage {
    public static class Handler implements IMessageHandler<DMPPacketUpdateShopSign, IMessage> {
       public IMessage onMessage(final DMPPacketUpdateShopSign message, final MessageContext ctx) {
          WorldServer mainThread = (WorldServer)ctx.getServerHandler().playerEntity.world;
-         mainThread.addScheduledTask(new Runnable() {
-            public void run() {
-               DMPTileEntityShopSign tileentity = (DMPTileEntityShopSign)ctx.getServerHandler().playerEntity.world.getTileEntity(message.pos);
-               tileentity.setSignText(message.signText1, message.signText2);
-            }
+         mainThread.addScheduledTask(() -> {
+            DMPTileEntityShopSign tileentity = (DMPTileEntityShopSign)ctx.getServerHandler().playerEntity.world.getTileEntity(message.pos);
+            tileentity.setSignText(message.signText1, message.signText2);
          });
          return null;
       }

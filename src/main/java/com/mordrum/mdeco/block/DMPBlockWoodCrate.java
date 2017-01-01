@@ -6,7 +6,6 @@ import com.mordrum.mdeco.object.DMPDecoration;
 import com.mordrum.mdeco.tileentity.DMPTileEntityWoodCrate;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -26,7 +25,7 @@ public class DMPBlockWoodCrate extends DMPBlockStorage implements ITileEntityPro
 
    public DMPBlockWoodCrate(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(CONNECTED, Integer.valueOf(0)).withProperty(FACING, EnumFacing.NORTH));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(CONNECTED, 0).withProperty(FACING, EnumFacing.NORTH));
       com.mordrum.mdeco.Util.registerBlockAndItem(this, DMPItemWoodCrate.class, this.decoration.name());
       this.registerOreDictName(this.decoration.oreDictName);
    }
@@ -41,11 +40,11 @@ public class DMPBlockWoodCrate extends DMPBlockStorage implements ITileEntityPro
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{CONNECTED, FACING});
+      return new BlockStateContainer(this, CONNECTED, FACING);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-      return state.withProperty(CONNECTED, Integer.valueOf(this.getConnectedState(worldIn, pos, state)));
+      return state.withProperty(CONNECTED, this.getConnectedState(worldIn, pos, state));
    }
 
    @Override

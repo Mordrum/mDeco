@@ -25,14 +25,12 @@ import net.minecraft.util.math.BlockPos;
 import org.lwjgl.opengl.GL11;
 
 public class DMPRenderShopSign extends TileEntitySpecialRenderer {
-   private RenderItem renderItem;
-   private RenderManager renderManager;
+	private RenderManager renderManager;
    private final Minecraft mc = Minecraft.getMinecraft();
    public int jLast = 0;
 
    public DMPRenderShopSign(RenderManager rm, RenderItem ri) {
       this.renderManager = rm;
-      this.renderItem = ri;
    }
 
    public void renderTileEntityAt(TileEntity te, double x, double y, double z, float p_180535_8_, int p_180535_9_) {
@@ -43,7 +41,7 @@ public class DMPRenderShopSign extends TileEntitySpecialRenderer {
       BlockPos blockPos = te.getPos();
       IBlockState myBlockState = this.getWorld().getBlockState(blockPos);
       if(myBlockState.getBlock() instanceof DMPBlockShopSign) {
-         EnumFacing facing = (EnumFacing)myBlockState.getValue(DMPBlockShopSign.FACING);
+         EnumFacing facing = myBlockState.getValue(DMPBlockShopSign.FACING);
          ItemStack stackImage = te.getStackInSlot(0);
          ItemStack stackDye1 = te.getStackInSlot(1);
          ItemStack stackDye2 = te.getStackInSlot(2);

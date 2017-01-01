@@ -2,7 +2,6 @@ package com.mordrum.mdeco.block;
 
 import com.mordrum.mdeco.object.DMPDecoration;
 import net.minecraft.block.Block;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -15,11 +14,11 @@ public class DMPBlockStackable extends DMPBlockDirectional {
 
    public DMPBlockStackable(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(POSITION, Integer.valueOf(0)));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(POSITION, 0));
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{FACING, POSITION});
+      return new BlockStateContainer(this, FACING, POSITION);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
@@ -29,14 +28,14 @@ public class DMPBlockStackable extends DMPBlockDirectional {
       IBlockState newState;
       if(blockBelow == this) {
          if(blockAbove == this) {
-            newState = state.withProperty(POSITION, Integer.valueOf(3));
+            newState = state.withProperty(POSITION, 3);
          } else {
-            newState = state.withProperty(POSITION, Integer.valueOf(2));
+            newState = state.withProperty(POSITION, 2);
          }
       } else if(blockAbove == this) {
-         newState = state.withProperty(POSITION, Integer.valueOf(1));
+         newState = state.withProperty(POSITION, 1);
       } else {
-         newState = state.withProperty(POSITION, Integer.valueOf(0));
+         newState = state.withProperty(POSITION, 0);
       }
 
       return newState;

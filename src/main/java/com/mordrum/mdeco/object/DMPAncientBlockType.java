@@ -6,7 +6,7 @@ public enum DMPAncientBlockType {
 
    public final String oreDictName;
 
-   private DMPAncientBlockType(String oreDictName) {
+   DMPAncientBlockType(String oreDictName) {
       this.oreDictName = oreDictName;
    }
 }

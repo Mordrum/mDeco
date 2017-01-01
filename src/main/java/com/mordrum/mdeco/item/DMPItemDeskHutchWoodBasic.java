@@ -43,7 +43,7 @@ public class DMPItemDeskHutchWoodBasic extends ItemBlock {
          if(!(worldIn.getBlockState(posTarget.down()).getBlock() instanceof DMPBlockDeskWoodBasic)) {
             return EnumActionResult.FAIL;
          } else {
-            EnumFacing enumFacing = (EnumFacing)worldIn.getBlockState(posTarget.down()).getValue(DMPBlockDeskWoodBasic.FACING);
+            EnumFacing enumFacing = worldIn.getBlockState(posTarget.down()).getValue(DMPBlockDeskWoodBasic.FACING);
             if(playerIn.canPlayerEdit(posTarget, facing, stack)) {
                IBlockState iblockstate1 = this.decorationBlock.getDefaultState().withProperty(DMPBlockDeskHutchWoodBasic.FACING, enumFacing);
                worldIn.setBlockState(posTarget, iblockstate1, 3);

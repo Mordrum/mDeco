@@ -25,13 +25,11 @@ import net.minecraft.util.math.BlockPos;
 import org.lwjgl.opengl.GL11;
 
 public class DMPRenderKitchenTableSetting extends TileEntitySpecialRenderer {
-   private RenderItem renderItem;
-   private RenderManager renderManager;
+	private RenderManager renderManager;
    public int jLast = 0;
 
    public DMPRenderKitchenTableSetting(RenderManager rm, RenderItem ri) {
       this.renderManager = rm;
-      this.renderItem = ri;
    }
 
    public void renderTileEntityAt(TileEntity te, double x, double y, double z, float p_180535_8_, int p_180535_9_) {
@@ -42,7 +40,7 @@ public class DMPRenderKitchenTableSetting extends TileEntitySpecialRenderer {
       BlockPos blockPos = te.getPos();
       IBlockState myBlockState = this.getWorld().getBlockState(blockPos);
       if(myBlockState.getBlock() instanceof DMPBlockKitchenTableSetting) {
-         EnumFacing facing = (EnumFacing)myBlockState.getValue(DMPBlockKitchenTableSetting.FACING);
+         EnumFacing facing = myBlockState.getValue(DMPBlockKitchenTableSetting.FACING);
          if(te.getStackInSlot(0) != null) {
             EntityItem napkinBlockStack = new EntityItem(te.getWorld(), (double)te.getPos().getX(), (double)te.getPos().getY(), (double)te.getPos().getZ(), te.getStackInSlot(0));
             napkinBlockStack.hoverStart = 0.0F;

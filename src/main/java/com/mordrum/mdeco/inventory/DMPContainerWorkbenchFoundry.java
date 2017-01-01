@@ -62,12 +62,15 @@ public class DMPContainerWorkbenchFoundry extends Container {
    }
 
    public boolean canInteractWith(EntityPlayer playerIn) {
-      return this.world.getBlockState(this.blockPos).getBlock() != MDeco.blocks.workbenchFoundry?false:playerIn.getDistanceSq((double)this.blockPos.getX() + 0.5D, (double)this.blockPos.getY() + 0.5D, (double)this.blockPos.getZ() + 0.5D) <= 64.0D;
+      return this.world.getBlockState(this.blockPos).getBlock() == MDeco.blocks.workbenchFoundry &&
+		      playerIn.getDistanceSq(
+				      (double) this.blockPos.getX() + 0.5D,
+				      (double) this.blockPos.getY() + 0.5D, (double) this.blockPos.getZ() + 0.5D) <= 64.0D;
    }
 
    public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
       ItemStack itemstack = null;
-      Slot slot = (Slot)this.inventorySlots.get(index);
+      Slot slot = this.inventorySlots.get(index);
       if(slot != null && slot.getHasStack()) {
          ItemStack itemstack1 = slot.getStack();
          itemstack = itemstack1.copy();
@@ -90,7 +93,7 @@ public class DMPContainerWorkbenchFoundry extends Container {
          }
 
          if(itemstack1.getCount() == 0) {
-            slot.putStack((ItemStack)null);
+            slot.putStack(null);
          } else {
             slot.onSlotChanged();
          }

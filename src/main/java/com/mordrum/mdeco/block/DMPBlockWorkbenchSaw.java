@@ -6,7 +6,6 @@ import com.mordrum.mdeco.tileentity.DMPTileEntityWorkbenchSaw;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
@@ -33,7 +32,7 @@ public class DMPBlockWorkbenchSaw extends BlockContainer {
 
    public DMPBlockWorkbenchSaw(String unlocalizedName) {
       super(Material.WOOD);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(ACTIVE, Boolean.valueOf(false)).withProperty(FACING, EnumFacing.NORTH));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(ACTIVE, Boolean.FALSE).withProperty(FACING, EnumFacing.NORTH));
       this.setUnlocalizedName(unlocalizedName);
       this.setCreativeTab(CreativeTabs.TOOLS);
       this.setTickRandomly(false);
@@ -49,7 +48,7 @@ public class DMPBlockWorkbenchSaw extends BlockContainer {
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{ACTIVE, FACING});
+      return new BlockStateContainer(this, ACTIVE, FACING);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
@@ -58,15 +57,15 @@ public class DMPBlockWorkbenchSaw extends BlockContainer {
 
    public int getMetaFromState(IBlockState state) {
       byte b0 = 0;
-      int i = b0 | ((EnumFacing)state.getValue(FACING)).getHorizontalIndex();
-      boolean active = ((Boolean)state.getValue(ACTIVE)).booleanValue();
+      int i = b0 | state.getValue(FACING).getHorizontalIndex();
+      boolean active = state.getValue(ACTIVE);
       i |= (active?1:0) << 2;
       return i;
    }
 
    public IBlockState getStateFromMeta(int meta) {
       EnumFacing enumfacing = EnumFacing.getHorizontal(meta &= -13);
-      return this.getDefaultState().withProperty(FACING, enumfacing).withProperty(ACTIVE, Boolean.valueOf((meta | 12) >> 2 != 0));
+      return this.getDefaultState().withProperty(FACING, enumfacing).withProperty(ACTIVE, (meta | 12) >> 2 != 0);
    }
 
    public boolean canPlaceTorchOnTop(IBlockState state, IBlockAccess worldIn, BlockPos pos) {

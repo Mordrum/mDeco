@@ -26,11 +26,9 @@ public abstract class DMPHelper {
       if(directory.isDirectory()) {
          File[] files = directory.listFiles();
          if(files != null && files.length > 0) {
-            File[] var2 = files;
-            int var3 = files.length;
+	         int var3 = files.length;
 
-            for(int var4 = 0; var4 < var3; ++var4) {
-               File aFile = var2[var4];
+            for (File aFile : files) {
                deleteOutputDirectory(aFile);
             }
          }
@@ -43,6 +41,6 @@ public abstract class DMPHelper {
    }
 
    public static void playObjectSound(World worldIn, BlockPos pos, EntityPlayer playerIn, Block block) {
-      worldIn.playSound((EntityPlayer)null, (double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), block.getSoundType().getPlaceSound(), SoundCategory.BLOCKS, 0.75F, 0.8F);
+      worldIn.playSound(null, (double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), block.getSoundType().getPlaceSound(), SoundCategory.BLOCKS, 0.75F, 0.8F);
    }
 }

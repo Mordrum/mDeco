@@ -46,13 +46,13 @@ public class DMPItemWoodTimber extends ItemBlock {
             if(facing != EnumFacing.WEST && facing != EnumFacing.EAST) {
                if(facing != EnumFacing.UP && facing != EnumFacing.DOWN) {
                   if(facing == EnumFacing.NORTH || facing == EnumFacing.SOUTH) {
-                     iblockstate1 = this.decorationBlock.getDefaultState().withProperty(DMPBlockWoodTimber.ORIENTATION, Integer.valueOf(2));
+                     iblockstate1 = this.decorationBlock.getDefaultState().withProperty(DMPBlockWoodTimber.ORIENTATION, 2);
                   }
                } else {
-                  iblockstate1 = this.decorationBlock.getDefaultState().withProperty(DMPBlockWoodTimber.ORIENTATION, Integer.valueOf(1));
+                  iblockstate1 = this.decorationBlock.getDefaultState().withProperty(DMPBlockWoodTimber.ORIENTATION, 1);
                }
             } else {
-               iblockstate1 = this.decorationBlock.getDefaultState().withProperty(DMPBlockWoodTimber.ORIENTATION, Integer.valueOf(0));
+               iblockstate1 = this.decorationBlock.getDefaultState().withProperty(DMPBlockWoodTimber.ORIENTATION, 0);
             }
 
             worldIn.setBlockState(posTarget, iblockstate1, 3);

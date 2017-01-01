@@ -2,7 +2,6 @@ package com.mordrum.mdeco.block;
 
 import com.mordrum.mdeco.item.DMPItemIngotStack;
 import com.mordrum.mdeco.object.DMPDecoration;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -21,13 +20,13 @@ public class DMPBlockIngotStack extends DMPBlockBaseDecoration {
 
    public DMPBlockIngotStack(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(STACKS, Integer.valueOf(0)));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(STACKS, 0));
       com.mordrum.mdeco.Util.registerBlockAndItem(this, DMPItemIngotStack.class, this.decoration.name());
       this.registerOreDictName(this.decoration.oreDictName);
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{STACKS});
+      return new BlockStateContainer(this, STACKS);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
@@ -35,15 +34,15 @@ public class DMPBlockIngotStack extends DMPBlockBaseDecoration {
    }
 
    public int getMetaFromState(IBlockState state) {
-      return ((Integer)state.getValue(STACKS)).intValue();
+      return state.getValue(STACKS);
    }
 
    public IBlockState getStateFromMeta(int meta) {
-      return this.getDefaultState().withProperty(STACKS, Integer.valueOf(meta));
+      return this.getDefaultState().withProperty(STACKS, meta);
    }
 
    public boolean isSideSolid(IBlockState base_state, IBlockAccess world, BlockPos pos, EnumFacing side) {
-      int stacks = ((Integer)base_state.getValue(STACKS)).intValue();
+      int stacks = base_state.getValue(STACKS);
       return side == EnumFacing.UP?stacks == 5:side == EnumFacing.DOWN;
    }
 
@@ -52,17 +51,17 @@ public class DMPBlockIngotStack extends DMPBlockBaseDecoration {
    }
 
    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-      int stacks = ((Integer)state.getValue(STACKS)).intValue();
+      int stacks = state.getValue(STACKS);
       ++stacks;
       if(stacks > 5) {
          stacks = 0;
       }
 
-      worldIn.setBlockState(pos, state.withProperty(STACKS, Integer.valueOf(stacks)));
+      worldIn.setBlockState(pos, state.withProperty(STACKS, stacks));
       return true;
    }
 
    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-      return STACK_HEIGHT[((Integer)state.getValue(STACKS)).intValue()];
+      return STACK_HEIGHT[state.getValue(STACKS)];
    }
 }

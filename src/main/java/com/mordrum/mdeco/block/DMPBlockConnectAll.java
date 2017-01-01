@@ -1,7 +1,6 @@
 package com.mordrum.mdeco.block;
 
 import com.mordrum.mdeco.object.DMPDecoration;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -23,15 +22,20 @@ public class DMPBlockConnectAll extends DMPBlockBaseDecoration {
 
    public DMPBlockConnectAll(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(DOWN, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false)).withProperty(NORTH, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(UP, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(DOWN, Boolean.FALSE).withProperty(EAST, Boolean.FALSE).withProperty(NORTH, Boolean.FALSE).withProperty(SOUTH, Boolean.FALSE).withProperty(UP, Boolean.FALSE).withProperty(WEST, Boolean.FALSE));
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{DOWN, EAST, NORTH, SOUTH, UP, WEST});
+      return new BlockStateContainer(this, DOWN, EAST, NORTH, SOUTH, UP, WEST);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-      return state.getBlock() != this?state:state.withProperty(DOWN, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.DOWN))).withProperty(EAST, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.EAST))).withProperty(NORTH, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.NORTH))).withProperty(SOUTH, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.SOUTH))).withProperty(UP, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.UP))).withProperty(WEST, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.WEST)));
+      return state.getBlock() != this?state:state.withProperty(DOWN, this.canConnectTo(worldIn, pos, EnumFacing.DOWN)).withProperty(EAST, this
+              .canConnectTo(worldIn, pos, EnumFacing.EAST)).withProperty(NORTH, this
+              .canConnectTo(worldIn, pos, EnumFacing.NORTH)).withProperty(SOUTH, this
+              .canConnectTo(worldIn, pos, EnumFacing.SOUTH)).withProperty(UP, this
+              .canConnectTo(worldIn, pos, EnumFacing.UP)).withProperty(WEST, this
+              .canConnectTo(worldIn, pos, EnumFacing.WEST));
    }
 
    public int getMetaFromState(IBlockState state) {
@@ -50,12 +54,12 @@ public class DMPBlockConnectAll extends DMPBlockBaseDecoration {
       if(state.getBlock() != this) {
          return FULL_BLOCK_AABB;
       } else {
-         boolean connectDown = ((Boolean)state.getValue(DOWN)).booleanValue();
-         boolean connectEast = ((Boolean)state.getValue(EAST)).booleanValue();
-         boolean connectNorth = ((Boolean)state.getValue(NORTH)).booleanValue();
-         boolean connectSouth = ((Boolean)state.getValue(SOUTH)).booleanValue();
-         boolean connectUp = ((Boolean)state.getValue(UP)).booleanValue();
-         boolean connectWest = ((Boolean)state.getValue(WEST)).booleanValue();
+         boolean connectDown = state.getValue(DOWN);
+         boolean connectEast = state.getValue(EAST);
+         boolean connectNorth = state.getValue(NORTH);
+         boolean connectSouth = state.getValue(SOUTH);
+         boolean connectUp = state.getValue(UP);
+         boolean connectWest = state.getValue(WEST);
          float pixel = 0.0625F;
          float x1 = 0.5F - pixel * (float)this.hitboxPixelSize;
          float x2 = 0.5F + pixel * (float)this.hitboxPixelSize;

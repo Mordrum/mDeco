@@ -31,7 +31,7 @@ public class DMPBlockCoinStack extends DMPBlockDirectional {
    }
 
    private void rotateBlock(World worldIn, BlockPos pos, IBlockState state) {
-      EnumFacing facing = (EnumFacing)state.getValue(FACING);
+      EnumFacing facing = state.getValue(FACING);
       facing = facing.rotateY();
       worldIn.setBlockState(pos, state.withProperty(FACING, facing), 3);
    }

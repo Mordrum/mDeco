@@ -34,11 +34,9 @@ public class DMPPacketUpdatePoleSign implements IMessage {
    public static class Handler implements IMessageHandler<DMPPacketUpdatePoleSign, IMessage> {
       public IMessage onMessage(final DMPPacketUpdatePoleSign message, final MessageContext ctx) {
          WorldServer mainThread = (WorldServer)ctx.getServerHandler().playerEntity.world;
-         mainThread.addScheduledTask(new Runnable() {
-            public void run() {
-               DMPTileEntityPoleSign tileentity = (DMPTileEntityPoleSign)ctx.getServerHandler().playerEntity.world.getTileEntity(message.pos);
-               tileentity.setSignText(message.signText);
-            }
+         mainThread.addScheduledTask(() -> {
+            DMPTileEntityPoleSign tileentity = (DMPTileEntityPoleSign)ctx.getServerHandler().playerEntity.world.getTileEntity(message.pos);
+            tileentity.setSignText(message.signText);
          });
          return null;
       }

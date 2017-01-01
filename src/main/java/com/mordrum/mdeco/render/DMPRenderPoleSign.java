@@ -15,11 +15,9 @@ import net.minecraft.util.math.BlockPos;
 import org.lwjgl.opengl.GL11;
 
 public class DMPRenderPoleSign extends TileEntitySpecialRenderer {
-   private RenderItem renderItem;
-   public int jLast = 0;
+	public int jLast = 0;
 
    public DMPRenderPoleSign(RenderManager rm, RenderItem ri) {
-      this.renderItem = ri;
    }
 
    public void renderTileEntityAt(TileEntity te, double x, double y, double z, float p_180535_8_, int p_180535_9_) {
@@ -30,7 +28,7 @@ public class DMPRenderPoleSign extends TileEntitySpecialRenderer {
       BlockPos blockPos = te.getPos();
       IBlockState myBlockState = this.getWorld().getBlockState(blockPos);
       if(myBlockState.getBlock() instanceof DMPBlockPoleSign) {
-         EnumFacing facing = (EnumFacing)myBlockState.getValue(DMPBlockPoleSign.FACING);
+         EnumFacing facing = myBlockState.getValue(DMPBlockPoleSign.FACING);
          ItemStack stackDye = te.getStackInSlot(0);
          String text = te.getSignText();
          if(text != null && text.length() > 0 && stackDye != null) {

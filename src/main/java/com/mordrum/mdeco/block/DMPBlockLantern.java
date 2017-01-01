@@ -29,7 +29,10 @@ public class DMPBlockLantern extends DMPBlockConnectable {
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-      return state.withProperty(EAST, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.EAST, true))).withProperty(NORTH, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.NORTH, true))).withProperty(SOUTH, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.SOUTH, true))).withProperty(WEST, Boolean.valueOf(this.canConnectTo(worldIn, pos, EnumFacing.WEST, true)));
+      return state.withProperty(EAST, this.canConnectTo(worldIn, pos, EnumFacing.EAST, true)).withProperty(NORTH, this
+		      .canConnectTo(worldIn, pos, EnumFacing.NORTH, true)).withProperty(SOUTH, this
+		      .canConnectTo(worldIn, pos, EnumFacing.SOUTH, true)).withProperty(WEST, this
+		      .canConnectTo(worldIn, pos, EnumFacing.WEST, true));
    }
 
    @SideOnly(Side.CLIENT)
@@ -37,7 +40,7 @@ public class DMPBlockLantern extends DMPBlockConnectable {
       double d0 = (double)pos.getX() + 0.5D;
       double d1 = (double)pos.getY() + 0.55D;
       double d2 = (double)pos.getZ() + 0.5D;
-      worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+      worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D);
    }
 
    public boolean isSideSolid(IBlockState base_state, IBlockAccess world, BlockPos pos, EnumFacing side) {
@@ -83,7 +86,10 @@ public class DMPBlockLantern extends DMPBlockConnectable {
    protected boolean canConnectTo(IBlockAccess worldIn, BlockPos pos, EnumFacing side, boolean includeNonPoleBlocks) {
       IBlockState stateTarget = worldIn.getBlockState(pos.offset(side));
       Block block = stateTarget.getBlock();
-      return (side == EnumFacing.DOWN || side == EnumFacing.UP) && block instanceof BlockFence?true:(block != null && block.isSideSolid(stateTarget, worldIn, pos.offset(side), side.getOpposite())?(!(block instanceof DMPBlockPole) && !(block instanceof DMPBlockPoleConnector)?includeNonPoleBlocks && block instanceof DMPBlockCap:true):false);
+      return (side == EnumFacing.DOWN || side == EnumFacing.UP) && block instanceof BlockFence || (
+		      (block != null && block.isSideSolid(stateTarget, worldIn, pos.offset(side), side.getOpposite())) && (
+				      !(!(block instanceof DMPBlockPole) && !(block instanceof DMPBlockPoleConnector)) ||
+						      includeNonPoleBlocks && block instanceof DMPBlockCap));
    }
 
    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {

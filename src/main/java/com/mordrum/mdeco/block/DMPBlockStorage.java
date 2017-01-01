@@ -7,7 +7,6 @@ import com.mordrum.mdeco.object.DMPTab;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -52,7 +51,7 @@ public abstract class DMPBlockStorage extends BlockContainer {
 	}
 
 	protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, new IProperty[]{FACING});
+		return new BlockStateContainer(this, FACING);
 	}
 
 	public IBlockState getStateFromMeta(int meta) {
@@ -65,7 +64,7 @@ public abstract class DMPBlockStorage extends BlockContainer {
 	}
 
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumFacing) state.getValue(FACING)).getIndex();
+		return state.getValue(FACING).getIndex();
 	}
 
 	public boolean canPlaceTorchOnTop(IBlockState state, IBlockAccess worldIn, BlockPos pos) {

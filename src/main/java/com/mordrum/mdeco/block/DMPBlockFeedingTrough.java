@@ -3,7 +3,6 @@ package com.mordrum.mdeco.block;
 import com.mordrum.mdeco.item.DMPItemFeedingTrough;
 import com.mordrum.mdeco.object.DMPDecorationType;
 import com.mordrum.mdeco.object.DMPDecoration;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
@@ -30,13 +29,13 @@ public class DMPBlockFeedingTrough extends DMPBlockBaseDecoration {
 
    public DMPBlockFeedingTrough(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(CONNECT_FORE, Boolean.valueOf(false)).withProperty(CONNECT_LEFT, Boolean.valueOf(false)).withProperty(CONNECT_RIGHT, Boolean.valueOf(false)).withProperty(FACING, EnumFacing.NORTH));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(CONNECT_FORE, Boolean.FALSE).withProperty(CONNECT_LEFT, Boolean.FALSE).withProperty(CONNECT_RIGHT, Boolean.FALSE).withProperty(FACING, EnumFacing.NORTH));
       com.mordrum.mdeco.Util.registerBlockAndItem(this, DMPItemFeedingTrough.class, this.decoration.name());
       this.registerOreDictName(this.decoration.oreDictName);
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{CONNECT_FORE, CONNECT_LEFT, CONNECT_RIGHT, FACING});
+      return new BlockStateContainer(this, CONNECT_FORE, CONNECT_LEFT, CONNECT_RIGHT, FACING);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
@@ -47,11 +46,11 @@ public class DMPBlockFeedingTrough extends DMPBlockBaseDecoration {
          bFore = false;
       }
 
-      return this.getDefaultState().withProperty(FACING, (EnumFacing)state.getValue(FACING)).withProperty(CONNECT_FORE, Boolean.valueOf(bFore)).withProperty(CONNECT_LEFT, Boolean.valueOf(bLeft)).withProperty(CONNECT_RIGHT, Boolean.valueOf(bRight));
+      return this.getDefaultState().withProperty(FACING, state.getValue(FACING)).withProperty(CONNECT_FORE, bFore).withProperty(CONNECT_LEFT, bLeft).withProperty(CONNECT_RIGHT, bRight);
    }
 
    public int getMetaFromState(IBlockState state) {
-      return ((EnumFacing)state.getValue(FACING)).getHorizontalIndex();
+      return state.getValue(FACING).getHorizontalIndex();
    }
 
    public IBlockState getStateFromMeta(int meta) {
@@ -76,10 +75,10 @@ public class DMPBlockFeedingTrough extends DMPBlockBaseDecoration {
 
    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
       float pixel = 0.0625F;
-      EnumFacing facing = (EnumFacing)state.getValue(FACING);
-      boolean fore = ((Boolean)state.getValue(CONNECT_FORE)).booleanValue();
-      boolean left = ((Boolean)state.getValue(CONNECT_LEFT)).booleanValue();
-      boolean right = ((Boolean)state.getValue(CONNECT_RIGHT)).booleanValue();
+      EnumFacing facing = state.getValue(FACING);
+      boolean fore = state.getValue(CONNECT_FORE);
+      boolean left = state.getValue(CONNECT_LEFT);
+      boolean right = state.getValue(CONNECT_RIGHT);
       float startX = 0.0F + 1.0F * pixel;
       float endX = 1.0F - 1.0F * pixel;
       float startZ = 0.0F + 1.0F * pixel;
@@ -138,14 +137,15 @@ public class DMPBlockFeedingTrough extends DMPBlockBaseDecoration {
    }
 
    private boolean canConnectFore(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-      EnumFacing facing = (EnumFacing)state.getValue(FACING);
+      EnumFacing facing = state.getValue(FACING);
       IBlockState adjacentState = worldIn.getBlockState(pos.offset(facing.getOpposite()));
       if(adjacentState != null && adjacentState.getBlock() == this) {
-         EnumFacing adjacentFacing = (EnumFacing)adjacentState.getValue(FACING);
+         EnumFacing adjacentFacing = adjacentState.getValue(FACING);
          if(facing != adjacentFacing && facing != adjacentFacing.getOpposite()) {
             IBlockState checkState1 = worldIn.getBlockState(pos.offset(adjacentFacing));
             IBlockState checkState2 = worldIn.getBlockState(pos.offset(adjacentFacing.getOpposite()));
-            return checkState1.getBlock() == this && (EnumFacing)checkState1.getValue(FACING) == facing?true:checkState2.getBlock() == this && (EnumFacing)checkState2.getValue(FACING) == facing;
+            return checkState1.getBlock() == this && checkState1.getValue(FACING) == facing ||
+		            checkState2.getBlock() == this && checkState2.getValue(FACING) == facing;
          } else {
             return false;
          }
@@ -155,7 +155,7 @@ public class DMPBlockFeedingTrough extends DMPBlockBaseDecoration {
    }
 
    private boolean canConnectLeft(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-      EnumFacing facing = (EnumFacing)state.getValue(FACING);
+      EnumFacing facing = state.getValue(FACING);
       IBlockState adjacentState = null;
       EnumFacing facingOffset = EnumFacing.NORTH;
       if(facing == EnumFacing.NORTH) {
@@ -171,15 +171,16 @@ public class DMPBlockFeedingTrough extends DMPBlockBaseDecoration {
       BlockPos posConnect = pos.offset(facingOffset);
       adjacentState = worldIn.getBlockState(posConnect);
       if(adjacentState != null && adjacentState.getBlock() == this) {
-         EnumFacing adjacentFacing = (EnumFacing)adjacentState.getValue(FACING);
-         return adjacentFacing == facing?true:(adjacentFacing != facingOffset?false:this.canConnectFore(worldIn.getBlockState(posConnect), worldIn, posConnect));
+         EnumFacing adjacentFacing = adjacentState.getValue(FACING);
+         return adjacentFacing == facing || (adjacentFacing == facingOffset &&
+		         this.canConnectFore(worldIn.getBlockState(posConnect), worldIn, posConnect));
       } else {
          return false;
       }
    }
 
    private boolean canConnectRight(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-      EnumFacing facing = (EnumFacing)state.getValue(FACING);
+      EnumFacing facing = state.getValue(FACING);
       IBlockState adjacentState = null;
       EnumFacing facingOffset = EnumFacing.NORTH;
       if(facing == EnumFacing.NORTH) {
@@ -195,8 +196,9 @@ public class DMPBlockFeedingTrough extends DMPBlockBaseDecoration {
       BlockPos posConnect = pos.offset(facingOffset);
       adjacentState = worldIn.getBlockState(posConnect);
       if(adjacentState != null && adjacentState.getBlock() == this) {
-         EnumFacing adjacentFacing = (EnumFacing)adjacentState.getValue(FACING);
-         return adjacentFacing == facing?true:(adjacentFacing != facingOffset?false:this.canConnectFore(worldIn.getBlockState(posConnect), worldIn, posConnect));
+         EnumFacing adjacentFacing = adjacentState.getValue(FACING);
+         return adjacentFacing == facing || (adjacentFacing == facingOffset &&
+		         this.canConnectFore(worldIn.getBlockState(posConnect), worldIn, posConnect));
       } else {
          return false;
       }

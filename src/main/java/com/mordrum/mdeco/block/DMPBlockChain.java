@@ -25,7 +25,8 @@ public class DMPBlockChain extends DMPBlockBaseDecoration {
 
    public boolean canPlaceBlockOnSide(World worldIn, BlockPos pos, EnumFacing side) {
       IBlockState stateTarget = worldIn.getBlockState(pos.offset(side.getOpposite()));
-      return side != EnumFacing.DOWN && side != EnumFacing.UP?false:stateTarget.getBlock().isSideSolid(stateTarget, worldIn, pos.offset(side.getOpposite()), side.getOpposite());
+      return !(side != EnumFacing.DOWN && side != EnumFacing.UP) && stateTarget.getBlock()
+		      .isSideSolid(stateTarget, worldIn, pos.offset(side.getOpposite()), side.getOpposite());
    }
 
    public boolean isSideSolid(IBlockState base_state, IBlockAccess world, BlockPos pos, EnumFacing side) {
@@ -38,7 +39,7 @@ public class DMPBlockChain extends DMPBlockBaseDecoration {
 
    private boolean canBlockStay(World worldIn, BlockPos pos) {
       Block blockAbove = worldIn.getBlockState(pos.up()).getBlock();
-      return blockAbove == null?false:worldIn.isSideSolid(pos.up(), EnumFacing.DOWN, true);
+      return blockAbove != null && worldIn.isSideSolid(pos.up(), EnumFacing.DOWN, true);
    }
 
    public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock) {

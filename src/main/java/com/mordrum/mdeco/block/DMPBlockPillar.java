@@ -41,7 +41,7 @@ public class DMPBlockPillar extends Block {
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{AXIS});
+      return new BlockStateContainer(this, AXIS);
    }
 
    public IBlockState getStateFromMeta(int meta) {
@@ -91,14 +91,14 @@ public class DMPBlockPillar extends Block {
       return this.smallPillar?AABB_SMALL:Block.FULL_BLOCK_AABB;
    }
 
-   public static enum EnumAxis implements IStringSerializable {
+   public enum EnumAxis implements IStringSerializable {
       x(0),
       y(1),
       z(2);
 
       private final int meta;
 
-      private EnumAxis(int meta) {
+      EnumAxis(int meta) {
          this.meta = meta;
       }
 

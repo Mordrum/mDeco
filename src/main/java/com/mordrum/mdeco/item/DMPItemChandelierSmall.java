@@ -5,11 +5,10 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 
 public class DMPItemChandelierSmall extends ItemBlock {
-   private DMPBlockChandelierSmall decorationBlock;
 
-   public DMPItemChandelierSmall(Block block) {
+	public DMPItemChandelierSmall(Block block) {
       super(block);
       this.setUnlocalizedName(block.getUnlocalizedName().substring(5));
-      this.decorationBlock = (DMPBlockChandelierSmall)block;
+		DMPBlockChandelierSmall decorationBlock = (DMPBlockChandelierSmall) block;
    }
 }

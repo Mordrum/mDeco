@@ -9,7 +9,6 @@ import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
@@ -40,7 +39,7 @@ public class DMPBlockBrickWall extends Block {
    public DMPBlockBrickWall(String unlocalizedName) {
       super(Material.GROUND, MapColor.STONE);
       this.setUnlocalizedName(unlocalizedName);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(UP, Boolean.valueOf(false)).withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)).withProperty(VARIANT, DMPBlockBrick.EnumType.normal));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(UP, Boolean.FALSE).withProperty(NORTH, Boolean.FALSE).withProperty(EAST, Boolean.FALSE).withProperty(SOUTH, Boolean.FALSE).withProperty(WEST, Boolean.FALSE).withProperty(VARIANT, DMPBlockBrick.EnumType.normal));
       this.setHardness(1.5F);
       this.setResistance(5.0F);
       this.setSoundType(SoundType.STONE);
@@ -50,11 +49,15 @@ public class DMPBlockBrickWall extends Block {
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{UP, NORTH, EAST, WEST, SOUTH, VARIANT});
+      return new BlockStateContainer(this, UP, NORTH, EAST, WEST, SOUTH, VARIANT);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-      return state.withProperty(UP, Boolean.valueOf(!worldIn.isAirBlock(pos.up()))).withProperty(NORTH, Boolean.valueOf(this.canConnectTo(worldIn, pos.north()))).withProperty(EAST, Boolean.valueOf(this.canConnectTo(worldIn, pos.east()))).withProperty(SOUTH, Boolean.valueOf(this.canConnectTo(worldIn, pos.south()))).withProperty(WEST, Boolean.valueOf(this.canConnectTo(worldIn, pos.west())));
+      return state.withProperty(UP, !worldIn.isAirBlock(pos.up())).withProperty(NORTH, this.canConnectTo(worldIn, pos
+		      .north())).withProperty(EAST, this
+		      .canConnectTo(worldIn, pos.east())).withProperty(SOUTH, this
+		      .canConnectTo(worldIn, pos.south())).withProperty(WEST, this
+		      .canConnectTo(worldIn, pos.west()));
    }
 
    public IBlockState getStateFromMeta(int meta) {
@@ -70,10 +73,9 @@ public class DMPBlockBrickWall extends Block {
       DMPBlockBrick.EnumType[] var4 = DMPBlockBrick.EnumType.values();
       int var5 = var4.length;
 
-      for(int var6 = 0; var6 < var5; ++var6) {
-         DMPBlockBrick.EnumType blockwall$enumtype = var4[var6];
-         list.add(new ItemStack(itemIn, 1, blockwall$enumtype.getMetadata()));
-      }
+	   for (DMPBlockBrick.EnumType blockwall$enumtype : var4) {
+		   list.add(new ItemStack(itemIn, 1, blockwall$enumtype.getMetadata()));
+	   }
 
    }
 
@@ -96,12 +98,14 @@ public class DMPBlockBrickWall extends Block {
    private boolean canConnectTo(IBlockAccess worldIn, BlockPos pos) {
       IBlockState iblockstate = worldIn.getBlockState(pos);
       Block block = iblockstate.getBlock();
-      return block == Blocks.BARRIER?false:(block != this && !(block instanceof BlockFenceGate)?(block.getMaterial(iblockstate).isOpaque() && iblockstate.isFullCube()?block.getMaterial(iblockstate) != Material.GOURD:false):true);
+      return block != Blocks.BARRIER && (!(block != this && !(block instanceof BlockFenceGate)) || (
+		      (block.getMaterial(iblockstate).isOpaque() && iblockstate.isFullCube()) &&
+				      block.getMaterial(iblockstate) != Material.GOURD));
    }
 
    @SideOnly(Side.CLIENT)
    public boolean shouldSideBeRendered(IBlockState state, IBlockAccess worldIn, BlockPos pos, EnumFacing side) {
-      return side == EnumFacing.DOWN?super.shouldSideBeRendered(state, worldIn, pos, side):true;
+      return side != EnumFacing.DOWN || super.shouldSideBeRendered(state, worldIn, pos, side);
    }
 
    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
@@ -116,19 +120,19 @@ public class DMPBlockBrickWall extends Block {
 
    private static int getAABBIndex(IBlockState p_185749_0_) {
       int i = 0;
-      if(((Boolean)p_185749_0_.getValue(NORTH)).booleanValue()) {
+      if(p_185749_0_.getValue(NORTH)) {
          i |= 1 << EnumFacing.NORTH.getHorizontalIndex();
       }
 
-      if(((Boolean)p_185749_0_.getValue(EAST)).booleanValue()) {
+      if(p_185749_0_.getValue(EAST)) {
          i |= 1 << EnumFacing.EAST.getHorizontalIndex();
       }
 
-      if(((Boolean)p_185749_0_.getValue(SOUTH)).booleanValue()) {
+      if(p_185749_0_.getValue(SOUTH)) {
          i |= 1 << EnumFacing.SOUTH.getHorizontalIndex();
       }
 
-      if(((Boolean)p_185749_0_.getValue(WEST)).booleanValue()) {
+      if(p_185749_0_.getValue(WEST)) {
          i |= 1 << EnumFacing.WEST.getHorizontalIndex();
       }
 

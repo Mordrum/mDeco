@@ -24,8 +24,8 @@ import net.minecraft.world.World;
 public class DMPTileEntityShopSign extends TileEntityLockable implements IInventory {
    private static final int TOTAL_SLOTS = 3;
    private ItemStack[] storageItems = new ItemStack[3];
-   private String signText1 = new String("");
-   private String signText2 = new String("");
+   private String signText1 = "";
+   private String signText2 = "";
    public boolean open = false;
    public int numPlayersUsing = 0;
 

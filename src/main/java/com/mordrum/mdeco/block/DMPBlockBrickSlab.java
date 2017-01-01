@@ -44,7 +44,7 @@ public abstract class DMPBlockBrickSlab extends BlockSlab {
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{HALF, VARIANT});
+      return new BlockStateContainer(this, HALF, VARIANT);
    }
 
    public IBlockState getStateFromMeta(int meta) {
@@ -104,7 +104,10 @@ public abstract class DMPBlockBrickSlab extends BlockSlab {
 
    @SideOnly(Side.CLIENT)
    public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
-      return this.isDouble()?super.shouldSideBeRendered(blockState, blockAccess, pos, side):(side != EnumFacing.UP && side != EnumFacing.DOWN && !super.shouldSideBeRendered(blockState, blockAccess, pos, side)?false:super.shouldSideBeRendered(blockState, blockAccess, pos, side));
+      return this.isDouble()?super.shouldSideBeRendered(blockState, blockAccess, pos, side):(
+		      !(side != EnumFacing.UP && side != EnumFacing.DOWN &&
+                      !super.shouldSideBeRendered(blockState, blockAccess, pos, side)) &&
+				      super.shouldSideBeRendered(blockState, blockAccess, pos, side));
    }
 
    @SideOnly(Side.CLIENT)
@@ -113,14 +116,14 @@ public abstract class DMPBlockBrickSlab extends BlockSlab {
       return block instanceof DMPBlockBrickSlab;
    }
 
-   public static enum EnumType implements IStringSerializable {
+   public enum EnumType implements IStringSerializable {
       normal(0),
       mossy(1);
 
       private static final EnumType[] META_LOOKUP = new EnumType[values().length];
       private final int meta;
 
-      private EnumType(int meta) {
+      EnumType(int meta) {
          this.meta = meta;
       }
 
@@ -148,8 +151,7 @@ public abstract class DMPBlockBrickSlab extends BlockSlab {
          EnumType[] var0 = values();
          int var1 = var0.length;
 
-         for(int var2 = 0; var2 < var1; ++var2) {
-            EnumType blockslab$enumtype = var0[var2];
+         for (EnumType blockslab$enumtype : var0) {
             META_LOOKUP[blockslab$enumtype.getMetadata()] = blockslab$enumtype;
          }
 

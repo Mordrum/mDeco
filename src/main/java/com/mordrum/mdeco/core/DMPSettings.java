@@ -91,7 +91,7 @@ public class DMPSettings {
       if(!pmpConfigDir.exists()) {
          try {
             pmpConfigDir.mkdir();
-            MDeco.instance.logOutput(String.format("Created config dir: %s", new Object[]{pmpConfigDir.getName()}));
+            MDeco.instance.logOutput(String.format("Created config dir: %s", pmpConfigDir.getName()));
          } catch (Exception var4) {
             var4.printStackTrace();
          }
@@ -192,141 +192,209 @@ public class DMPSettings {
 
             try {
                String[] exception = line.split(":");
-               if(exception[0].equals("contentBarrelLarge")) {
-                  this.contentBarrelLarge = exception[1].equals("true");
-               } else if(exception[0].equals("contentBarrelSmall")) {
-                  this.contentBarrelSmall = exception[1].equals("true");
-               } else if(exception[0].equals("contentBenchStone")) {
-                  this.contentBenchStone = exception[1].equals("true");
-               } else if(exception[0].equals("contentBenchWood")) {
-                  this.contentBenchWood = exception[1].equals("true");
-               } else if(exception[0].equals("contentBenchWoodMetalArm")) {
-                  this.contentBenchWoodMetalArm = exception[1].equals("true");
-               } else if(exception[0].equals("contentCabinetBase")) {
-                  this.contentCabinetBase = exception[1].equals("true");
-               } else if(exception[0].equals("contentCabinetWall")) {
-                  this.contentCabinetWall = exception[1].equals("true");
-               } else if(exception[0].equals("contentCabinetWallGlass")) {
-                  this.contentCabinetWallGlass = exception[1].equals("true");
-               } else if(exception[0].equals("contentCaps")) {
-                  this.contentCaps = exception[1].equals("true");
-               } else if(exception[0].equals("contentChain")) {
-                  this.contentChain = exception[1].equals("true");
-               } else if(exception[0].equals("contentChairBasic")) {
-                  this.contentChairBasic = exception[1].equals("true");
-               } else if(exception[0].equals("contentChairBasicArm")) {
-                  this.contentChairBasicArm = exception[1].equals("true");
-               } else if(exception[0].equals("contentChandelierSmall")) {
-                  this.contentChandelierSmallRound = exception[1].equals("true");
-               } else if(exception[0].equals("contentCoinBag")) {
-                  this.contentCoinBag = exception[1].equals("true");
-               } else if(exception[0].equals("contentCoinStack")) {
-                  this.contentCoinStack = exception[1].equals("true");
-               } else if(exception[0].equals("contentCurioCabinet")) {
-                  this.contentCurioCabinet = exception[1].equals("true");
-               } else if(exception[0].equals("contentCurtainRod")) {
-                  this.contentCurtainRod = exception[1].equals("true");
-               } else if(exception[0].equals("contentCurtainWool")) {
-                  this.contentCurtainWool = exception[1].equals("true");
-               } else if(exception[0].equals("contentDeskHutchWoodBasic")) {
-                  this.contentDeskHutchWoodBasic = exception[1].equals("true");
-               } else if(exception[0].equals("contentDeskWoodBasic")) {
-                  this.contentDeskWoodBasic = exception[1].equals("true");
-               } else if(exception[0].equals("contentEndTableMetalRound")) {
-                  this.contentEndTableMetalRound = exception[1].equals("true");
-               } else if(exception[0].equals("contentEndTableWood")) {
-                  this.contentEndTableWood = exception[1].equals("true");
-               } else if(exception[0].equals("contentFireplaceBellows")) {
-                  this.contentFireplaceBellows = exception[1].equals("true");
-               } else if(exception[0].equals("contentFireplacePokerSet")) {
-                  this.contentFireplacePokerSet = exception[1].equals("true");
-               } else if(exception[0].equals("contentFireplaceScreen")) {
-                  this.contentFireplaceScreen = exception[1].equals("true");
-               } else if(exception[0].equals("contentFireplaceWoodStack")) {
-                  this.contentFireplaceWoodStack = exception[1].equals("true");
-               } else if(exception[0].equals("contentFoodTrough")) {
-                  this.contentFoodTrough = exception[1].equals("true");
-               } else if(exception[0].equals("contentFountainLava")) {
-                  this.contentFountainLava = exception[1].equals("true");
-               } else if(exception[0].equals("contentFountainWater")) {
-                  this.contentFountainWater = exception[1].equals("true");
-               } else if(exception[0].equals("contentIngotStack")) {
-                  this.contentIngotStack = exception[1].equals("true");
-               } else if(exception[0].equals("contentLantern")) {
-                  this.contentLantern = exception[1].equals("true");
-               } else if(exception[0].equals("contentMantle")) {
-                  this.contentMantle = exception[1].equals("true");
-               } else if(exception[0].equals("contentMantleColumn")) {
-                  this.contentMantleColumn = exception[1].equals("true");
-               } else if(exception[0].equals("contentMarketCrate")) {
-                  this.contentMarketCrate = exception[1].equals("true");
-               } else if(exception[0].equals("contentMarketStand")) {
-                  this.contentMarketStand = exception[1].equals("true");
-               } else if(exception[0].equals("contentPalletStack")) {
-                  this.contentPalletStack = exception[1].equals("true");
-               } else if(exception[0].equals("contentPillarLarge")) {
-                  this.contentPillarLarge = exception[1].equals("true");
-               } else if(exception[0].equals("contentPillarSmall")) {
-                  this.contentPillarSmall = exception[1].equals("true");
-               } else if(exception[0].equals("contentPoleMetal")) {
-                  this.contentPoleMetal = exception[1].equals("true");
-               } else if(exception[0].equals("contentPoleSign")) {
-                  this.contentPoleSign = exception[1].equals("true");
-               } else if(exception[0].equals("contentShelf")) {
-                  this.contentShelf = exception[1].equals("true");
-               } else if(exception[0].equals("contentShopSignCornerCut")) {
-                  this.contentShopSignCornerCut = exception[1].equals("true");
-               } else if(exception[0].equals("contentShopSignDome")) {
-                  this.contentShopSignDome = exception[1].equals("true");
-               } else if(exception[0].equals("contentShopSignGable")) {
-                  this.contentShopSignGable = exception[1].equals("true");
-               } else if(exception[0].equals("contentShopSignHexagon")) {
-                  this.contentShopSignHexagon = exception[1].equals("true");
-               } else if(exception[0].equals("contentShopSignRound")) {
-                  this.contentShopSignRound = exception[1].equals("true");
-               } else if(exception[0].equals("contentShopSignSquare")) {
-                  this.contentShopSignSquare = exception[1].equals("true");
-               } else if(exception[0].equals("contentSofa")) {
-                  this.contentSofa = exception[1].equals("true");
-               } else if(exception[0].equals("contentStandLargeMetal")) {
-                  this.contentStandLargeMetal = exception[1].equals("true");
-               } else if(exception[0].equals("contentStandLargeStone")) {
-                  this.contentStandLargeStone = exception[1].equals("true");
-               } else if(exception[0].equals("contentStandSmallMetal")) {
-                  this.contentStandSmallMetal = exception[1].equals("true");
-               } else if(exception[0].equals("contentStandSmallStone")) {
-                  this.contentStandSmallStone = exception[1].equals("true");
-               } else if(exception[0].equals("contentStandSmallWood")) {
-                  this.contentStandSmallWood = exception[1].equals("true");
-               } else if(exception[0].equals("contentSupportPole")) {
-                  this.contentSupportPole = exception[1].equals("true");
-               } else if(exception[0].equals("contentTableWood")) {
-                  this.contentTableWood = exception[1].equals("true");
-               } else if(exception[0].equals("contentTile")) {
-                  this.contentTile = exception[1].equals("true");
-               } else if(exception[0].equals("contentWallLantern")) {
-                  this.contentWallLantern = exception[1].equals("true");
-               } else if(exception[0].equals("contentWaterTrough")) {
-                  this.contentWaterTrough = exception[1].equals("true");
-               } else if(exception[0].equals("contentWoodBox")) {
-                  this.contentWoodBox = exception[1].equals("true");
-               } else if(exception[0].equals("contentWoodCrate")) {
-                  this.contentWoodCrate = exception[1].equals("true");
-               } else if(exception[0].equals("contentWoodPanel")) {
-                  this.contentWoodPanel = exception[1].equals("true");
-               } else if(exception[0].equals("contentWoodTimber")) {
-                  this.contentWoodTimber = exception[1].equals("true");
-               } else if(exception[0].equals("contentWoodTrim")) {
-                  this.contentWoodTrim = exception[1].equals("true");
-               } else if(exception[0].equals("workbenchSawCutTime")) {
-                  this.workbenchSawCutTime = Integer.parseInt(exception[1]);
-               } else if(exception[0].equals("workbenchFoundryParticles")) {
-                  this.workbenchFoundryParticles = exception[1].equals("true");
-               } else if(exception[0].equals("updateNotify")) {
-                  this.updateNotify = exception[1].equals("true");
-               } else {
-                  MDeco.instance.logOutput(String.format("Unrecognized config option \"%s\" ignored" + exception[0], new Object[0]));
-               }
+	            switch (exception[0]) {
+		            case "contentBarrelLarge":
+			            this.contentBarrelLarge = exception[1].equals("true");
+			            break;
+		            case "contentBarrelSmall":
+			            this.contentBarrelSmall = exception[1].equals("true");
+			            break;
+		            case "contentBenchStone":
+			            this.contentBenchStone = exception[1].equals("true");
+			            break;
+		            case "contentBenchWood":
+			            this.contentBenchWood = exception[1].equals("true");
+			            break;
+		            case "contentBenchWoodMetalArm":
+			            this.contentBenchWoodMetalArm = exception[1].equals("true");
+			            break;
+		            case "contentCabinetBase":
+			            this.contentCabinetBase = exception[1].equals("true");
+			            break;
+		            case "contentCabinetWall":
+			            this.contentCabinetWall = exception[1].equals("true");
+			            break;
+		            case "contentCabinetWallGlass":
+			            this.contentCabinetWallGlass = exception[1].equals("true");
+			            break;
+		            case "contentCaps":
+			            this.contentCaps = exception[1].equals("true");
+			            break;
+		            case "contentChain":
+			            this.contentChain = exception[1].equals("true");
+			            break;
+		            case "contentChairBasic":
+			            this.contentChairBasic = exception[1].equals("true");
+			            break;
+		            case "contentChairBasicArm":
+			            this.contentChairBasicArm = exception[1].equals("true");
+			            break;
+		            case "contentChandelierSmall":
+			            this.contentChandelierSmallRound = exception[1].equals("true");
+			            break;
+		            case "contentCoinBag":
+			            this.contentCoinBag = exception[1].equals("true");
+			            break;
+		            case "contentCoinStack":
+			            this.contentCoinStack = exception[1].equals("true");
+			            break;
+		            case "contentCurioCabinet":
+			            this.contentCurioCabinet = exception[1].equals("true");
+			            break;
+		            case "contentCurtainRod":
+			            this.contentCurtainRod = exception[1].equals("true");
+			            break;
+		            case "contentCurtainWool":
+			            this.contentCurtainWool = exception[1].equals("true");
+			            break;
+		            case "contentDeskHutchWoodBasic":
+			            this.contentDeskHutchWoodBasic = exception[1].equals("true");
+			            break;
+		            case "contentDeskWoodBasic":
+			            this.contentDeskWoodBasic = exception[1].equals("true");
+			            break;
+		            case "contentEndTableMetalRound":
+			            this.contentEndTableMetalRound = exception[1].equals("true");
+			            break;
+		            case "contentEndTableWood":
+			            this.contentEndTableWood = exception[1].equals("true");
+			            break;
+		            case "contentFireplaceBellows":
+			            this.contentFireplaceBellows = exception[1].equals("true");
+			            break;
+		            case "contentFireplacePokerSet":
+			            this.contentFireplacePokerSet = exception[1].equals("true");
+			            break;
+		            case "contentFireplaceScreen":
+			            this.contentFireplaceScreen = exception[1].equals("true");
+			            break;
+		            case "contentFireplaceWoodStack":
+			            this.contentFireplaceWoodStack = exception[1].equals("true");
+			            break;
+		            case "contentFoodTrough":
+			            this.contentFoodTrough = exception[1].equals("true");
+			            break;
+		            case "contentFountainLava":
+			            this.contentFountainLava = exception[1].equals("true");
+			            break;
+		            case "contentFountainWater":
+			            this.contentFountainWater = exception[1].equals("true");
+			            break;
+		            case "contentIngotStack":
+			            this.contentIngotStack = exception[1].equals("true");
+			            break;
+		            case "contentLantern":
+			            this.contentLantern = exception[1].equals("true");
+			            break;
+		            case "contentMantle":
+			            this.contentMantle = exception[1].equals("true");
+			            break;
+		            case "contentMantleColumn":
+			            this.contentMantleColumn = exception[1].equals("true");
+			            break;
+		            case "contentMarketCrate":
+			            this.contentMarketCrate = exception[1].equals("true");
+			            break;
+		            case "contentMarketStand":
+			            this.contentMarketStand = exception[1].equals("true");
+			            break;
+		            case "contentPalletStack":
+			            this.contentPalletStack = exception[1].equals("true");
+			            break;
+		            case "contentPillarLarge":
+			            this.contentPillarLarge = exception[1].equals("true");
+			            break;
+		            case "contentPillarSmall":
+			            this.contentPillarSmall = exception[1].equals("true");
+			            break;
+		            case "contentPoleMetal":
+			            this.contentPoleMetal = exception[1].equals("true");
+			            break;
+		            case "contentPoleSign":
+			            this.contentPoleSign = exception[1].equals("true");
+			            break;
+		            case "contentShelf":
+			            this.contentShelf = exception[1].equals("true");
+			            break;
+		            case "contentShopSignCornerCut":
+			            this.contentShopSignCornerCut = exception[1].equals("true");
+			            break;
+		            case "contentShopSignDome":
+			            this.contentShopSignDome = exception[1].equals("true");
+			            break;
+		            case "contentShopSignGable":
+			            this.contentShopSignGable = exception[1].equals("true");
+			            break;
+		            case "contentShopSignHexagon":
+			            this.contentShopSignHexagon = exception[1].equals("true");
+			            break;
+		            case "contentShopSignRound":
+			            this.contentShopSignRound = exception[1].equals("true");
+			            break;
+		            case "contentShopSignSquare":
+			            this.contentShopSignSquare = exception[1].equals("true");
+			            break;
+		            case "contentSofa":
+			            this.contentSofa = exception[1].equals("true");
+			            break;
+		            case "contentStandLargeMetal":
+			            this.contentStandLargeMetal = exception[1].equals("true");
+			            break;
+		            case "contentStandLargeStone":
+			            this.contentStandLargeStone = exception[1].equals("true");
+			            break;
+		            case "contentStandSmallMetal":
+			            this.contentStandSmallMetal = exception[1].equals("true");
+			            break;
+		            case "contentStandSmallStone":
+			            this.contentStandSmallStone = exception[1].equals("true");
+			            break;
+		            case "contentStandSmallWood":
+			            this.contentStandSmallWood = exception[1].equals("true");
+			            break;
+		            case "contentSupportPole":
+			            this.contentSupportPole = exception[1].equals("true");
+			            break;
+		            case "contentTableWood":
+			            this.contentTableWood = exception[1].equals("true");
+			            break;
+		            case "contentTile":
+			            this.contentTile = exception[1].equals("true");
+			            break;
+		            case "contentWallLantern":
+			            this.contentWallLantern = exception[1].equals("true");
+			            break;
+		            case "contentWaterTrough":
+			            this.contentWaterTrough = exception[1].equals("true");
+			            break;
+		            case "contentWoodBox":
+			            this.contentWoodBox = exception[1].equals("true");
+			            break;
+		            case "contentWoodCrate":
+			            this.contentWoodCrate = exception[1].equals("true");
+			            break;
+		            case "contentWoodPanel":
+			            this.contentWoodPanel = exception[1].equals("true");
+			            break;
+		            case "contentWoodTimber":
+			            this.contentWoodTimber = exception[1].equals("true");
+			            break;
+		            case "contentWoodTrim":
+			            this.contentWoodTrim = exception[1].equals("true");
+			            break;
+		            case "workbenchSawCutTime":
+			            this.workbenchSawCutTime = Integer.parseInt(exception[1]);
+			            break;
+		            case "workbenchFoundryParticles":
+			            this.workbenchFoundryParticles = exception[1].equals("true");
+			            break;
+		            case "updateNotify":
+			            this.updateNotify = exception[1].equals("true");
+			            break;
+		            default:
+			            MDeco.instance.logOutput("Unrecognized config option \"%s\" ignored" + exception[0]);
+			            break;
+	            }
             } catch (Exception var4) {
                MDeco.instance.logOutput("Skipping bad config line: " + line);
             }

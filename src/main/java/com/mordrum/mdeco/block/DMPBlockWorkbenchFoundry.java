@@ -7,7 +7,6 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -52,7 +51,7 @@ public class DMPBlockWorkbenchFoundry extends Block {
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{FACING});
+      return new BlockStateContainer(this, FACING);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
@@ -60,7 +59,7 @@ public class DMPBlockWorkbenchFoundry extends Block {
    }
 
    public int getMetaFromState(IBlockState state) {
-      return ((EnumFacing)state.getValue(FACING)).getHorizontalIndex();
+      return state.getValue(FACING).getHorizontalIndex();
    }
 
    public IBlockState getStateFromMeta(int meta) {
@@ -113,7 +112,7 @@ public class DMPBlockWorkbenchFoundry extends Block {
    @SideOnly(Side.CLIENT)
    public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand) {
       if(MDeco.settings.workbenchFoundryParticles) {
-         EnumFacing facing = (EnumFacing)state.getValue(FACING);
+         EnumFacing facing = state.getValue(FACING);
          double pixel = 0.0625D;
          double d0 = 0.0D;
          double d1 = (double)pos.getY() + 1.0D + pixel * 9.0D;
@@ -138,7 +137,7 @@ public class DMPBlockWorkbenchFoundry extends Block {
             d2 = (double)pos.getZ() + pixel * 4.5D;
          }
 
-         worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+         worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, 0.0D, 0.0D, 0.0D);
       }
    }
 
@@ -168,7 +167,7 @@ public class DMPBlockWorkbenchFoundry extends Block {
       }
 
       public ITextComponent getDisplayName() {
-         return new TextComponentTranslation(MDeco.blocks.workbenchFoundry.getUnlocalizedName() + ".name", new Object[0]);
+         return new TextComponentTranslation(MDeco.blocks.workbenchFoundry.getUnlocalizedName() + ".name");
       }
 
       public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn) {

@@ -63,7 +63,7 @@ public class DMPContainerCabinetBase extends Container {
 
    public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
       ItemStack itemstack = null;
-      Slot slot = (Slot)this.inventorySlots.get(index);
+      Slot slot = this.inventorySlots.get(index);
       if(slot != null && slot.getHasStack()) {
          ItemStack itemstack1 = slot.getStack();
          itemstack = itemstack1.copy();
@@ -76,7 +76,7 @@ public class DMPContainerCabinetBase extends Container {
          }
 
          if(itemstack1.getCount() == 0) {
-            slot.putStack((ItemStack)null);
+            slot.putStack(null);
          } else {
             slot.onSlotChanged();
          }
@@ -105,7 +105,7 @@ public class DMPContainerCabinetBase extends Container {
             return false;
          } else {
             Block block = Block.getBlockFromItem(item);
-            return block == null?false:block instanceof DMPBlockTile;
+            return block != null && block instanceof DMPBlockTile;
          }
       }
 

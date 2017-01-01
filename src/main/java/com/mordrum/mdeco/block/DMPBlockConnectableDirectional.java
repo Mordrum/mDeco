@@ -2,7 +2,6 @@ package com.mordrum.mdeco.block;
 
 import com.mordrum.mdeco.object.DMPDecoration;
 import net.minecraft.block.Block;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
@@ -19,25 +18,28 @@ public class DMPBlockConnectableDirectional extends DMPBlockBaseDecoration {
 
    public DMPBlockConnectableDirectional(DMPDecoration decoration) {
       super(decoration);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(ORIENTATION, Integer.valueOf(0)).withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)));
+      this.setDefaultState(this.blockState.getBaseState().withProperty(ORIENTATION, 0).withProperty(NORTH, Boolean.FALSE).withProperty(EAST, Boolean.FALSE).withProperty(SOUTH, Boolean.FALSE).withProperty(WEST, Boolean.FALSE));
    }
 
    protected BlockStateContainer createBlockState() {
-      return new BlockStateContainer(this, new IProperty[]{ORIENTATION, NORTH, EAST, WEST, SOUTH});
+      return new BlockStateContainer(this, ORIENTATION, NORTH, EAST, WEST, SOUTH);
    }
 
    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
       IBlockState actualState = worldIn.getBlockState(pos);
-      actualState = actualState.withProperty(NORTH, Boolean.valueOf(this.canConnectTo(worldIn, pos.north()))).withProperty(EAST, Boolean.valueOf(this.canConnectTo(worldIn, pos.east()))).withProperty(SOUTH, Boolean.valueOf(this.canConnectTo(worldIn, pos.south()))).withProperty(WEST, Boolean.valueOf(this.canConnectTo(worldIn, pos.west())));
+      actualState = actualState.withProperty(NORTH, this.canConnectTo(worldIn, pos.north())).withProperty(EAST, this
+		      .canConnectTo(worldIn, pos.east())).withProperty(SOUTH, this
+		      .canConnectTo(worldIn, pos.south())).withProperty(WEST, this
+		      .canConnectTo(worldIn, pos.west()));
       return actualState;
    }
 
    public int getMetaFromState(IBlockState state) {
-      return ((Integer)state.getValue(ORIENTATION)).intValue();
+      return state.getValue(ORIENTATION);
    }
 
    public IBlockState getStateFromMeta(int meta) {
-      return this.getDefaultState().withProperty(ORIENTATION, Integer.valueOf(meta));
+      return this.getDefaultState().withProperty(ORIENTATION, meta);
    }
 
    protected boolean canConnectTo(IBlockAccess worldIn, BlockPos pos) {

@@ -79,8 +79,8 @@ public class DMPTileEntityWorkbenchSaw extends TileEntityLockable implements ISi
          IBlockState iblockstate = this.world.getBlockState(this.getPos());
          if(iblockstate.getBlock() instanceof DMPBlockWorkbenchSaw) {
             boolean newState = canCut && this.cutTime > 0;
-            if(((Boolean)iblockstate.getValue(DMPBlockWorkbenchSaw.ACTIVE)).booleanValue() != newState) {
-               iblockstate = iblockstate.withProperty(DMPBlockWorkbenchSaw.ACTIVE, Boolean.valueOf(newState));
+            if(iblockstate.getValue(DMPBlockWorkbenchSaw.ACTIVE) != newState) {
+               iblockstate = iblockstate.withProperty(DMPBlockWorkbenchSaw.ACTIVE, newState);
                this.world.setBlockState(this.getPos(), iblockstate, 2);
             }
          }
@@ -174,7 +174,9 @@ public class DMPTileEntityWorkbenchSaw extends TileEntityLockable implements ISi
    }
 
    public boolean isUsableByPlayer(EntityPlayer player) {
-      return this.world.getTileEntity(this.pos) != this?false:player.getDistanceSq((double)this.pos.getX() + 0.5D, (double)this.pos.getY() + 0.5D, (double)this.pos.getZ() + 0.5D) <= 64.0D;
+      return this.world.getTileEntity(this.pos) == this && player.getDistanceSq(
+		      (double) this.pos.getX() + 0.5D, (double) this.pos.getY() + 0.5D, (double) this.pos.getZ() + 0.5D) <=
+		      64.0D;
    }
 
    public void openInventory(EntityPlayer player) {
@@ -232,7 +234,8 @@ public class DMPTileEntityWorkbenchSaw extends TileEntityLockable implements ISi
          return false;
       } else {
          Item item = stack.getItem();
-         return item == null?false: MDeco.recipes.workbenchSawRecipes.isWorkbenchSawInputMaterial(item, stack.getItemDamage());
+         return item != null &&
+		         MDeco.recipes.workbenchSawRecipes.isWorkbenchSawInputMaterial(item, stack.getItemDamage());
       }
    }
 

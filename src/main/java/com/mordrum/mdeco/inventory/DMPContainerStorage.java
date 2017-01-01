@@ -42,7 +42,7 @@ public class DMPContainerStorage extends Container {
 
    public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
       ItemStack itemstack = null;
-      Slot slot = (Slot)this.inventorySlots.get(index);
+      Slot slot = this.inventorySlots.get(index);
       if(slot != null && slot.getHasStack()) {
          ItemStack itemstack1 = slot.getStack();
          itemstack = itemstack1.copy();
@@ -55,7 +55,7 @@ public class DMPContainerStorage extends Container {
          }
 
          if(itemstack1.getCount() == 0) {
-            slot.putStack((ItemStack)null);
+            slot.putStack(null);
          } else {
             slot.onSlotChanged();
          }

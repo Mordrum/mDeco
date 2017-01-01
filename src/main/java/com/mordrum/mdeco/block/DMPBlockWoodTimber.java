@@ -8,7 +8,6 @@ import net.minecraft.block.BlockGlass;
 import net.minecraft.block.BlockGlowstone;
 import net.minecraft.block.BlockStainedGlass;
 import net.minecraft.block.BlockWall;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -46,35 +45,35 @@ public class DMPBlockWoodTimber extends DMPBlockBaseDecoration {
       if(orientation == 0) {
          blockNorth = worldIn.getBlockState(pos.west());
          blockSouth = worldIn.getBlockState(pos.east());
-         return blockNorth != null && blockSouth != null?(blockNorth.getBlock() instanceof DMPBlockWoodTimber && blockNorth.getValue(ORIENTATION)
-                 .intValue() == orientation?(blockSouth.getBlock() instanceof DMPBlockWoodTimber && blockSouth.getValue(ORIENTATION)
-                 .intValue() == orientation?state.withProperty(CONNECTED, Integer.valueOf(0)):state.withProperty(CONNECTED, Integer.valueOf(1))):(blockSouth.getBlock() instanceof DMPBlockWoodTimber && blockSouth.getValue(ORIENTATION)
-                 .intValue() == orientation?state.withProperty(CONNECTED, Integer.valueOf(2)):state.withProperty(CONNECTED, Integer.valueOf(3)))):state;
+         return blockNorth != null && blockSouth != null?(blockNorth.getBlock() instanceof DMPBlockWoodTimber &&
+                 blockNorth.getValue(ORIENTATION) == orientation?(blockSouth.getBlock() instanceof DMPBlockWoodTimber &&
+                 blockSouth.getValue(ORIENTATION) == orientation?state.withProperty(CONNECTED, 0):state.withProperty(CONNECTED, 1)):(blockSouth.getBlock() instanceof DMPBlockWoodTimber &&
+                 blockSouth.getValue(ORIENTATION) == orientation?state.withProperty(CONNECTED, 2):state.withProperty(CONNECTED, 3))):state;
       } else if(orientation == 1) {
          blockNorth = worldIn.getBlockState(pos.up());
          blockSouth = worldIn.getBlockState(pos.down());
-         return blockNorth != null && blockSouth != null?(blockNorth.getBlock() instanceof DMPBlockWoodTimber && blockNorth.getValue(ORIENTATION)
-                 .intValue() == orientation?(blockSouth.getBlock() instanceof DMPBlockWoodTimber && blockSouth.getValue(ORIENTATION)
-                 .intValue() == orientation?state.withProperty(CONNECTED, Integer.valueOf(0)):state.withProperty(CONNECTED, Integer.valueOf(1))):(blockSouth.getBlock() instanceof DMPBlockWoodTimber && blockSouth.getValue(ORIENTATION)
-                 .intValue() == orientation?this.getDefaultState().withProperty(CONNECTED, Integer.valueOf(2)):this.getDefaultState().withProperty(CONNECTED, Integer.valueOf(3)))):worldIn.getBlockState(pos);
+         return blockNorth != null && blockSouth != null?(blockNorth.getBlock() instanceof DMPBlockWoodTimber &&
+                 blockNorth.getValue(ORIENTATION) == orientation?(blockSouth.getBlock() instanceof DMPBlockWoodTimber &&
+                 blockSouth.getValue(ORIENTATION) == orientation?state.withProperty(CONNECTED, 0):state.withProperty(CONNECTED, 1)):(blockSouth.getBlock() instanceof DMPBlockWoodTimber &&
+                 blockSouth.getValue(ORIENTATION) == orientation?this.getDefaultState().withProperty(CONNECTED, 2):this.getDefaultState().withProperty(CONNECTED, 3))):worldIn.getBlockState(pos);
       } else if(orientation == 2) {
          blockNorth = worldIn.getBlockState(pos.north());
          blockSouth = worldIn.getBlockState(pos.south());
-         return blockNorth != null && blockSouth != null?(blockNorth.getBlock() instanceof DMPBlockWoodTimber && blockNorth.getValue(ORIENTATION)
-                 .intValue() == orientation?(blockSouth.getBlock() instanceof DMPBlockWoodTimber && blockSouth.getValue(ORIENTATION)
-                 .intValue() == orientation?state.withProperty(CONNECTED, Integer.valueOf(0)):state.withProperty(CONNECTED, Integer.valueOf(1))):(blockSouth.getBlock() instanceof DMPBlockWoodTimber && blockSouth.getValue(ORIENTATION)
-                 .intValue() == orientation?state.withProperty(CONNECTED, Integer.valueOf(2)):state.withProperty(CONNECTED, Integer.valueOf(3)))):state;
+         return blockNorth != null && blockSouth != null?(blockNorth.getBlock() instanceof DMPBlockWoodTimber &&
+                 blockNorth.getValue(ORIENTATION) == orientation?(blockSouth.getBlock() instanceof DMPBlockWoodTimber &&
+                 blockSouth.getValue(ORIENTATION) == orientation?state.withProperty(CONNECTED, 0):state.withProperty(CONNECTED, 1)):(blockSouth.getBlock() instanceof DMPBlockWoodTimber &&
+                 blockSouth.getValue(ORIENTATION) == orientation?state.withProperty(CONNECTED, 2):state.withProperty(CONNECTED, 3))):state;
       } else {
          return state;
       }
    }
 
    public int getMetaFromState(IBlockState state) {
-      return state.getValue(ORIENTATION).intValue();
+      return state.getValue(ORIENTATION);
    }
 
    public IBlockState getStateFromMeta(int meta) {
-      return this.getDefaultState().withProperty(ORIENTATION, Integer.valueOf(meta));
+      return this.getDefaultState().withProperty(ORIENTATION, meta);
    }
 
    public boolean canPlaceBlockOnSide(World worldIn, BlockPos pos, EnumFacing side) {
@@ -89,13 +88,13 @@ public class DMPBlockWoodTimber extends DMPBlockBaseDecoration {
    }
 
    public boolean isSideSolid(IBlockState base_state, IBlockAccess world, BlockPos pos, EnumFacing side) {
-      int orientation = base_state.getValue(ORIENTATION).intValue();
+      int orientation = base_state.getValue(ORIENTATION);
       return orientation == 0?side == EnumFacing.WEST || side == EnumFacing.EAST:(orientation == 1?side == EnumFacing.UP || side == EnumFacing.DOWN:(
               orientation == 2 && (side == EnumFacing.NORTH || side == EnumFacing.SOUTH)));
    }
 
    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-      switch(state.getValue(ORIENTATION).intValue()) {
+      switch(state.getValue(ORIENTATION)) {
       case 0:
          return AABB_0;
       case 1:

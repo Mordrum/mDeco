@@ -8,9 +8,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class DMPGuiScreenMainMenu extends DMPGuiBase {
-   private DMPGuiButton buttonTools;
 
-   public DMPGuiScreenMainMenu(GuiScreen parent) {
+	public DMPGuiScreenMainMenu(GuiScreen parent) {
       super(parent, "gui.screen.mainMenu", 0);
    }
 
@@ -18,8 +17,9 @@ public class DMPGuiScreenMainMenu extends DMPGuiBase {
       super.initGui();
       int xPos = this.width / 2 - 90;
       byte yPos = 36;
-      this.buttonTools = new DMPGuiButton(3, DMPGuiButtonMode.normal, xPos, yPos, 180, 20, I18n.translateToLocal("gui.screen.tools") + "...");
-      this.buttonList.add(this.buttonTools);
+	   DMPGuiButton buttonTools = new DMPGuiButton(3, DMPGuiButtonMode.normal, xPos, yPos, 180, 20,
+			   I18n.translateToLocal("gui.screen.tools") + "...");
+      this.buttonList.add(buttonTools);
    }
 
    protected void actionPerformed(GuiButton button) {

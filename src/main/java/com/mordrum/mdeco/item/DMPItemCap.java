@@ -40,7 +40,8 @@ public class DMPItemCap extends ItemBlock {
 
       if(posTarget != null && worldIn.isAirBlock(posTarget)) {
          if(playerIn.canPlayerEdit(posTarget, facing, stack)) {
-            IBlockState iblockstate1 = this.decorationBlock.getDefaultState().withProperty(DMPBlockCap.CONNECTED, Integer.valueOf(facing.getIndex()));
+            IBlockState iblockstate1 = this.decorationBlock.getDefaultState().withProperty(DMPBlockCap.CONNECTED, facing
+		            .getIndex());
             worldIn.setBlockState(posTarget, iblockstate1, 3);
             DMPHelper.playObjectSound(worldIn, pos, playerIn, this.block);
             stack.setCount(stack.getCount() - 1);

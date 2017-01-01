@@ -22,69 +22,68 @@ public class DMPJsonBlockBuildingBlock {
       DMPAncientBlockType[] var2 = DMPAncientBlockType.values();
       int var3 = var2.length;
 
-      for(int var4 = 0; var4 < var3; ++var4) {
-         DMPAncientBlockType blockType = var2[var4];
-         DMPBlockBrick.EnumType[] var6 = DMPBlockBrick.EnumType.values();
-         int var7 = var6.length;
+	   for (DMPAncientBlockType blockType : var2) {
+		   DMPBlockBrick.EnumType[] var6 = DMPBlockBrick.EnumType.values();
+		   int var7 = var6.length;
 
-         int var8;
-         for(var8 = 0; var8 < var7; ++var8) {
-            DMPBlockBrick.EnumType variantHeadstone = var6[var8];
-            createStructureBlockModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_block");
-            ++filesGenerated;
-            createStructureBlockModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_slab_bottom");
-            ++filesGenerated;
-            createStructureBlockModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_slab_top");
-            ++filesGenerated;
-            createStructureBlockModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_slab_double");
-            ++filesGenerated;
-            createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_inventory");
-            ++filesGenerated;
-            createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_post");
-            ++filesGenerated;
-            createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_n");
-            ++filesGenerated;
-            createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_ne");
-            ++filesGenerated;
-            createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_ns");
-            ++filesGenerated;
-            createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_nse");
-            ++filesGenerated;
-            createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_nsew");
-            ++filesGenerated;
-            createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_ns_above");
-            ++filesGenerated;
-            createAncientStonePillarModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_pillar_large");
-            ++filesGenerated;
-            createAncientStonePillarModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_pillar_large_side");
-            ++filesGenerated;
-            createAncientStonePillarModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_pillar_small");
-            ++filesGenerated;
-            createAncientStonePillarModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_pillar_small_side");
-            ++filesGenerated;
-         }
+		   int var8;
+		   for (var8 = 0; var8 < var7; ++var8) {
+			   DMPBlockBrick.EnumType variantHeadstone = var6[var8];
+			   createStructureBlockModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_block");
+			   ++filesGenerated;
+			   createStructureBlockModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_slab_bottom");
+			   ++filesGenerated;
+			   createStructureBlockModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_slab_top");
+			   ++filesGenerated;
+			   createStructureBlockModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_slab_double");
+			   ++filesGenerated;
+			   createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_inventory");
+			   ++filesGenerated;
+			   createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_post");
+			   ++filesGenerated;
+			   createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_n");
+			   ++filesGenerated;
+			   createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_ne");
+			   ++filesGenerated;
+			   createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_ns");
+			   ++filesGenerated;
+			   createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_nse");
+			   ++filesGenerated;
+			   createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_nsew");
+			   ++filesGenerated;
+			   createStoneWallModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_wall_ns_above");
+			   ++filesGenerated;
+			   createAncientStonePillarModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_pillar_large");
+			   ++filesGenerated;
+			   createAncientStonePillarModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_pillar_large_side");
+			   ++filesGenerated;
+			   createAncientStonePillarModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_pillar_small");
+			   ++filesGenerated;
+			   createAncientStonePillarModelFile(rootPath, blockType.name(), variantHeadstone.name(), "_pillar_small_side");
+			   ++filesGenerated;
+		   }
 
-         createStairsModelFile(rootPath, blockType.name(), "_stairs");
-         ++filesGenerated;
-         createStairsModelFile(rootPath, blockType.name(), "_stairs_inner");
-         ++filesGenerated;
-         createStairsModelFile(rootPath, blockType.name(), "_stairs_outer");
-         ++filesGenerated;
-         DMPBlockBrickHeadstone.EnumType[] var10 = DMPBlockBrickHeadstone.EnumType.values();
-         var7 = var10.length;
+		   createStairsModelFile(rootPath, blockType.name(), "_stairs");
+		   ++filesGenerated;
+		   createStairsModelFile(rootPath, blockType.name(), "_stairs_inner");
+		   ++filesGenerated;
+		   createStairsModelFile(rootPath, blockType.name(), "_stairs_outer");
+		   ++filesGenerated;
+		   DMPBlockBrickHeadstone.EnumType[] var10 = DMPBlockBrickHeadstone.EnumType.values();
+		   var7 = var10.length;
 
-         for(var8 = 0; var8 < var7; ++var8) {
-            DMPBlockBrickHeadstone.EnumType var11 = var10[var8];
-            createHeadstoneFile(rootPath, blockType.name(), var11.name());
-            ++filesGenerated;
-         }
-      }
+		   for (var8 = 0; var8 < var7; ++var8) {
+			   DMPBlockBrickHeadstone.EnumType var11 = var10[var8];
+			   createHeadstoneFile(rootPath, blockType.name(), var11.name());
+			   ++filesGenerated;
+		   }
+	   }
 
       return filesGenerated;
    }
 
    private static void createStairsModelFile(String rootPath, String blockName, String filenameSuffix) {
-      String texture = String.format("%s_normal", new Object[]{blockName});
+      String texture = String.format("%s_normal", blockName);
       File jsonFile = new File(String.format("%s%s%s.json", new Object[]{rootPath, blockName, filenameSuffix}));
 
       try {
@@ -123,26 +122,25 @@ public class DMPJsonBlockBuildingBlock {
       DMPBuildingBlock[] var2 = DMPBuildingBlock.values();
       int var3 = var2.length;
 
-      for(int var4 = 0; var4 < var3; ++var4) {
-         DMPBuildingBlock buildingBlock = var2[var4];
-         if(buildingBlock.blockType == DMPBuildingBlockType.pillarLarge) {
-            createPillarModelFile(rootPath, buildingBlock, "_pillar_large", false);
-            ++filesGenerated;
-            createPillarModelFile(rootPath, buildingBlock, "_pillar_large_side", true);
-            ++filesGenerated;
-         } else if(buildingBlock.blockType == DMPBuildingBlockType.pillarSmall) {
-            createPillarModelFile(rootPath, buildingBlock, "_pillar_small", false);
-            ++filesGenerated;
-            createPillarModelFile(rootPath, buildingBlock, "_pillar_small_side", true);
-            ++filesGenerated;
-         }
-      }
+	   for (DMPBuildingBlock buildingBlock : var2) {
+		   if (buildingBlock.blockType == DMPBuildingBlockType.pillarLarge) {
+			   createPillarModelFile(rootPath, buildingBlock, "_pillar_large", false);
+			   ++filesGenerated;
+			   createPillarModelFile(rootPath, buildingBlock, "_pillar_large_side", true);
+			   ++filesGenerated;
+		   } else if (buildingBlock.blockType == DMPBuildingBlockType.pillarSmall) {
+			   createPillarModelFile(rootPath, buildingBlock, "_pillar_small", false);
+			   ++filesGenerated;
+			   createPillarModelFile(rootPath, buildingBlock, "_pillar_small_side", true);
+			   ++filesGenerated;
+		   }
+	   }
 
       return filesGenerated;
    }
 
    private static void createStructureBlockModelFile(String rootPath, String blockName, String variant, String filenameSuffix) {
-      String texture = String.format("%s_%s", new Object[]{blockName, variant});
+      String texture = String.format("%s_%s", blockName, variant);
       File jsonFile = new File(String.format("%s%s_%s%s.json", new Object[]{rootPath, blockName, variant, filenameSuffix}));
 
       try {
@@ -187,7 +185,7 @@ public class DMPJsonBlockBuildingBlock {
    }
 
    private static void createAncientStonePillarModelFile(String rootPath, String blockName, String variant, String filenameSuffix) {
-      String texture = String.format("%s_%s", new Object[]{blockName, variant});
+      String texture = String.format("%s_%s", blockName, variant);
       File jsonFile = new File(String.format("%s%s_%s%s.json", new Object[]{rootPath, blockName, variant, filenameSuffix}));
 
       try {
@@ -213,7 +211,7 @@ public class DMPJsonBlockBuildingBlock {
    }
 
    private static void createStoneWallModelFile(String rootPath, String blockName, String variant, String filenameSuffix) {
-      String texture = String.format("%s_%s", new Object[]{blockName, variant});
+      String texture = String.format("%s_%s", blockName, variant);
       File jsonFile = new File(String.format("%s%s_%s%s.json", new Object[]{rootPath, blockName, variant, filenameSuffix}));
 
       try {

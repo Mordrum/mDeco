@@ -48,7 +48,7 @@ public enum DMPBuildingBlock {
    public final String textureHardware;
    public final String textureExtra;
 
-   private DMPBuildingBlock(String oreDictName, DMPBuildingBlockType blockType, Material material, String texturePrimary, String textureTrim, String textureHardware, String textureExtra) {
+   DMPBuildingBlock(String oreDictName, DMPBuildingBlockType blockType, Material material, String texturePrimary, String textureTrim, String textureHardware, String textureExtra) {
       this.oreDictName = oreDictName;
       this.blockType = blockType;
       this.material = material;
